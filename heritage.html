@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Heritage & Ritual | The Jade Ritual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --emerald: #004b23; --jade: #2d6a4f; --gold: #d4af37; --silk: #fffdfa; --ink: #0a0a0a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--silk); font-family: 'Montserrat', sans-serif; color: var(--ink); line-height: 1.8; }
+        header { padding: 30px 8%; display: flex; justify-content: space-between; align-items: center; background: white; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 900; color: var(--emerald); font-size: 1.5rem; letter-spacing: 2px; text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: var(--ink); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .hero-culture { height: 60vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://s.alicdn.com/@sc04/kf/H11258bb95fea49ffb21bf4981db3e4ccX.jpg_640x640.jpg') center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; }
+        .hero-culture h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 10px; }
+        .hero-culture p { font-style: italic; font-size: 1.2rem; opacity: 0.9; }
+
+        .culture-section { padding: 100px 8%; max-width: 1400px; margin: 0 auto; }
+        .ritual-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-top: 60px; }
+        .ritual-card { padding: 40px; background: white; border: 1px solid #eee; transition: 0.3s; }
+        .ritual-card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .ritual-card h3 { font-family: 'Playfair Display', serif; color: var(--emerald); margin-bottom: 20px; font-size: 1.5rem; }
+        
+        .philosophy { background: var(--emerald); color: white; padding: 100px 8%; display: flex; gap: 80px; align-items: center; }
+        .philosophy h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); }
+        .philosophy p { font-size: 1.1rem; opacity: 0.9; }
+
+        footer { background: var(--ink); color: white; padding: 80px 8% 40px; text-align: center; }
+        .footer-logo { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
+        .copy { opacity: 0.5; font-size: 0.8rem; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">THE JADE RITUAL</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Collection</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="heritage.html" style="color:var(--gold)">Heritage</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-culture">
+        <h1>Tea is a Mirror</h1>
+        <p>Exploring the thousand-year journey of the leaf and the clay.</p>
+    </div>
+
+    <section class="culture-section">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center;">The Pillars of the Ritual</h2>
+        <div class="ritual-grid">
+            <div class="ritual-card">
+                <h3>The Earth (Clay)</h3>
+                <p>Yixing Zisha, the 'Purple Sand' clay, is porous and mineral-rich. Over years of use, the clay 'remembers' the tea, absorbing its oils and developing a unique patina that enhances every subsequent brew.</p>
+            </div>
+            <div class="ritual-card">
+                <h3>The Water (Flow)</h3>
+                <p>Gongfu tea is the 'Art of Taking Time'. It's not just about drinking; it's about the precision of the pour, the temperature of the water, and the rhythm of the repeated steepings.</p>
+            </div>
+            <div class="ritual-card">
+                <h3>The Soul (Zen)</h3>
+                <p>In the silence of the tea room, the chaotic world outside fades away. Tea culture in China is deeply intertwined with Zen philosophy—finding beauty in the imperfect and peace in the present moment.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="philosophy">
+        <div style="flex: 1;">
+            <h2>Vibrant Heritage. Liquid Jade.</h2>
+        </div>
+        <div style="flex: 2;">
+            <p>Our philosophy is grounded in the concept of 'Vibrant Heritage'. We believe that tradition shouldn't be a museum piece; it should be a living, breathing part of your day. 'Liquid Jade' represents the precious nature of the tea soup—a gem-like infusion that nourishes both body and spirit.</p>
+            <p style="margin-top: 20px;">We specialize in 'Heritage Packaging'—providing not just a product, but a complete sensory experience. Every item arrives with a manual on history, craftsmanship, and the specific brewing ritual it was designed for.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logo">The Jade Ritual</div>
+        <p>Part of Shandong Mingzhi Education Group</p>
+        <p class="copy">&copy; 2026 China Tea Culture Communication. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

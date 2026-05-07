@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tea Journal | The Jade Ritual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --emerald: #004b23; --jade: #2d6a4f; --gold: #d4af37; --silk: #fffdfa; --ink: #0a0a0a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--silk); font-family: 'Montserrat', sans-serif; color: var(--ink); line-height: 1.8; }
+        header { padding: 30px 8%; display: flex; justify-content: space-between; align-items: center; background: white; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 900; color: var(--emerald); font-size: 1.5rem; letter-spacing: 2px; text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: var(--ink); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        .journal-container { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
+        .journal-header { text-align: center; margin-bottom: 80px; }
+        .journal-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--emerald); }
+        .journal-header p { font-style: italic; color: #666; font-size: 1.1rem; }
+
+        .blog-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px; }
+        .blog-post { background: white; border-bottom: 4px solid #eee; transition: 0.3s; padding-bottom: 20px; }
+        .blog-post:hover { border-color: var(--gold); }
+        .blog-img { height: 250px; background-size: cover; background-position: center; margin-bottom: 20px; border-radius: 4px; }
+        .blog-content { padding: 0 10px; }
+        .blog-content .date { font-size: 0.8rem; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: block; }
+        .blog-content h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--emerald); margin-bottom: 15px; }
+        .blog-content p { font-size: 0.95rem; color: #555; margin-bottom: 20px; }
+        .read-more { font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--gold); padding-bottom: 5px; font-size: 0.8rem; }
+
+        footer { background: var(--ink); color: white; padding: 80px 8% 40px; text-align: center; }
+        .footer-logo { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
+        .copy { opacity: 0.5; font-size: 0.8rem; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">THE JADE RITUAL</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Collection</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="heritage.html">Heritage</a></li>
+                <li><a href="journal.html" style="color:var(--gold)">Journal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="journal-container">
+        <div class="journal-header">
+            <h1>The Tea Journal</h1>
+            <p>Dispatches from the tea mountains and master kilns of China.</p>
+        </div>
+
+        <div class="blog-list">
+            <article class="blog-post">
+                <div class="blog-img" style="background-image: url('https://s.alicdn.com/@sc04/kf/H78637402ca99400592268b76c5565a90T.jpg_640x640.jpg');"></div>
+                <div class="blog-content">
+                    <span class="date">May 15, 2026</span>
+                    <h2>How to 'Season' Your First Zisha Teapot</h2>
+                    <p>Learn the sacred steps of awakening a new purple sand clay vessel before its first brew. From boiling to leaf-infusion...</p>
+                    <a href="#" class="read-more">Continue Reading</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-img" style="background-image: url('https://s.alicdn.com/@sc04/kf/H11258bb95fea49ffb21bf4981db3e4ccX.jpg_640x640.jpg');"></div>
+                <div class="blog-content">
+                    <span class="date">April 28, 2026</span>
+                    <h2>The Spring 2026 Longjing Harvest Report</h2>
+                    <p>Our scouts in the West Lake region report a cooler spring, resulting in smaller, more concentrated buds with intense nutty notes...</p>
+                    <a href="#" class="read-more">Continue Reading</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-img" style="background-image: url('https://s.alicdn.com/@sc04/kf/HTB1Eu7tSpXXXXaUXVXXq6xXFXXXY.jpg_640x640.jpg');"></div>
+                <div class="blog-content">
+                    <span class="date">April 10, 2026</span>
+                    <h2>Porcelain vs. Zisha: Which to Choose?</h2>
+                    <p>Understanding the thermal properties of Dehua white porcelain and why it remains the best choice for tasting the true aroma of Green tea...</p>
+                    <a href="#" class="read-more">Continue Reading</a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logo">The Jade Ritual</div>
+        <p>Part of Shandong Mingzhi Education Group</p>
+        <p class="copy">&copy; 2026 China Tea Culture Communication. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

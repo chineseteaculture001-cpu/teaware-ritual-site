@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | The Jade Ritual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --emerald: #004b23; --jade: #2d6a4f; --gold: #d4af37; --silk: #fffdfa; --ink: #0a0a0a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--silk); font-family: 'Montserrat', sans-serif; color: var(--ink); line-height: 1.8; }
+        header { padding: 30px 8%; display: flex; justify-content: space-between; align-items: center; background: white; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 900; color: var(--emerald); font-size: 1.5rem; letter-spacing: 2px; text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: var(--ink); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        .contact-container { max-width: 1200px; margin: 80px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+        .contact-info h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--emerald); margin-bottom: 20px; }
+        .contact-info p { font-size: 1.1rem; color: #666; margin-bottom: 40px; }
+        
+        .contact-method { margin-bottom: 30px; }
+        .contact-method h4 { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 10px; }
+        .contact-method a { font-size: 1.5rem; color: var(--ink); text-decoration: none; font-weight: 600; }
+        .contact-method a:hover { color: var(--emerald); }
+
+        .contact-form { background: white; padding: 50px; border: 1px solid #eee; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 15px; border: 1px solid #ddd; font-family: 'Montserrat', sans-serif; font-size: 1rem; }
+        .btn-submit { width: 100%; padding: 20px; background: var(--emerald); color: white; border: none; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: 0.3s; }
+        .btn-submit:hover { background: var(--jade); }
+
+        footer { background: var(--ink); color: white; padding: 80px 8% 40px; text-align: center; }
+        .footer-logo { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
+        .copy { opacity: 0.5; font-size: 0.8rem; margin-top: 40px; }
+
+        @media (max-width: 992px) { .contact-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">THE JADE RITUAL</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Collection</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="heritage.html">Heritage</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="contact.html" style="color:var(--gold)">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h1>Let's Share a Cup</h1>
+            <p>For wholesale inquiries, cultural partnership, or personal collection advice, our tea masters are ready to assist you.</p>
+            
+            <div class="contact-method">
+                <h4>Global Inquiry Email</h4>
+                <a href="mailto:chineseteaculture001@gmail.com">chineseteaculture001@gmail.com</a>
+            </div>
+
+            <div class="contact-method">
+                <h4>WhatsApp Support Line 1</h4>
+                <a href="https://wa.me/8618663543398">+86 186 6354 3398</a>
+            </div>
+
+            <div class="contact-method">
+                <h4>WhatsApp Support Line 2</h4>
+                <a href="https://wa.me/8618678513398">+86 186 7851 3398</a>
+            </div>
+
+            <div style="margin-top: 50px; padding: 30px; background: rgba(212,175,55,0.1); border-radius: 8px;">
+                <p style="margin-bottom: 0; color: var(--ink); font-weight: 600; font-size: 0.95rem;">Operational Headquarters:</p>
+                <p style="font-size: 0.9rem; margin-bottom: 0;">China Tea Culture Communication<br>Shandong Mingzhi Education Group<br>Shandong Province, China</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                <select style="width: 100%; padding: 15px; border: 1px solid #ddd; font-family: 'Montserrat', sans-serif;">
+                    <option>Product Inquiry</option>
+                    <option>Wholesale/B2B</option>
+                    <option>Cultural Collaboration</option>
+                    <option>Logistics/Shipping</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea rows="6" placeholder="How can we help you explore Chinese tea culture?"></textarea>
+            </div>
+            <button class="btn-submit">Send Inquiry</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logo">The Jade Ritual</div>
+        <p>Part of Shandong Mingzhi Education Group</p>
+        <p class="copy">&copy; 2026 China Tea Culture Communication. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
