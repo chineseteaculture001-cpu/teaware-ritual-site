@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Jade Ritual | China Tea Culture Communication</title>
+    <title>The Jade Ritual | Authentic Chinese Teaware & Premium Tea</title>
+    <meta name="description" content="Discover handmade Yixing Zisha teapots, Dehua porcelain, and premium ancient tree tea. Direct from the source to your table. Global shipping available.">
+    <meta name="keywords" content="Gongfu Tea Set, Yixing Zisha Teapot, Handmade Teaware, Chinese Tea, Puer Tea, Oolong Tea, Dehua Porcelain">
+    <meta property="og:title" content="The Jade Ritual | Authentic Chinese Teaware">
+    <meta property="og:description" content="Experience the thousand-year heritage of Chinese tea culture.">
+    <meta property="og:image" content="https://sc01.alicdn.com/kf/H987e678a92444288930e90058d3624bdR.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@300;400;600;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -35,10 +40,19 @@
         nav a { text-decoration: none; color: var(--ink); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
 
         .hero {
-            height: 90vh; background: linear-gradient(rgba(0, 75, 35, 0.4), rgba(0, 0, 0, 0.7)), url('https://sc01.alicdn.com/kf/H987e678a92444288930e90058d3624bdR.jpg') center/cover;
+            height: 90vh; position: relative; overflow: hidden;
             display: flex; align-items: center; justify-content: center; text-align: center; color: white;
         }
-        .hero-overlay { max-width: 900px; padding: 50px; background: rgba(0, 75, 35, 0.2); backdrop-filter: blur(15px); border: 2px solid var(--gold); }
+        .hero-video-container {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+        }
+        .hero-video-container iframe {
+            width: 100vw; height: 56.25vw; /* 16:9 aspect ratio */
+            min-height: 100vh; min-width: 177.77vh; /* 100 * 16 / 9 */
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+        .hero-overlay { max-width: 900px; padding: 50px; background: rgba(0, 75, 35, 0.4); backdrop-filter: blur(5px); border: 2px solid var(--gold); z-index: 1; }
         .hero h2 { font-size: 4.5rem; margin-bottom: 20px; font-family: var(--font-title); }
 
         section { padding: 100px 8%; }
@@ -97,9 +111,13 @@
     </header>
 
     <section class="hero">
+        <div class="hero-video-container">
+            <iframe src="https://www.youtube.com/embed/fA_X8D1Tj10?autoplay=1&mute=1&loop=1&playlist=fA_X8D1Tj10&controls=0&showinfo=0&rel=0&iv_load_policy=3" 
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
         <div class="hero-overlay">
-            <p style="letter-spacing: 5px; color: var(--gold);">AUTHENTIC CHINESE HERITAGE</p>
-            <h2>Vibrant Heritage.<br>Liquid Jade.</h2>
+            <p id="hero-subtitle" style="letter-spacing: 5px; color: var(--gold);">AUTHENTIC CHINESE HERITAGE</p>
+            <h2 id="hero-title">Vibrant Heritage.<br>Liquid Jade.</h2>
             <a href="#ceremony" class="btn-gold" style="display:inline-block; margin-top:30px; padding:20px 50px; background:var(--gold); color:white; text-decoration:none; font-weight:800; letter-spacing:2px; box-shadow:0 10px 20px rgba(212,175,55,0.4);">Explore the Collection</a>
         </div>
     </section>
@@ -143,9 +161,21 @@
                 <div class="product-img" style="background-image: url('https://cbu01.alicdn.com/img/ibank/O1CN01Zv24zs1QPOVvLn54o_!!2215636381968-0-cib.jpg');"></div>
                 <div class="product-info"><h4>Literati Shi Piao</h4><p>Zisha Masterpiece</p></div>
             </div>
-            <div class="product-card" onclick="openModal('longdan')">
-                <div class="product-img" style="background-image: url('https://cbu01.alicdn.com/img/ibank/O1CN01cGEGVI1QPOaV983hb_!!2215636381968-0-cib.jpg');"></div>
-                <div class="product-info"><h4>Original Dragon Egg</h4><p>Zisha Masterpiece</p></div>
+            <div class="product-card" onclick="openModal('fanggu')">
+                <div class="product-img" style="background-image: url('https://s.alicdn.com/@sc04/kf/He6199aa2a0184f009474b3bba779e3a78.jpg_640x640.jpg');"></div>
+                <div class="product-info"><h4>Classical Fang Gu</h4><p>Zisha Masterpiece</p></div>
+            </div>
+            <div class="product-card" onclick="openModal('dezhong')">
+                <div class="product-img" style="background-image: url('https://s.alicdn.com/@sc04/kf/H90d2ad75fe6547d390687c1600c29190h.png_640x640.png');"></div>
+                <div class="product-info"><h4>Master De Zhong</h4><p>Zisha Masterpiece</p></div>
+            </div>
+            <div class="product-card" onclick="openModal('duoqiu')">
+                <div class="product-img" style="background-image: url('https://s.alicdn.com/@sc04/kf/HTB1fj7CXCf2gK0jSZFPq6xsopXae.jpg_640x640.jpg');"></div>
+                <div class="product-info"><h4>Elegant Duo Qiu</h4><p>Zisha Masterpiece</p></div>
+            </div>
+            <div class="product-card" onclick="openModal('hanwa')">
+                <div class="product-img" style="background-image: url('https://s.alicdn.com/@sc04/kf/H2463d9b95bbb41e7834ca50156055efad.jpg_640x640.jpg');"></div>
+                <div class="product-info"><h4>Minimalist Han Wa</h4><p>Zisha Masterpiece</p></div>
             </div>
         </div>
     </section>
@@ -248,14 +278,41 @@
                 audience: "Experienced tea drinkers seeking professional tools.",
                 benefits: "Promotes a smooth, laminar flow that aerates the tea soup."
             },
-            longdan: {
-                title: "Long Dan (Dragon Egg)",
+            fanggu: {
+                title: "Fang Gu (Archaic Drum)",
+                tag: "Craft: Classical Zisha",
+                body: "Inspired by ancient war drums, the Fang Gu shape is a testament to strength and balance. Its wide mouth and body allow tea leaves to expand fully.",
+                craft: "Flattened spherical body with a large, perfectly fitted lid.",
+                brewing: "Excellent for large-leaf Oolongs and Puer teas.",
+                audience: "Collectors who appreciate bold, masculine forms.",
+                benefits: "Enhanced flavor extraction due to the large surface area."
+            },
+            dezhong: {
+                title: "De Zhong (Virtuous Bell)",
+                tag: "Craft: Masterpiece Zisha",
+                body: "Modeled after ancient Chinese bells, the De Zhong embodies dignity and virtue. It is known for its upright, steady, and graceful appearance.",
+                craft: "Tall, cylindrical body with clean lines and a powerful spout.",
+                brewing: "Ideal for Black Tea and aged Puer.",
+                audience: "Those who seek a formal and respectful tea ceremony experience.",
+                benefits: "Exceptional temperature stability for heavy fermentation teas."
+            },
+            duoqiu: {
+                title: "Duo Qiu (Stacked Spheres)",
+                tag: "Craft: Harmonic Zisha",
+                body: "A composition of three overlapping spheres (body, lid, and knob), Duo Qiu represents perfect harmony and mathematical beauty.",
+                craft: "Complex alignment of spherical components for a seamless look.",
+                brewing: "Great for delicate Green and White teas.",
+                audience: "Lovers of minimalist and geometric modern design.",
+                benefits: "Internal convection currents optimize aroma concentration."
+            },
+            hanwa: {
+                title: "Han Wa (Han Dynasty Tile)",
                 tag: "Craft: Minimalist Zisha",
-                body: "One of the most ancient shapes. Its ovoid form represents a dragon's energy waiting to awaken. Simple yet powerful.",
-                craft: "Minimalist two-piece construction, focusing on raw clay texture.",
-                brewing: "Suited for High-mountain Oolong and fast-extraction teas.",
+                body: "Inspired by the roof tiles of the Han Dynasty, this shape is rustic and grounded. Its simplicity belies its deep historical roots.",
+                craft: "Cylindrical body with a unique 'tile' shaped handle and lid.",
+                brewing: "Suited for everyday Gongfu tea practice.",
                 audience: "Minimalists and practitioners of Zen tea ceremonies.",
-                benefits: "Small footprint preserves high-temperature extraction."
+                benefits: "Robust design with easy leaf removal and cleaning."
             },
             // Teas
             dahongpao: {

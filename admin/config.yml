@@ -1,0 +1,48 @@
+backend:
+  name: github
+  repo: chineseteaculture001-cpu/teaware-ritual-site
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - {label: "Product Name", name: "name", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["Teapot", "Cup", "Tray", "Tea", "Accessories"]}
+      - {label: "Price (USD)", name: "price", widget: "number", value_type: "float"}
+      - {label: "Image URL", name: "image", widget: "image"}
+      - {label: "Description", name: "body", widget: "markdown"}
+
+  - name: "blog"
+    label: "Journal/Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "settings"
+    label: "Site Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "content/settings.json"
+        fields:
+          - {label: "Hero Title", name: "hero_title", widget: "string"}
+          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "string"}
+          - {label: "YouTube Video ID", name: "video_id", widget: "string", hint: "e.g. fA_X8D1Tj10"}
+          - {label: "WhatsApp Number", name: "whatsapp", widget: "string"}
+          - {label: "Contact Email", name: "email", widget: "string"}
