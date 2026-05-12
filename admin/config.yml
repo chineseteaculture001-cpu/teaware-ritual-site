@@ -2,7 +2,7 @@ backend:
   name: github
   repo: chineseteaculture001-cpu/teaware-ritual-site
   branch: main
-  base_url: https://thejaderitual.com
+  base_url: https://www.thejaderitual.com
   auth_endpoint: api/auth
 
 media_folder: "assets/images"

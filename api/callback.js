@@ -39,7 +39,10 @@ export default async function handler(req, res) {
     (function() {
       function recieveMessage(e) {
         console.log("recieveMessage %o", e);
-        if (e.origin !== window.location.origin) return;
+        // Accept messages from the same domain (with or without www)
+        const isSameDomain = e.origin.replace('www.', '') === window.location.origin.replace('www.', '');
+        if (!isSameDomain) return;
+
         window.opener.postMessage(
           'authorization:github:success:${JSON.stringify({
             token: data.access_token,
@@ -47,6 +50,11 @@ export default async function handler(req, res) {
           })}',
           e.origin
         );
+        
+        // Close the popup after a short delay to allow message to be processed
+        setTimeout(() => {
+          window.close();
+        }, 1000);
       }
       window.addEventListener("message", recieveMessage, false);
       window.opener.postMessage("authorizing:github", "*");
