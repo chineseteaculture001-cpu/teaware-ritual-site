@@ -35,36 +35,47 @@ export default async function handler(req, res) {
   <title>Authorizing...</title>
 </head>
 <body>
+  <div id="status" style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+    Authenticating with GitHub...
+  </div>
   <script>
     (function() {
-      const tokenData = ${JSON.stringify({
-        token: data.access_token,
-        provider: 'github',
-      })};
-      const successMessage = 'authorization:github:success:' + JSON.stringify(tokenData);
-      
-      function sendToOpener(message) {
-        if (window.opener) {
-          window.opener.postMessage(message, "*");
+      const status = document.getElementById('status');
+      try {
+        const tokenData = ${JSON.stringify({
+          token: data.access_token,
+          provider: 'github',
+        })};
+        const successMessage = 'authorization:github:success:' + JSON.stringify(tokenData);
+        
+        function sendToOpener(message) {
+          if (window.opener) {
+            window.opener.postMessage(message, "*");
+            return true;
+          }
+          return false;
         }
+
+        console.log("Sending handshake...");
+        if (sendToOpener("authorizing:github")) {
+          status.innerText = "Handshake sent, transferring token...";
+          sendToOpener(successMessage);
+          
+          window.addEventListener("message", function(e) {
+            console.log("Received handshake response:", e.data);
+            sendToOpener(successMessage);
+          }, false);
+
+          setTimeout(function() {
+            status.innerText = "Success! Closing window...";
+            window.close();
+          }, 1500);
+        } else {
+          status.innerHTML = '<span style="color: red;">Error: Opener window lost. Please try again from the admin panel.</span>';
+        }
+      } catch (err) {
+        status.innerHTML = '<span style="color: red;">Error: ' + err.message + '</span>';
       }
-
-      // 1. Initial handshake
-      sendToOpener("authorizing:github");
-
-      // 2. Send success message immediately (some versions don't send a response back)
-      sendToOpener(successMessage);
-
-      // 3. Also handle the responsive handshake if needed
-      window.addEventListener("message", function(e) {
-        console.log("Received message from opener:", e.data);
-        sendToOpener(successMessage);
-      }, false);
-
-      // 4. Close after a delay
-      setTimeout(function() {
-        window.close();
-      }, 2000);
     })();
   </script>
 </body>
