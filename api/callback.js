@@ -37,27 +37,34 @@ export default async function handler(req, res) {
 <body>
   <script>
     (function() {
-      function recieveMessage(e) {
-        console.log("recieveMessage %o", e);
-        // Accept messages from the same domain (with or without www)
-        const isSameDomain = e.origin.replace('www.', '') === window.location.origin.replace('www.', '');
-        if (!isSameDomain) return;
-
-        window.opener.postMessage(
-          'authorization:github:success:${JSON.stringify({
-            token: data.access_token,
-            provider: 'github',
-          })}',
-          e.origin
-        );
-        
-        // Close the popup after a short delay to allow message to be processed
-        setTimeout(() => {
-          window.close();
-        }, 1000);
+      const tokenData = ${JSON.stringify({
+        token: data.access_token,
+        provider: 'github',
+      })};
+      const successMessage = 'authorization:github:success:' + JSON.stringify(tokenData);
+      
+      function sendToOpener(message) {
+        if (window.opener) {
+          window.opener.postMessage(message, "*");
+        }
       }
-      window.addEventListener("message", recieveMessage, false);
-      window.opener.postMessage("authorizing:github", "*");
+
+      // 1. Initial handshake
+      sendToOpener("authorizing:github");
+
+      // 2. Send success message immediately (some versions don't send a response back)
+      sendToOpener(successMessage);
+
+      // 3. Also handle the responsive handshake if needed
+      window.addEventListener("message", function(e) {
+        console.log("Received message from opener:", e.data);
+        sendToOpener(successMessage);
+      }, false);
+
+      // 4. Close after a delay
+      setTimeout(function() {
+        window.close();
+      }, 2000);
     })();
   </script>
 </body>
