@@ -10,5 +10,35 @@
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.registerPreviewStyle("/style.css"); // If you have a global style.css
+
+    const ProductPreview = createClass({
+      render: function() {
+        const entry = this.props.entry;
+        const image = entry.getIn(['data', 'image']);
+        return h('div', {style: {padding: '20px', background: '#fffdfa'}},
+          h('div', {className: 'product-card', style: {maxWidth: '300px', margin: '0 auto', textAlign: 'center', border: '1px solid #eee'}},
+            h('div', {
+              className: 'product-img',
+              style: {
+                height: '350px',
+                backgroundImage: 'url(' + this.props.getAsset(image) + ')',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }
+            }),
+            h('div', {className: 'product-info', style: {padding: '20px'}},
+              h('h4', {style: {fontFamily: 'serif', fontSize: '1.4rem', color: '#004b23'}}, entry.getIn(['data', 'name'])),
+              h('p', {style: {fontSize: '0.85rem', color: '#888'}}, entry.getIn(['data', 'category'])),
+              h('div', {style: {marginTop: '10px', fontSize: '0.9rem'}}, this.props.widgetFor('body'))
+            )
+          )
+        );
+      }
+    });
+
+    CMS.registerPreviewTemplate("products", ProductPreview);
+  </script>
 </body>
 </html>
