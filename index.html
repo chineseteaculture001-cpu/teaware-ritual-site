@@ -65,8 +65,9 @@
         .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px; }
         .product-card { background: white; border: 1px solid #eee; transition: 0.5s; cursor: pointer; position: relative; overflow: hidden; }
         .product-card:hover { transform: translateY(-15px); border-color: var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .product-img { width: 100%; height: 400px; background-size: cover; background-position: center; transition: 0.8s; }
-        .product-card:hover .product-img { transform: scale(1.1); }
+        .product-img { width: 100%; height: 400px; overflow: hidden; position: relative; }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
+        .product-card:hover .product-img img { transform: scale(1.1); }
         .product-info { padding: 30px; text-align: center; background: white; position: relative; z-index: 2; }
         .product-info h4 { font-family: var(--font-title); font-size: 1.4rem; color: var(--emerald); margin-bottom: 10px; }
         .product-info p { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
@@ -79,9 +80,11 @@
         }
         .modal-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 0; }
         .modal-gallery { background: #f0f0f0; padding: 20px; display: flex; flex-direction: column; gap: 15px; }
-        .main-preview { width: 100%; aspect-ratio: 1/1; background-size: cover; background-position: center; border: 1px solid #ddd; }
+        .main-preview { width: 100%; aspect-ratio: 1/1; border: 1px solid #ddd; overflow: hidden; }
+        .main-preview img { width: 100%; height: 100%; object-fit: cover; }
         .thumbnail-list { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; }
-        .thumb-item { width: 70px; height: 70px; background-size: cover; background-position: center; cursor: pointer; border: 2px solid transparent; opacity: 0.7; transition: 0.3s; }
+        .thumb-item { width: 70px; height: 70px; cursor: pointer; border: 2px solid transparent; opacity: 0.7; transition: 0.3s; overflow: hidden; }
+        .thumb-item img { width: 100%; height: 100%; object-fit: cover; }
         .thumb-item:hover, .thumb-item.active { border-color: var(--gold); opacity: 1; }
         .modal-details { padding: 40px; }
         .close-modal { position: absolute; top: 20px; right: 25px; font-size: 2rem; cursor: pointer; color: var(--emerald); z-index: 10; }
@@ -269,7 +272,9 @@
                         card.onclick = () => openModal(index);
                         
                         card.innerHTML = `
-                            <div class="product-img" style="background-image: url('${product.image}');"></div>
+                            <div class="product-img">
+                                <img src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.src='https://sc04.alicdn.com/kf/H89ace38d4caf42c59826f029a4e18545s.jpg_640x640.jpg'">
+                            </div>
                             <div class="product-info">
                                 <h4>${product.name}</h4>
                                 <p>${product.category.replace('Tea - ', '')}</p>
@@ -299,17 +304,21 @@
 
         function openModal(index) {
             const product = allProducts[index];
+            console.log("Opening modal for:", product.name, "Variants:", product.variants);
             const gallery = product.gallery || [];
             const images = [product.image, ...gallery.map(g => g.image)];
 
             const galleryHtml = `
                 <div class="modal-gallery">
-                    <div id="main-preview" class="main-preview" style="background-image: url('${images[0]}');"></div>
+                    <div id="main-preview" class="main-preview">
+                        <img src="${images[0]}" alt="${product.name}">
+                    </div>
                     <div class="thumbnail-list">
                         ${images.map((img, i) => `
                             <div class="thumb-item ${i === 0 ? 'active' : ''}" 
-                                 style="background-image: url('${img}');" 
-                                 onclick="changePreview(this, '${img}')"></div>
+                                 onclick="changePreview(this, '${img}')">
+                                 <img src="${img}" alt="thumbnail">
+                            </div>
                         `).join('')}
                     </div>
                 </div>
@@ -352,7 +361,7 @@
         }
 
         function changePreview(el, url) {
-            document.getElementById('main-preview').style.backgroundImage = `url('${url}')`;
+            document.querySelector('#main-preview img').src = url;
             document.querySelectorAll('.thumb-item').forEach(item => item.classList.remove('active'));
             el.classList.add('active');
         }
