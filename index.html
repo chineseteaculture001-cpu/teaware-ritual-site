@@ -322,6 +322,27 @@
                         <span class="clay-tag">${product.category}</span>
                         <h3>${product.name}</h3>
                         <div style="font-size: 1.1rem; color: #444; margin-bottom: 25px;">${product.body || ''}</div>
+                        
+                        ${product.variants && product.variants.length > 0 ? `
+                            <div style="margin-bottom: 30px;">
+                                <h5 style="color: var(--gold); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Specifications</h5>
+                                <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                                    <tr style="border-bottom: 1px solid #eee; text-align: left;">
+                                        <th style="padding: 8px 0;">Model/Size</th>
+                                        <th style="padding: 8px 0;">Weight</th>
+                                        <th style="padding: 8px 0;">Dimensions</th>
+                                    </tr>
+                                    ${product.variants.map(v => `
+                                        <tr style="border-bottom: 1px solid #f9f9f9;">
+                                            <td style="padding: 8px 0;">${v.name}</td>
+                                            <td style="padding: 8px 0;">${v.weight || '-'}</td>
+                                            <td style="padding: 8px 0;">${v.dimensions || '-'}</td>
+                                        </tr>
+                                    `).join('')}
+                                </table>
+                            </div>
+                        ` : ''}
+
                         <h4 style="color: var(--gold); margin-bottom: 10px;">Price: ${product.price > 0 ? '$' + product.price : 'Inquire for Price'}</h4>
                         <a href="https://wa.me/8618663543398" class="btn-gold" style="display:inline-block; padding:15px 40px; text-decoration:none; color:white; background:var(--gold);">Inquire via WhatsApp</a>
                     </div>

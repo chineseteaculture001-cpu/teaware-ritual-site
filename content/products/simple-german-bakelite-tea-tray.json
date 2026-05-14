@@ -1,13 +1,12 @@
 {
-  "name": "Simple German Bakelite Tea Tray",
+  "name": "Professional German Bakelite Tray",
   "category": "Tea Tray",
   "marketing_tip": "High-density German material for professional Gongfu sessions.",
   "price": 0,
-  "image": "https://cbu01.alicdn.com/img/ibank/18917483266_1998279968.jpg",
+  "image": "https://s.alicdn.com/@sc04/kf/H89ace38d4caf42c59826f029a4e18545s.jpg_640x640.jpg",
   "gallery": [
-    {"image": "https://cbu01.alicdn.com/img/ibank/18917483266_1998279968.jpg"},
-    {"image": "https://cbu01.alicdn.com/img/ibank/18355135855_1998279968.jpg"},
-    {"image": "https://cbu01.alicdn.com/img/ibank/18431027824_1998279968.jpg"}
+    {"image": "https://s.alicdn.com/@sc04/kf/H89ace38d4caf42c59826f029a4e18545s.jpg_640x640.jpg"},
+    {"image": "https://s.alicdn.com/@sc04/kf/Hd031755df9df4f2aafd9cd94723882cdR.jpg_640x640.jpg"}
   ],
   "variants": [
     {"name": "40x20x5cm", "weight": "4000g", "dimensions": "47x27x11.5cm"},
