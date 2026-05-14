@@ -17,8 +17,17 @@ collections:
     format: "json"
     fields:
       - {label: "Product Name", name: "name", widget: "string"}
-      - {label: "Category", name: "category", widget: "select", options: ["Teapot", "Cup", "Tray", "Tea", "Accessories"]}
-      - {label: "Price (USD)", name: "price", widget: "number", value_type: "float"}
+      - label: "Category (Determines Page Section)"
+        name: "category"
+        widget: "select"
+        options: 
+          - {label: "Gongfu Ceremony Set", value: "Ceremony Set"}
+          - {label: "Yixing Zisha Teapot", value: "Teapot"}
+          - {label: "Tea - Rock & Oolong", value: "Tea - Rock & Oolong"}
+          - {label: "Tea - Green & White", value: "Tea - Green & White"}
+          - {label: "Tea - Scented", value: "Tea - Scented"}
+          - {label: "Tea - Black & Puer", value: "Tea - Black & Puer"}
+      - {label: "Price (USD)", name: "price", widget: "number", value_type: "float", default: 0}
       - {label: "Image URL", name: "image", widget: "image"}
       - {label: "Description", name: "body", widget: "markdown"}
 

@@ -155,7 +155,24 @@
             <p>Curated from the most prestigious mountains of China</p>
             <div class="line"></div>
         </div>
-        <div class="product-grid" id="tea-grid">
+
+        <h3 style="margin-bottom: 30px; color: var(--jade); font-family: var(--font-title); font-size: 2rem;">Rock & Oolong Collection</h3>
+        <div class="product-grid" id="tea-rock-grid" style="margin-bottom: 80px;">
+            <!-- Dynamic content -->
+        </div>
+
+        <h3 style="margin-bottom: 30px; color: var(--jade); font-family: var(--font-title); font-size: 2rem;">Green & White Collection</h3>
+        <div class="product-grid" id="tea-green-grid" style="margin-bottom: 80px;">
+            <!-- Dynamic content -->
+        </div>
+
+        <h3 style="margin-bottom: 30px; color: var(--jade); font-family: var(--font-title); font-size: 2rem;">Scented & Specialty Collection</h3>
+        <div class="product-grid" id="tea-scented-grid" style="margin-bottom: 80px;">
+            <!-- Dynamic content -->
+        </div>
+
+        <h3 style="margin-bottom: 30px; color: var(--jade); font-family: var(--font-title); font-size: 2rem;">Black & Puer Collection</h3>
+        <div class="product-grid" id="tea-black-grid">
             <!-- Dynamic content -->
         </div>
     </section>
@@ -191,38 +208,44 @@
     <script>
         async function loadProducts() {
             try {
-                // In a real production environment, you would use a build-time list of files.
-                // For this implementation, we will fetch the product files we created.
                 const productFiles = [
-                    'imperial-white-porcelain.json',
-                    'ru-kiln-celadon-set.json',
-                    'handmade-xi-shi.json',
-                    'wuyi-dahongpao.json'
+                    'imperial-white-porcelain.json', 'ru-kiln-celadon-set.json', 'longquan-celadon-set.json', 'zisha-12-piece-master.json', 'travel-gongfu-set.json',
+                    'handmade-xi-shi.json', 'literati-shi-piao.json', 'classical-fang-gu.json', 'master-de-zhong.json', 'elegant-duo-qiu.json', 'minimalist-han-wa.json', 'dragon-egg.json', 'master-pan-hu.json',
+                    'wuyi-dahongpao.json', 'wuyi-rougui.json', 'roasted-tieguanyin.json',
+                    'west-lake-longjing.json', 'biluochun.json', 'silver-needle.json',
+                    'jasmine-dragon-pearls.json',
+                    'yunnan-dianhong.json', 'ancient-tree-palace-ripe.json', 'xiaoqinggan.json'
                 ];
 
                 const products = await Promise.all(
-                    productFiles.map(file => fetch(`/content/products/${file}`).then(res => res.json()))
+                    productFiles.map(file => fetch(`/content/products/${file}`).then(res => res.ok ? res.json() : null))
                 );
 
                 const grids = {
                     'Ceremony Set': document.getElementById('ceremony-grid'),
                     'Teapot': document.getElementById('zisha-grid'),
-                    'Tea': document.getElementById('tea-grid')
+                    'Tea - Rock & Oolong': document.getElementById('tea-rock-grid'),
+                    'Tea - Green & White': document.getElementById('tea-green-grid'),
+                    'Tea - Scented': document.getElementById('tea-scented-grid'),
+                    'Tea - Black & Puer': document.getElementById('tea-black-grid')
                 };
 
-                products.forEach(product => {
+                products.filter(p => p).forEach(product => {
                     const grid = grids[product.category];
                     if (grid) {
                         const card = document.createElement('div');
                         card.className = 'product-card';
+                        // Add click for modal if ID is available
+                        const slug = product.name.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+                        card.onclick = () => openModal(slug);
+                        
                         card.innerHTML = `
                             <div class="product-img" style="background-image: url('${product.image}');"></div>
                             <div class="product-info">
                                 <h4>${product.name}</h4>
-                                <p>${product.category}</p>
+                                <p>${product.category.replace('Tea - ', '')}</p>
                             </div>
                         `;
-                        // Handle modal if applicable (slug matching)
                         grid.appendChild(card);
                     }
                 });
