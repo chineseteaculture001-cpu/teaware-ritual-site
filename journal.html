@@ -54,36 +54,8 @@
             <p>Dispatches from the tea mountains and master kilns of China.</p>
         </div>
 
-        <div class="blog-list">
-            <article class="blog-post">
-                <div class="blog-img" style="background-image: url('https://s.alicdn.com/@sc04/kf/H78637402ca99400592268b76c5565a90T.jpg_640x640.jpg');"></div>
-                <div class="blog-content">
-                    <span class="date">May 15, 2026</span>
-                    <h2>How to 'Season' Your First Zisha Teapot</h2>
-                    <p>Learn the sacred steps of awakening a new purple sand clay vessel before its first brew. From boiling to leaf-infusion...</p>
-                    <a href="#" class="read-more">Continue Reading</a>
-                </div>
-            </article>
-
-            <article class="blog-post">
-                <div class="blog-img" style="background-image: url('https://s.alicdn.com/@sc04/kf/H11258bb95fea49ffb21bf4981db3e4ccX.jpg_640x640.jpg');"></div>
-                <div class="blog-content">
-                    <span class="date">April 28, 2026</span>
-                    <h2>The Spring 2026 Longjing Harvest Report</h2>
-                    <p>Our scouts in the West Lake region report a cooler spring, resulting in smaller, more concentrated buds with intense nutty notes...</p>
-                    <a href="#" class="read-more">Continue Reading</a>
-                </div>
-            </article>
-
-            <article class="blog-post">
-                <div class="blog-img" style="background-image: url('https://s.alicdn.com/@sc04/kf/HTB1Eu7tSpXXXXaUXVXXq6xXFXXXY.jpg_640x640.jpg');"></div>
-                <div class="blog-content">
-                    <span class="date">April 10, 2026</span>
-                    <h2>Porcelain vs. Zisha: Which to Choose?</h2>
-                    <p>Understanding the thermal properties of Dehua white porcelain and why it remains the best choice for tasting the true aroma of Green tea...</p>
-                    <a href="#" class="read-more">Continue Reading</a>
-                </div>
-            </article>
+        <div class="blog-list" id="blog-list">
+            <!-- Dynamic content -->
         </div>
     </div>
 
@@ -92,5 +64,65 @@
         <p>Part of Shandong Mingzhi Education Group</p>
         <p class="copy">&copy; 2026 China Tea Culture Communication. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function parseMarkdown(md) {
+            const frontmatterMatch = md.match(/^---\n([\s\S]+?)\n---\n([\s\S]*)$/);
+            if (!frontmatterMatch) return null;
+            
+            const yaml = frontmatterMatch[1];
+            const content = frontmatterMatch[2];
+            
+            const meta = {};
+            yaml.split('\n').forEach(line => {
+                const [key, ...val] = line.split(':');
+                if (key && val) meta[key.trim()] = val.join(':').trim().replace(/^"(.*)"$/, '$1');
+            });
+            
+            return { meta, content: content.substring(0, 150) + '...' };
+        }
+
+        async function loadBlogs() {
+            const blogFiles = [
+                '2026-05-15-how-to-season-your-first-zisha-teapot.md',
+                '2026-04-28-the-spring-2026-longjing-harvest-report.md',
+                '2026-04-10-porcelain-vs-zisha-which-to-choose.md'
+            ];
+
+            const blogList = document.getElementById('blog-list');
+            
+            for (const file of blogFiles) {
+                try {
+                    const res = await fetch(`/content/blog/${file}`);
+                    if (!res.ok) continue;
+                    const text = await res.text();
+                    const post = parseMarkdown(text);
+                    
+                    if (post) {
+                        const date = new Date(post.meta.date).toLocaleDateString('en-US', {
+                            year: 'numeric', month: 'long', day: 'numeric'
+                        });
+                        
+                        const article = document.createElement('article');
+                        article.className = 'blog-post';
+                        article.innerHTML = `
+                            <div class="blog-img" style="background-image: url('${post.meta.image}');"></div>
+                            <div class="blog-content">
+                                <span class="date">${date}</span>
+                                <h2>${post.meta.title}</h2>
+                                <p>${post.content}</p>
+                                <a href="#" class="read-more">Continue Reading</a>
+                            </div>
+                        `;
+                        blogList.appendChild(article);
+                    }
+                } catch (e) {
+                    console.error("Error loading blog:", file, e);
+                }
+            }
+        }
+
+        loadBlogs();
+    </script>
 </body>
 </html>
