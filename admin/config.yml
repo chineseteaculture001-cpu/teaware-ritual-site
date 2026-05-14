@@ -22,6 +22,7 @@ collections:
         widget: "select"
         options: 
           - {label: "Gongfu Ceremony Set", value: "Ceremony Set"}
+          - {label: "Tea Tray / Accessories", value: "Tea Tray"}
           - {label: "Yixing Zisha Teapot", value: "Teapot"}
           - {label: "Tea - Rock & Oolong", value: "Tea - Rock & Oolong"}
           - {label: "Tea - Green & White", value: "Tea - Green & White"}

@@ -109,7 +109,7 @@
     <header>
 
         <div class="brand-logo"><div class="seal">WISE</div><h1>The Jade Ritual</h1></div>
-        <nav><ul><li><a href="#ceremony">Ceremony</a></li><li><a href="#zisha">Zisha</a></li><li><a href="#tea">Tea</a></li><li><a href="about.html">About</a></li><li><a href="heritage.html">Heritage</a></li><li><a href="journal.html">Journal</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+        <nav><ul><li><a href="#ceremony">Ceremony</a></li><li><a href="#trays">Trays</a></li><li><a href="#zisha">Zisha</a></li><li><a href="#tea">Tea</a></li><li><a href="about.html">About</a></li><li><a href="heritage.html">Heritage</a></li><li><a href="journal.html">Journal</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
     </header>
 
     <section class="hero">
@@ -132,6 +132,18 @@
             <div class="line"></div>
         </div>
         <div class="product-grid" id="ceremony-grid">
+            <!-- Dynamic content -->
+        </div>
+    </section>
+
+    <!-- Tea Tray & Accessories -->
+    <section id="trays" style="background: #fdfaf0;">
+        <div class="section-header">
+            <h2>Tea Trays & Tools</h2>
+            <p>The stage for your tea ritual: Bamboo, Stone, and Wood</p>
+            <div class="line"></div>
+        </div>
+        <div class="product-grid" id="tray-grid">
             <!-- Dynamic content -->
         </div>
     </section>
@@ -177,6 +189,19 @@
         </div>
     </section>
 
+    <!-- Video Experience Section -->
+    <section id="ritual-video" style="background: var(--ink); color: white;">
+        <div class="section-header">
+            <h2 style="color: var(--gold);">Tea Ritual Experience</h2>
+            <p style="color: #aaa;">Immerse yourself in the tranquility of Gongfu Tea</p>
+            <div class="line"></div>
+        </div>
+        <div style="max-width: 1000px; margin: 0 auto; aspect-ratio: 16/9; box-shadow: 0 30px 60px rgba(0,0,0,0.5); border: 1px solid var(--gold);">
+            <iframe id="main-ritual-video" width="100%" height="100%" src="https://www.youtube.com/embed/fA_X8D1Tj10" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
     <!-- Modal for History/Guide -->
     <div id="guideModal" class="modal">
         <div class="modal-content">
@@ -210,6 +235,7 @@
             try {
                 const productFiles = [
                     'imperial-white-porcelain.json', 'ru-kiln-celadon-set.json', 'longquan-celadon-set.json', 'zisha-12-piece-master.json', 'travel-gongfu-set.json',
+                    'bamboo-ritual-tray.json',
                     'handmade-xi-shi.json', 'literati-shi-piao.json', 'classical-fang-gu.json', 'master-de-zhong.json', 'elegant-duo-qiu.json', 'minimalist-han-wa.json', 'dragon-egg.json', 'master-pan-hu.json',
                     'wuyi-dahongpao.json', 'wuyi-rougui.json', 'roasted-tieguanyin.json',
                     'west-lake-longjing.json', 'biluochun.json', 'silver-needle.json',
@@ -223,12 +249,25 @@
 
                 const grids = {
                     'Ceremony Set': document.getElementById('ceremony-grid'),
+                    'Tea Tray': document.getElementById('tray-grid'),
                     'Teapot': document.getElementById('zisha-grid'),
                     'Tea - Rock & Oolong': document.getElementById('tea-rock-grid'),
                     'Tea - Green & White': document.getElementById('tea-green-grid'),
                     'Tea - Scented': document.getElementById('tea-scented-grid'),
                     'Tea - Black & Puer': document.getElementById('tea-black-grid')
                 };
+
+                // Load Settings
+                const settings = await fetch('/content/settings.json').then(res => res.json());
+                if (settings) {
+                    document.getElementById('hero-title').innerText = settings.hero_title;
+                    document.getElementById('hero-subtitle').innerText = settings.hero_subtitle;
+                    if (settings.video_id) {
+                        const videoUrl = `https://www.youtube.com/embed/${settings.video_id}`;
+                        document.querySelector('.hero-video-container iframe').src = `${videoUrl}?autoplay=1&mute=1&loop=1&playlist=${settings.video_id}&controls=0&showinfo=0&rel=0&iv_load_policy=3`;
+                        document.getElementById('main-ritual-video').src = videoUrl;
+                    }
+                }
 
                 products.filter(p => p).forEach(product => {
                     const grid = grids[product.category];
