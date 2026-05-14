@@ -29,7 +29,12 @@ collections:
           - {label: "Tea - Scented", value: "Tea - Scented"}
           - {label: "Tea - Black & Puer", value: "Tea - Black & Puer"}
       - {label: "Price (USD)", name: "price", widget: "number", value_type: "float", default: 0}
-      - {label: "Image URL", name: "image", widget: "image"}
+      - {label: "Main Image", name: "image", widget: "image"}
+      - label: "Product Gallery"
+        name: "gallery"
+        widget: "list"
+        summary: "{{fields.image}}"
+        field: {label: "Image", name: "image", widget: "image"}
       - {label: "Description", name: "body", widget: "markdown"}
 
   - name: "blog"

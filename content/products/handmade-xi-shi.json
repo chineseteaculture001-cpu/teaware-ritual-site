@@ -3,5 +3,9 @@
   "category": "Teapot",
   "price": 0,
   "image": "https://s.alicdn.com/@sc04/kf/H78637402ca99400592268b76c5565a90T.jpg_640x640.jpg",
-  "body": "Named after one of China's Four Beauties, the Xi Shi teapot features a spherical body and an elegant, short spout. Its gentle curves represent femininity and harmony."
+  "gallery": [
+    {"image": "https://s.alicdn.com/@sc04/kf/HTB1M1yLVMTqK1RjSZPhq6xfOFXaW.jpg_640x640.jpg"},
+    {"image": "https://sc02.alicdn.com/kf/A5b4e13524dbf4c3fba1cf45353f53ffbk.png"}
+  ],
+  "body": "Named after one of China's Four Beauties..."
 }
