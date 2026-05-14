@@ -1,0 +1,18 @@
+{
+  "name": "Simple German Bakelite Tea Tray",
+  "category": "Tea Tray",
+  "marketing_tip": "High-density German material for professional Gongfu sessions.",
+  "price": 0,
+  "image": "https://cbu01.alicdn.com/img/ibank/18917483266_1998279968.jpg",
+  "gallery": [
+    {"image": "https://cbu01.alicdn.com/img/ibank/18917483266_1998279968.jpg"},
+    {"image": "https://cbu01.alicdn.com/img/ibank/18355135855_1998279968.jpg"},
+    {"image": "https://cbu01.alicdn.com/img/ibank/18431027824_1998279968.jpg"}
+  ],
+  "variants": [
+    {"name": "40x20x5cm", "weight": "4000g", "dimensions": "47x27x11.5cm"},
+    {"name": "50x30x5cm", "weight": "7000g", "dimensions": "57x37x13cm"},
+    {"name": "100x50x5cm", "weight": "20000g", "dimensions": "107.5x57.5x14cm"}
+  ],
+  "body": "Expertly crafted using high-density phenolic resin (Bakelite), this tray mimics the warmth of wood while offering incredible durability. It resists warping and cracking even with heavy daily water exposure."
+}

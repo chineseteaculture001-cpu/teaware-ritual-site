@@ -1,0 +1,15 @@
+{
+  "name": "Round Bakelite Zen Tray",
+  "category": "Tea Tray",
+  "marketing_tip": "A symbol of completeness and Zen for intimate tea gatherings.",
+  "price": 0,
+  "image": "https://cbu01.alicdn.com/img/ibank/20553338031_1998279968.jpg",
+  "gallery": [
+    {"image": "https://cbu01.alicdn.com/img/ibank/20553338031_1998279968.jpg"},
+    {"image": "https://cbu01.alicdn.com/img/ibank/20398227539_1998279968.jpg"}
+  ],
+  "variants": [
+    {"name": "Diameter 40cm", "weight": "6000g", "dimensions": "47x47x12.5cm"}
+  ],
+  "body": "The circular shape represents 'Yuan Man' (Completeness). Perfect for dry-pour style tea sessions in a compact setting."
+}

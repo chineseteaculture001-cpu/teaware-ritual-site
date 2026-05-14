@@ -1,0 +1,16 @@
+{
+  "name": "Integrated Square Bakelite Tray",
+  "category": "Tea Tray",
+  "marketing_tip": "Large capacity and seamless design for an elegant tea sea.",
+  "price": 0,
+  "image": "https://cbu01.alicdn.com/img/ibank/18842524532_1998279968.jpg",
+  "gallery": [
+    {"image": "https://cbu01.alicdn.com/img/ibank/18842524532_1998279968.jpg"},
+    {"image": "https://cbu01.alicdn.com/img/ibank/17942239965_1998279968.jpg"}
+  ],
+  "variants": [
+    {"name": "40x20x5", "weight": "4000g", "dimensions": "47x27x11.5cm"},
+    {"name": "100x50x5", "weight": "21000g", "dimensions": "107.5x57.5x14cm"}
+  ],
+  "body": "A masterfully integrated square tea sea. The slight inward slope ensures perfect drainage, keeping your ritual space dry and focused."
+}

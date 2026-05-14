@@ -17,6 +17,7 @@ collections:
     format: "json"
     fields:
       - {label: "Product Name", name: "name", widget: "string"}
+      - {label: "Marketing / Ritual Tip", name: "marketing_tip", widget: "string", hint: "A short tip to engage the customer (e.g., 'Perfect for Oolong rituals')"}
       - label: "Category (Determines Page Section)"
         name: "category"
         widget: "select"
@@ -35,6 +36,13 @@ collections:
         widget: "list"
         summary: "{{fields.image}}"
         field: {label: "Image", name: "image", widget: "image"}
+      - label: "Specifications / Variants"
+        name: "variants"
+        widget: "list"
+        fields:
+          - {label: "Name (e.g. 40x20cm)", name: "name", widget: "string"}
+          - {label: "Weight", name: "weight", widget: "string"}
+          - {label: "Dimensions", name: "dimensions", widget: "string"}
       - {label: "Description", name: "body", widget: "markdown"}
 
   - name: "blog"
