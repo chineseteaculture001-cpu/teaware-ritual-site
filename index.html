@@ -54,26 +54,24 @@
         }
         .hero-overlay { max-width: 900px; padding: 50px; background: rgba(0, 75, 35, 0.4); backdrop-filter: blur(5px); border: 2px solid var(--gold); z-index: 1; }
         .hero h2 { font-size: 4.5rem; margin-bottom: 20px; font-family: var(--font-title); }
+        .hero p { font-size: 1.2rem; letter-spacing: 3px; margin-bottom: 40px; }
 
         section { padding: 100px 8%; }
-        .section-header { text-align: center; margin-bottom: 70px; }
-        .section-header h2 { font-size: 3rem; color: var(--emerald); }
-        .section-header .line { width: 80px; height: 3px; background: var(--gold); margin: 20px auto; }
+        .section-header { text-align: center; margin-bottom: 80px; }
+        .section-header h2 { font-family: var(--font-title); font-size: 3.5rem; color: var(--emerald); margin-bottom: 15px; }
+        .section-header p { text-transform: uppercase; letter-spacing: 5px; color: var(--gold); font-size: 0.9rem; }
+        .section-header .line { width: 80px; height: 2px; background: var(--gold); margin: 30px auto; }
 
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .product-card { background: white; border: 1px solid #eee; overflow: hidden; transition: 0.5s; text-align: center; cursor: pointer; }
-        .product-card:hover { transform: translateY(-15px); border-color: var(--gold); box-shadow: 0 20px 40px rgba(0,75,35,0.1); }
-        .product-img { height: 350px; background-size: cover; background-position: center; }
-        .product-info { padding: 30px; }
-        .product-info h4 { font-size: 1.4rem; color: var(--emerald); margin-bottom: 10px; font-family: var(--font-title); }
-        .product-info p { font-size: 0.85rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
-        .product-info .sub-text { font-size: 0.9rem; color: #666; font-style: italic; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px; }
+        .product-card { background: white; border: 1px solid #eee; transition: 0.5s; cursor: pointer; position: relative; overflow: hidden; }
+        .product-card:hover { transform: translateY(-15px); border-color: var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .product-img { width: 100%; height: 400px; background-size: cover; background-position: center; transition: 0.8s; }
+        .product-card:hover .product-img { transform: scale(1.1); }
+        .product-info { padding: 30px; text-align: center; background: white; position: relative; z-index: 2; }
+        .product-info h4 { font-family: var(--font-title); font-size: 1.4rem; color: var(--emerald); margin-bottom: 10px; }
+        .product-info p { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Modal Structure for History */
-        .modal {
-            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9); z-index: 5000; align-items: center; justify-content: center; padding: 20px;
-        }
+        #guideModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10,10,10,0.95); z-index: 3000; align-items: center; justify-content: center; padding: 20px; }
         .modal-content {
             background: var(--silk); max-width: 1000px; width: 100%; padding: 0;
             border-top: 10px solid var(--emerald); position: relative; max-height: 90vh; overflow-y: auto;
@@ -86,47 +84,44 @@
         .thumb-item { width: 70px; height: 70px; background-size: cover; background-position: center; cursor: pointer; border: 2px solid transparent; opacity: 0.7; transition: 0.3s; }
         .thumb-item:hover, .thumb-item.active { border-color: var(--gold); opacity: 1; }
         .modal-details { padding: 40px; }
+        .close-modal { position: absolute; top: 20px; right: 25px; font-size: 2rem; cursor: pointer; color: var(--emerald); z-index: 10; }
+        .clay-tag { display: inline-block; padding: 5px 15px; background: var(--gold); color: white; border-radius: 20px; font-size: 0.8rem; margin-bottom: 20px; }
 
         @media (max-width: 768px) {
             .modal-layout { grid-template-columns: 1fr; }
         }
 
         footer { background: var(--ink); color: white; padding: 100px 8% 50px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 80px; }
-        .footer-brand h2 { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
-
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; border-bottom: 1px solid #333; padding-bottom: 50px; }
+        .footer-brand h2 { font-family: var(--font-deco); color: var(--gold); margin-bottom: 20px; }
+        .footer-links h4 { color: var(--gold); margin-bottom: 25px; letter-spacing: 2px; }
         .footer-links ul { list-style: none; }
-        .footer-links li { margin-bottom: 10px; }
-        .footer-links a { color: white; text-decoration: none; opacity: 0.8; transition: 0.3s; }
-        .footer-links a:hover { opacity: 1; text-decoration: underline; }
+        .footer-links li { margin-bottom: 15px; }
+        .footer-links a { color: #aaa; text-decoration: none; transition: 0.3s; }
+        .footer-links a:hover { color: white; }
 
-        .whatsapp-fixed { position: fixed; bottom: 40px; right: 40px; background: #25d366; color: white; padding: 18px 35px; border-radius: 50px; font-weight: 800; text-decoration: none; z-index: 3000; transition: 0.4s; }
-
-        @media (max-width: 992px) {
-            .hero h2 { font-size: 3rem; }
-            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-            .modal-body .meta-grid { grid-template-columns: 1fr; }
-        }
+        .whatsapp-fixed { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: 0.3s; }
+        .whatsapp-fixed:hover { transform: scale(1.1); }
     </style>
 </head>
 <body>
-
-    <!-- Last Build: 2026-05-08 -->
     <header>
-
-        <div class="brand-logo"><div class="seal">WISE</div><h1>The Jade Ritual</h1></div>
+        <div class="brand-logo">
+            <div class="seal">Jade</div>
+            <h1>The Jade Ritual</h1>
+        </div>
         <nav><ul><li><a href="#ceremony">Ceremony</a></li><li><a href="#trays">Trays</a></li><li><a href="#zisha">Zisha</a></li><li><a href="#tea">Tea</a></li><li><a href="about.html">About</a></li><li><a href="heritage.html">Heritage</a></li><li><a href="journal.html">Journal</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
     </header>
 
     <section class="hero">
         <div class="hero-video-container">
-            <iframe src="https://www.youtube.com/embed/fA_X8D1Tj10?autoplay=1&mute=1&loop=1&playlist=fA_X8D1Tj10&controls=0&showinfo=0&rel=0&iv_load_policy=3" 
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/fA_X8D1Tj10?autoplay=1&mute=1&loop=1&playlist=fA_X8D1Tj10&controls=0&showinfo=0&rel=0&iv_load_policy=3" frameborder="0"></iframe>
         </div>
         <div class="hero-overlay">
-            <p id="hero-subtitle" style="letter-spacing: 5px; color: var(--gold);">AUTHENTIC CHINESE HERITAGE</p>
-            <h2 id="hero-title">Vibrant Heritage.<br>Liquid Jade.</h2>
-            <a href="#ceremony" class="btn-gold" style="display:inline-block; margin-top:30px; padding:20px 50px; background:var(--gold); color:white; text-decoration:none; font-weight:800; letter-spacing:2px; box-shadow:0 10px 20px rgba(212,175,55,0.4);">Explore the Collection</a>
+            <p>ESTABLISHED 2026</p>
+            <h2 id="hero-title">THE JADE RITUAL</h2>
+            <p id="hero-subtitle">Authentic Chinese Teaware & Premium Tea</p>
+            <a href="#ceremony" class="btn-gold" style="display:inline-block; padding:15px 40px; text-decoration:none; color:white; border:1px solid var(--gold); margin-top:20px;">EXPLORE COLLECTION</a>
         </div>
     </section>
 
@@ -208,11 +203,10 @@
         </div>
     </section>
 
-    <!-- Modal for History/Guide -->
-    <div id="guideModal" class="modal">
+    <div id="guideModal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <div class="modal-body" id="modalBody">
+            <div id="modalBody" class="modal-body">
                 <!-- Content injected by JS -->
             </div>
         </div>
@@ -284,7 +278,21 @@
                         grid.appendChild(card);
                     }
                 });
-                ...
+
+                // Load Settings
+                const settings = await fetch('/content/settings.json').then(res => res.json());
+                if (settings) {
+                    document.getElementById('hero-title').innerText = settings.hero_title;
+                    document.getElementById('hero-subtitle').innerText = settings.hero_subtitle;
+                    if (settings.video_id) {
+                        const videoUrl = `https://www.youtube.com/embed/${settings.video_id}`;
+                        document.querySelector('.hero-video-container iframe').src = `${videoUrl}?autoplay=1&mute=1&loop=1&playlist=${settings.video_id}&controls=0&showinfo=0&rel=0&iv_load_policy=3`;
+                        document.getElementById('main-ritual-video').src = videoUrl;
+                    }
+                }
+            } catch (err) {
+                console.error("Error loading dynamic products:", err);
+            }
         }
         
         loadProducts();
@@ -326,221 +334,6 @@
             document.getElementById('main-preview').style.backgroundImage = `url('${url}')`;
             document.querySelectorAll('.thumb-item').forEach(item => item.classList.remove('active'));
             el.classList.add('active');
-        }
-
-        function closeModal() {
-            document.getElementById('guideModal').style.display = 'none';
-        }
-                }
-
-                products.filter(p => p).forEach(product => {
-                    const grid = grids[product.category];
-                    if (grid) {
-                        const card = document.createElement('div');
-                        card.className = 'product-card';
-                        // Add click for modal if ID is available
-                        const slug = product.name.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
-                        card.onclick = () => openModal(slug);
-                        
-                        card.innerHTML = `
-                            <div class="product-img" style="background-image: url('${product.image}');"></div>
-                            <div class="product-info">
-                                <h4>${product.name}</h4>
-                                <p>${product.category.replace('Tea - ', '')}</p>
-                            </div>
-                        `;
-                        grid.appendChild(card);
-                    }
-                });
-            } catch (err) {
-                console.error("Error loading dynamic products:", err);
-            }
-        }
-        
-        loadProducts();
-
-        const guideData = {
-            // Teapots
-            xishi: {
-                title: "Xi Shi (The Legendary Beauty)",
-                tag: "Craft: Handmade Zisha",
-                body: "Named after one of China's Four Beauties, the Xi Shi teapot features a spherical body and an elegant, short spout. Its gentle curves represent femininity and harmony.",
-                craft: "Hand-shaped from authentic purple clay (Zini), fired at 1100°C.",
-                brewing: "Ideal for Green, White, and Light Oolong teas.",
-                audience: "Lovers of elegant, classical Chinese aesthetics.",
-                benefits: "Excellent heat retention and air permeability for delicate aromas."
-            },
-            shipiao: {
-                title: "Shi Piao (Stone Ladle)",
-                tag: "Craft: Literati Style Zisha",
-                body: "A pillar of Yixing art, the Shi Piao reflects geometric precision and stability. It is the gold standard for steely, consistent pouring.",
-                craft: "Traditional triangular structure with three-point balance.",
-                brewing: "Perfect for Dahongpao, Rock Tea, and Roasted Oolong.",
-                audience: "Experienced tea drinkers seeking professional tools.",
-                benefits: "Promotes a smooth, laminar flow that aerates the tea soup."
-            },
-            fanggu: {
-                title: "Fang Gu (Archaic Drum)",
-                tag: "Craft: Classical Zisha",
-                body: "Inspired by ancient war drums, the Fang Gu shape is a testament to strength and balance. Its wide mouth and body allow tea leaves to expand fully.",
-                craft: "Flattened spherical body with a large, perfectly fitted lid.",
-                brewing: "Excellent for large-leaf Oolongs and Puer teas.",
-                audience: "Collectors who appreciate bold, masculine forms.",
-                benefits: "Enhanced flavor extraction due to the large surface area."
-            },
-            dezhong: {
-                title: "De Zhong (Virtuous Bell)",
-                tag: "Craft: Masterpiece Zisha",
-                body: "Modeled after ancient Chinese bells, the De Zhong embodies dignity and virtue. It is known for its upright, steady, and graceful appearance.",
-                craft: "Tall, cylindrical body with clean lines and a powerful spout.",
-                brewing: "Ideal for Black Tea and aged Puer.",
-                audience: "Those who seek a formal and respectful tea ceremony experience.",
-                benefits: "Exceptional temperature stability for heavy fermentation teas."
-            },
-            duoqiu: {
-                title: "Duo Qiu (Stacked Spheres)",
-                tag: "Craft: Harmonic Zisha",
-                body: "A composition of three overlapping spheres (body, lid, and knob), Duo Qiu represents perfect harmony and mathematical beauty.",
-                craft: "Complex alignment of spherical components for a seamless look.",
-                brewing: "Great for delicate Green and White teas.",
-                audience: "Lovers of minimalist and geometric modern design.",
-                benefits: "Internal convection currents optimize aroma concentration."
-            },
-            hanwa: {
-                title: "Han Wa (Han Dynasty Tile)",
-                tag: "Craft: Minimalist Zisha",
-                body: "Inspired by the roof tiles of the Han Dynasty, this shape is rustic and grounded. Its simplicity belies its deep historical roots.",
-                craft: "Cylindrical body with a unique 'tile' shaped handle and lid.",
-                brewing: "Suited for everyday Gongfu tea practice.",
-                audience: "Minimalists and practitioners of Zen tea ceremonies.",
-                benefits: "Robust design with easy leaf removal and cleaning."
-            },
-            longdan: {
-                title: "Long Dan (Dragon Egg)",
-                tag: "Craft: Classic Zisha",
-                body: "One of the most ancient and minimalist shapes. Its ovoid form represents a dragon's energy. It is prized for its simplicity and excellent heat retention.",
-                craft: "Egg-shaped body with a short spout and triangular handle.",
-                brewing: "Ideal for fast-extraction teas like Oolong and Raw Puer.",
-                audience: "Beginners and enthusiasts of pure, organic forms.",
-                benefits: "Concentrates aroma and maintains high temperature for extraction."
-            },
-            panhu: {
-                title: "Pan Hu (Masterpiece)",
-                tag: "Craft: Royal Zisha",
-                body: "Named after the legendary Pan family, this shape is a masterclass in proportion. It features a wide base and a tall, elegant neck.",
-                craft: "Sophisticated balance between a broad base and a slender top.",
-                brewing: "Perfect for aged Puer and dark roasted Oolongs.",
-                audience: "Serious collectors and those hosting formal tea sessions.",
-                benefits: "Stabilizes tea soup temperature and promotes a mellow flavor."
-            },
-            longjing: {
-                title: "West Lake Longjing",
-                tag: "Type: Green Tea",
-                body: "China's most famous green tea, grown in the West Lake region of Hangzhou. Known for its 'four wonders': green color, flat leaves, fragrant aroma, and sweet taste.",
-                craft: "Pan-fired by hand in iron woks to create the signature flat, spear-like shape.",
-                brewing: "Temp: 80°C; use a glass cup to enjoy the 'dancing' leaves.",
-                audience: "Lovers of fresh, nutty, and vegetal flavors.",
-                benefits: "High in antioxidants, improves mental focus and metabolism."
-            },
-            // Teas
-            dahongpao: {
-                title: "Wuyi Mountain Dahongpao",
-                tag: "Type: Rock Tea (Oolong)",
-                body: "The King of Wuyi Rock teas, known for its complex 'Yan Yun' (Rock Rhyme) and deep charcoal-roasted aroma.",
-                craft: "Traditional Wuyi processing: withering, bruising, fixation, and multiple stages of charcoal roasting.",
-                brewing: "Temp: 95-100°C; Ratio: 8g per 120ml; use a Zisha pot or Gaiwan.",
-                audience: "Those who enjoy deep, roasted, and mineral flavors.",
-                benefits: "Warms the stomach, aids digestion, and is rich in polyphenols."
-            },
-            rougui: {
-                title: "Wuyi Rougui (Cinnamon)",
-                tag: "Type: Rock Tea (Oolong)",
-                body: "A spicy, punchy variety of Rock tea known for its persistent cinnamon-like aroma and long-lasting aftertaste.",
-                craft: "Intensive roasting to bring out the sharp, spicy volatile oils of the leaves.",
-                brewing: "Temp: 100°C (Boiling); fast steeps to prevent bitterness.",
-                audience: "Experienced drinkers seeking a strong, 'punchy' sensory experience.",
-                benefits: "Dispels internal cold and improves metabolic circulation."
-            },
-            tieguanyin: {
-                title: "Anxi Charcoal Tieguanyin",
-                tag: "Type: Oolong Tea",
-                body: "A traditional roasted Tieguanyin. Unlike the modern green version, this has a nutty, mellow, and honey-sweet profile.",
-                craft: "Heavy charcoal baking for 30+ hours to transform the floral notes into nutty complexity.",
-                brewing: "Temp: 95-100°C; can be steeped many times (7-10 infusions).",
-                audience: "Fans of full-bodied, sweet, and comforting roasted teas.",
-                benefits: "Promotes weight management and refreshes the breath."
-            },
-            silver_needle: {
-                title: "White Hair Silver Needle",
-                tag: "Type: White Tea",
-                body: "The most prestigious white tea, made only from the youngest, downy buds of spring. Elegant, subtle, and sweet.",
-                craft: "Minimal processing: natural withering and gentle drying without any rolling.",
-                brewing: "Temp: 80-85°C; use glass to see the buds dance upright.",
-                audience: "Connoisseurs of subtle, delicate, and high-end gift teas.",
-                benefits: "Highest antioxidant levels; anti-aging and skin health support."
-            },
-            biluochun: {
-                title: "Biluochun (Green Snail)",
-                tag: "Type: Green Tea",
-                body: "One of China's top 10 teas. Tiny spiral buds with a distinct fruity and floral aroma from fruit-tree interplanting.",
-                craft: "Hand-rolled into snail-like curls while still fresh.",
-                brewing: "Temp: 75-80°C; Top-drop method (water first, then tea).",
-                audience: "Daily green tea drinkers seeking a fresh, energetic start.",
-                benefits: "High Vitamin C and Caffeine for instant mental clarity."
-            },
-            jasmine: {
-                title: "Jasmine Silver Needle",
-                tag: "Type: Scented Tea",
-                body: "Premium silver needle buds scented multiple times with fresh jasmine flowers to absorb their heavenly fragrance.",
-                craft: "The 'Ying Zhi' process: layering tea with fresh flowers overnight, repeated 7-9 times.",
-                brewing: "Temp: 80-85°C; extremely aromatic and relaxing.",
-                audience: "People who love floral scents; excellent for stress relief.",
-                benefits: "Anti-inflammatory, relieves stress, and improves sleep quality."
-            },
-            dianhong: {
-                title: "Yunnan Palace Dianhong",
-                tag: "Type: Black Tea",
-                body: "A golden bud black tea from Yunnan. Rich, honey-sweet, and full-bodied with a beautiful amber liquor.",
-                craft: "Fully fermented from large-leaf Yunnan varieties, resulting in high golden bud content.",
-                brewing: "Temp: 90-95°C; stands well with milk or honey.",
-                audience: "Black tea enthusiasts who love malty, sweet, and bold flavors.",
-                benefits: "Warms the body and protects the cardiovascular system."
-            },
-            puer_ripe: {
-                title: "Ancient Tree Palace Ripe",
-                tag: "Type: Ripe Puer",
-                body: "A deeply fermented Puer tea. Mellow, earthy, and smooth with a thick, satisfying mouthfeel.",
-                craft: "The 'Wo Dui' (wet-pile) fermentation process, followed by aging in a dry warehouse.",
-                brewing: "Temp: 100°C; rinse the leaves first; use a Zisha pot.",
-                audience: "People with sensitive stomachs or those looking for a digestive aid.",
-                benefits: "Excellent for digestion, weight loss, and lowering lipids."
-            },
-            xiaoqinggan: {
-                title: "Citrus Stuffed Puer",
-                tag: "Type: Specialty Puer",
-                body: "Authentic Xinhui green citrus stuffed with high-quality ripe Puer tea. A refreshing fusion of fruit and earth.",
-                craft: "Sun-drying the fruit shell together with the tea to infuse the citrus oils.",
-                brewing: "Temp: 100°C; brew the whole citrus; excellent for long-term sipping.",
-                audience: "Office workers and smokers; anyone seeking a refreshing, throat-soothing tea.",
-                benefits: "Clears the throat, reduces phlegm, and aids digestion."
-            }
-        };
-
-        function openModal(id) {
-            const data = guideData[id];
-            document.getElementById('modalBody').innerHTML = `
-                <span class="clay-tag">${data.tag}</span>
-                <h3>${data.title}</h3>
-                <p>${data.body}</p>
-                <div class="meta-grid">
-                    <div class="meta-item"><h5>Craftsmanship</h5><p>${data.craft}</p></div>
-                    <div class="meta-item"><h5>Brewing Tips</h5><p>${data.brewing}</p></div>
-                    <div class="meta-item"><h5>Ideal Audience</h5><p>${data.audience}</p></div>
-                    <div class="meta-item"><h5>Health Benefits</h5><p>${data.benefits}</p></div>
-                </div>
-                <a href="https://wa.me/8618663543398" class="btn-gold" style="display:inline-block; margin-top:40px; padding:15px 40px; text-decoration:none; color:white; background:var(--gold);">Inquire via WhatsApp</a>
-            `;
-            document.getElementById('guideModal').style.display = 'flex';
         }
 
         function closeModal() {
