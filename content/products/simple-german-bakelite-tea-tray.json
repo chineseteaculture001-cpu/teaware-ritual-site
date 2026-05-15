@@ -1,17 +1,50 @@
 {
-  "name": "Professional German Bakelite Tray",
+  "name": "Square minimalist luxury Chinese-style tea tray",
   "category": "Tea Tray",
   "marketing_tip": "High-density German material for professional Gongfu sessions.",
   "price": 0,
-  "image": "https://s.alicdn.com/@sc04/kf/H89ace38d4caf42c59826f029a4e18545s.jpg_640x640.jpg",
+  "image": "/assets/images/18014537336_1998279968.jpg",
   "gallery": [
-    {"image": "https://s.alicdn.com/@sc04/kf/H89ace38d4caf42c59826f029a4e18545s.jpg_640x640.jpg"},
-    {"image": "https://s.alicdn.com/@sc04/kf/Hd031755df9df4f2aafd9cd94723882cdR.jpg_640x640.jpg"}
+    "/assets/images/17942239965_1998279968.jpg",
+    "/assets/images/17942266596_1998279968.jpg_.webp",
+    "/assets/images/18415225005_1998279968.jpg_.webp"
   ],
   "variants": [
-    {"name": "40x20x5cm", "weight": "4000g", "dimensions": "47x27x11.5cm"},
-    {"name": "50x30x5cm", "weight": "7000g", "dimensions": "57x37x13cm"},
-    {"name": "100x50x5cm", "weight": "20000g", "dimensions": "107.5x57.5x14cm"}
+    {
+      "name": "40x20x5cm",
+      "weight": "4000g",
+      "dimensions": "47x27x11.5cm"
+    },
+    {
+      "name": "50x30x5cm",
+      "weight": "7000g",
+      "dimensions": "57x37x13cm"
+    },
+    {
+      "name": "60x40x5cm",
+      "weight": "10000g",
+      "dimensions": "67.5x47.5x14cm"
+    },
+    {
+      "name": "70x40x5cm",
+      "weight": "12000g",
+      "dimensions": "77.5x47.5x14cm"
+    },
+    {
+      "name": "80x48x5cm",
+      "weight": "16000g",
+      "dimensions": "87.5x55.5x14cm"
+    },
+    {
+      "name": "90x40x5cm",
+      "weight": "15000g",
+      "dimensions": "97.5x47.5x14cm"
+    },
+    {
+      "name": "100x50x5cm",
+      "weight": "20000g",
+      "dimensions": "107.5x57.5x14cm"
+    }
   ],
   "body": "Expertly crafted using high-density phenolic resin (Bakelite), this tray mimics the warmth of wood while offering incredible durability. It resists warping and cracking even with heavy daily water exposure."
 }
