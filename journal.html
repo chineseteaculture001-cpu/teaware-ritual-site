@@ -9,17 +9,17 @@
         :root { --emerald: #004b23; --jade: #2d6a4f; --gold: #d4af37; --silk: #fffdfa; --ink: #0a0a0a; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: var(--silk); font-family: 'Montserrat', sans-serif; color: var(--ink); line-height: 1.8; }
-        header { padding: 30px 8%; display: flex; justify-content: space-between; align-items: center; background: white; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+        header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 253, 250, 0.98); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 2000; border-bottom: 3px solid var(--emerald); left: 0; right: 0; width: 100%; }
         .logo { font-family: 'Playfair Display', serif; font-weight: 900; color: var(--emerald); font-size: 1.5rem; letter-spacing: 2px; text-decoration: none; }
         nav ul { display: flex; list-style: none; gap: 30px; }
         nav a { text-decoration: none; color: var(--ink); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        .journal-container { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
+        .journal-container { max-width: 1600px; margin: 80px auto; padding: 0 20px; }
         .journal-header { text-align: center; margin-bottom: 80px; }
         .journal-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--emerald); }
         .journal-header p { font-style: italic; color: #666; font-size: 1.1rem; }
 
-        .blog-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px; }
+        .blog-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
         .blog-post { background: white; border-bottom: 4px solid #eee; transition: 0.3s; padding-bottom: 20px; }
         .blog-post:hover { border-color: var(--gold); }
         .blog-img { height: 250px; background-size: cover; background-position: center; margin-bottom: 20px; border-radius: 4px; }
