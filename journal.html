@@ -34,7 +34,24 @@
         .copy { opacity: 0.5; font-size: 0.8rem; margin-top: 40px; }
         
         .full-content { font-size: 0.95rem; color: #555; white-space: pre-line; }
-    </style>
+    
+@media (max-width: 768px) {
+    header { padding: 15px 5%; flex-direction: column; text-align: center; }
+    nav ul { gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+    nav a { font-size: 0.6rem; letter-spacing: 1px; }
+
+    .journal-container { margin: 40px auto; }
+    .journal-header { margin-bottom: 40px; }
+    .journal-header h1 { font-size: 2.2rem; }
+    .journal-header p { font-size: 0.9rem; }
+
+    .blog-list { grid-template-columns: 1fr; gap: 30px; }
+    .blog-img { height: 200px; }
+    .blog-content h2 { font-size: 1.5rem; }
+    
+    footer { padding: 40px 5% 20px; }
+}
+</style>
 </head>
 <body>
     <header>
