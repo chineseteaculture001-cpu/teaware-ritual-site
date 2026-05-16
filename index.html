@@ -24,12 +24,13 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { background-color: var(--silk); color: var(--ink); font-family: var(--font-main); line-height: 1.6; overflow-x: hidden; }
+        body { background-color: var(--silk); color: var(--ink); font-family: var(--font-main); line-height: 1.6; overflow-x: hidden; width: 100vw; position: relative; }
 
         header {
             padding: 20px 8%; display: flex; justify-content: space-between; align-items: center;
             background: rgba(255, 253, 250, 0.98); backdrop-filter: blur(10px);
             position: sticky; top: 0; z-index: 2000; border-bottom: 3px solid var(--emerald);
+            left: 0; right: 0; width: 100%;
         }
         .brand-logo { display: flex; align-items: center; gap: 15px; }
         .brand-logo .seal { width: 50px; height: 50px; background: var(--crimson); color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-deco); font-size: 1.2rem; border-radius: 4px; box-shadow: 2px 2px 0 var(--gold); }
@@ -44,14 +45,18 @@
         }
         .hero-video-container {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            overflow: hidden;
         }
         .hero-video-container iframe {
-            width: 100vw; height: 56.25vw; /* 16:9 aspect ratio */
-            min-height: 100vh; min-width: 177.77vh; /* 100 * 16 / 9 */
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            pointer-events: none;
+            width: 177.77vh; /* 16/9 * 100vh */
+            height: 100vh;
+            min-width: 100vw;
+            min-height: 56.25vw; /* 9/16 * 100vw */
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
         }
-        .hero-overlay { max-width: 900px; padding: 50px; background: rgba(0, 75, 35, 0.4); backdrop-filter: blur(5px); border: 2px solid var(--gold); z-index: 1; }
+        .hero-overlay { max-width: 800px; padding: 50px; background: rgba(0, 75, 35, 0.4); backdrop-filter: blur(5px); border: 2px solid var(--gold); z-index: 1; }
         .hero h2 { font-size: 4.5rem; margin-bottom: 20px; font-family: var(--font-title); }
         .hero p { font-size: 1.2rem; letter-spacing: 3px; margin-bottom: 40px; }
 
@@ -103,7 +108,7 @@
 @media (max-width: 768px) {
     html, body { overflow-x: hidden !important; position: relative; width: 100%; }
     
-    header { padding: 15px 5% !important; flex-direction: column !important; text-align: center !important; height: auto !important; }
+    header { padding: 15px 5%; flex-direction: column; text-align: center; height: auto; }
     .brand-logo { justify-content: center !important; width: 100% !important; margin-bottom: 10px !important; }
     .brand-logo h1 { font-size: 1.1rem !important; }
     
