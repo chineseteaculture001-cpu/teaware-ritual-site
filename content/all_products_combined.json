@@ -200,7 +200,7 @@
     "name": "Guiyin Mountain Forest (Gift Box)",
     "category": "Ceremony Set",
     "price": 0,
-    "image": "/assets/images/10953477033_1639040125.jpg",
+    "image": "assets/images/10953477033_1639040125.jpg",
     "body": "#### Product details\n\n![](/assets/images/o1cn01mwqoac1apafpc2i4o_-2513843378-0-cib.jpg)",
     "gallery": [
       "/assets/images/10953477033_1639040125.jpg",
@@ -905,7 +905,7 @@
     "marketing_tip": "Generous capacity for sharing tea with friends and family.",
     "category": "Zisha Teapot",
     "price": 259.0,
-    "image": "https://sc02.alicdn.com/kf/Aaba8ab179fde45dc8aa8de840162fde5O.png",
+    "image": "assets/products/prod_71c92be7989c5f85a8331b7dff7ab33b.png",
     "body": "The Rong Tian style is known for its ample body and steady pour. Handcrafted from premium raw ore clay for the best results.",
     "filename": "zisha-4-19.json"
   },
@@ -954,7 +954,7 @@
     "name": "Original Small Qin Quan Teapot (Raw Ore Cultural Revolution Purple Clay)",
     "category": "Zisha Teapot",
     "price": 173,
-    "image": "https://s.alicdn.com/@sc04/kf/O1CN01EBNDgV1C1CcZTPkPp_!!3023600020-0-cib.310x310.jpg",
+    "image": "assets/products/prod_f604e50d8b8396cd21481caefe9ff594.png",
     "body": "Crafted from authentic Cultural Revolution-era purple clay, this Qin Quan teapot is a piece of history that offers a unique brewing experience.",
     "filename": "zisha-5-28.json"
   },
