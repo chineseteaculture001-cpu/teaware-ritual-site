@@ -4,174 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Jade Ritual | Authentic Chinese Teaware & Premium Tea</title>
-    <meta name="description" content="Discover handmade Yixing Zisha teapots, Dehua porcelain, and premium ancient tree tea. Direct from the source to your table. Global shipping available.">
-    <meta name="keywords" content="Gongfu Tea Set, Yixing Zisha Teapot, Handmade Teaware, Chinese Tea, Puer Tea, Oolong Tea, Dehua Porcelain">
-    <meta property="og:title" content="The Jade Ritual | Authentic Chinese Teaware">
-    <meta property="og:description" content="Experience the thousand-year heritage of Chinese tea culture.">
-    <meta property="og:image" content="https://sc01.alicdn.com/kf/H987e678a92444288930e90058d3624bdR.jpg">
+    <meta name="description" content="Discover handmade Yixing Zisha teapots, Dehua porcelain, and premium ancient tree tea.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@300;400;600;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
-    <style>:root {
-            --emerald: #004b23;
-            --jade: #2d6a4f;
+    <style>
+        :root {
+            --bg-deep: #000c18;
+            --bg-card: #001529;
             --gold: #d4af37;
-            --deep-gold: #b08d4a;
-            --silk: #fffdfa;
-            --ink: #0a0a0a;
-            --crimson: #a4161a;
+            --gold-hover: #f1c40f;
+            --text-main: #f8f8f8;
+            --text-muted: #bdc3c7;
+            --emerald: #004b23;
             --font-main: 'Montserrat', sans-serif;
             --font-title: 'Playfair Display', serif;
             --font-deco: 'Cinzel Decorative', cursive;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { background-color: var(--silk); color: var(--ink); font-family: var(--font-main); line-height: 1.6; overflow-x: hidden; width: 100vw; position: relative; }
+        body { background-color: var(--bg-deep); color: var(--text-main); font-family: var(--font-main); line-height: 1.6; overflow-x: hidden; width: 100vw; }
 
         header {
-            padding: 20px 8%; display: flex; justify-content: space-between; align-items: center;
-            background: rgba(255, 253, 250, 0.98); backdrop-filter: blur(10px);
-            position: sticky; top: 0; z-index: 2000; border-bottom: 3px solid var(--emerald);
-            left: 0; right: 0; width: 100%;
+            padding: 15px 8%; display: flex; justify-content: space-between; align-items: center;
+            background: var(--bg-deep); border-bottom: 1px solid var(--gold);
+            position: sticky; top: 0; z-index: 2000; width: 100%;
         }
         .brand-logo { display: flex; align-items: center; gap: 15px; }
-        .brand-logo .seal { width: 50px; height: 50px; background: var(--crimson); color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-deco); font-size: 1.2rem; border-radius: 4px; box-shadow: 2px 2px 0 var(--gold); }
-        .brand-logo h1 { font-size: 1.5rem; color: var(--emerald); text-transform: uppercase; letter-spacing: 1px; }
+        .brand-logo .seal { width: 45px; height: 45px; background: #a4161a; color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-deco); font-size: 1rem; border-radius: 4px; border: 1px solid var(--gold); }
+        .brand-logo h1 { font-size: 1.4rem; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-family: var(--font-deco); }
 
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav a { text-decoration: none; color: var(--ink); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav a { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
 
-        .hero {
-            height: 90vh; position: relative; overflow: hidden;
-            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
-        }
-        .hero-video-container {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-            overflow: hidden;
-        }
-        .hero-video-container iframe {
-            width: 177.77vh; /* 16/9 * 100vh */
-            height: 100vh;
-            min-width: 100vw;
-            min-height: 56.25vw; /* 9/16 * 100vw */
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .hero-overlay { max-width: 800px; padding: 50px; background: rgba(0, 75, 35, 0.4); backdrop-filter: blur(5px); border: 2px solid var(--gold); z-index: 1; }
-        .hero h2 { font-size: 4.5rem; margin-bottom: 20px; font-family: var(--font-title); }
-        .hero p { font-size: 1.2rem; letter-spacing: 3px; margin-bottom: 40px; }
+        .hero { height: 90vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .hero-video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+        .hero-video-container iframe { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+        .hero-overlay { max-width: 800px; padding: 60px; background: rgba(0, 12, 24, 0.7); backdrop-filter: blur(10px); border: 1px solid var(--gold); }
+        .hero h2 { font-size: 4rem; margin-bottom: 15px; font-family: var(--font-title); color: var(--gold); }
+        .hero p { font-size: 1.1rem; letter-spacing: 4px; margin-bottom: 30px; color: var(--text-main); }
 
-        section { padding: 100px 8%; }
-        .section-header { text-align: center; margin-bottom: 80px; }
-        .section-header h2 { font-family: var(--font-title); font-size: 3.5rem; color: var(--emerald); margin-bottom: 15px; }
-        .section-header p { text-transform: uppercase; letter-spacing: 5px; color: var(--gold); font-size: 0.9rem; }
-        .section-header .line { width: 80px; height: 2px; background: var(--gold); margin: 30px auto; }
+        .controls-section { padding: 40px 8% 0; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center; }
+        .search-box { flex: 1; min-width: 250px; position: relative; }
+        .search-box input { width: 100%; padding: 12px 20px; background: var(--bg-card); border: 1px solid var(--gold); color: white; border-radius: 5px; outline: none; }
+        .sort-box select { padding: 12px 20px; background: var(--bg-card); border: 1px solid var(--gold); color: white; border-radius: 5px; outline: none; cursor: pointer; }
 
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px; }
-        .product-card { background: white; border: 1px solid #eee; transition: 0.5s; cursor: pointer; position: relative; overflow: hidden; }
-        .product-card:hover { transform: translateY(-15px); border-color: var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .product-img { width: 100%; height: 400px; overflow: hidden; position: relative; }
-        .product-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
-        .product-card:hover .product-img img { transform: scale(1.1); }
-        .product-info { padding: 30px; text-align: center; background: white; position: relative; z-index: 2; }
-        .product-info h4 { font-family: var(--font-title); font-size: 1.4rem; color: var(--emerald); margin-bottom: 10px; }
-        .product-info p { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
+        section { padding: 80px 8%; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-family: var(--font-title); font-size: 3rem; color: var(--gold); margin-bottom: 10px; }
+        .section-header p { text-transform: uppercase; letter-spacing: 4px; color: var(--text-muted); font-size: 0.8rem; }
+        .section-header .line { width: 60px; height: 1px; background: var(--gold); margin: 25px auto; }
 
-        #guideModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10,10,10,0.95); z-index: 3000; align-items: center; justify-content: center; padding: 20px; }
-        .modal-content {
-            background: var(--silk); max-width: 1000px; width: 100%; padding: 0;
-            border-top: 10px solid var(--emerald); position: relative; max-height: 90vh; overflow-y: auto;
-            display: flex; flex-direction: column;
-        }
-        .modal-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 0; }
-        .modal-gallery { background: #f0f0f0; padding: 20px; display: flex; flex-direction: column; gap: 15px; }
-        .main-preview { width: 100%; aspect-ratio: 1/1; border: 1px solid #ddd; overflow: hidden; }
-        .main-preview img { width: 100%; height: 100%; object-fit: cover; }
-        .thumbnail-list { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; }
-        .thumb-item { width: 70px; height: 70px; cursor: pointer; border: 2px solid transparent; opacity: 0.7; transition: 0.3s; overflow: hidden; }
-        .thumb-item img { width: 100%; height: 100%; object-fit: cover; }
-        .thumb-item:hover, .thumb-item.active { border-color: var(--gold); opacity: 1; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+        .product-card { background: var(--bg-card); border: 1px solid #1a2a3a; transition: 0.4s; cursor: pointer; overflow: hidden; }
+        .product-card:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .product-img { width: 100%; height: 320px; overflow: hidden; }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+        .product-card:hover .product-img img { transform: scale(1.08); }
+        .product-info { padding: 25px; text-align: center; }
+        .product-info h4 { font-family: var(--font-title); font-size: 1.2rem; color: var(--gold); margin-bottom: 8px; }
+        .product-info p.category { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+        .product-info .price { font-size: 1.1rem; color: var(--text-main); font-weight: 700; }
+
+        #product-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 3000; align-items: center; justify-content: center; padding: 20px; }
+        .modal-content { background: var(--bg-deep); max-width: 900px; width: 100%; border: 1px solid var(--gold); position: relative; max-height: 90vh; overflow-y: auto; }
+        .modal-layout { display: grid; grid-template-columns: 1fr 1fr; }
+        .modal-img-box { width: 100%; aspect-ratio: 1/1; background: #001a33; }
+        .modal-img-box img { width: 100%; height: 100%; object-fit: cover; }
         .modal-details { padding: 40px; }
-        .close-modal { position: absolute; top: 20px; right: 25px; font-size: 2rem; cursor: pointer; color: var(--emerald); z-index: 10; }
-        .clay-tag { display: inline-block; padding: 5px 15px; background: var(--gold); color: white; border-radius: 20px; font-size: 0.8rem; margin-bottom: 20px; }
+        .modal-details h2 { font-family: var(--font-title); font-size: 2rem; color: var(--gold); margin-bottom: 15px; }
+        .modal-details .price { font-size: 1.5rem; margin-bottom: 20px; font-weight: 700; }
+        .modal-details .marketing { font-style: italic; color: var(--gold); margin-bottom: 20px; font-size: 0.9rem; }
+        .modal-details .desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 30px; }
+        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.8rem; cursor: pointer; color: var(--gold); z-index: 10; }
 
-        footer { background: var(--ink); color: white; padding: 100px 8% 50px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; border-bottom: 1px solid #333; padding-bottom: 50px; }
-        .footer-brand h2 { font-family: var(--font-deco); color: var(--gold); margin-bottom: 20px; }
-        .footer-links h4 { color: var(--gold); margin-bottom: 25px; letter-spacing: 2px; }
-        .footer-links ul { list-style: none; }
-        .footer-links li { margin-bottom: 15px; }
-        .footer-links a { color: #aaa; text-decoration: none; transition: 0.3s; }
-        .footer-links a:hover { color: white; }
+        footer { background: #000810; padding: 80px 8% 40px; border-top: 1px solid #112233; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1.2fr; gap: 60px; padding-bottom: 40px; }
+        .footer-brand h2 { font-family: var(--font-deco); color: var(--gold); margin-bottom: 20px; font-size: 1.8rem; }
+        .footer-brand p { color: var(--text-muted); max-width: 400px; }
+        .footer-links h4 { color: var(--gold); margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; }
+        .footer-links ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--gold); }
 
-        .whatsapp-fixed { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: 0.3s; }
-        .whatsapp-fixed:hover { transform: scale(1.1); }
-@media (max-width: 768px) {
-    html, body { overflow-x: hidden !important; position: relative; width: 100%; }
-    
-    header { padding: 15px 5%; flex-direction: column; text-align: center; height: auto; }
-    .brand-logo { justify-content: center !important; width: 100% !important; margin-bottom: 10px !important; }
-    .brand-logo h1 { font-size: 1.1rem !important; }
-    
-    nav ul { 
-        display: flex !important; 
-        flex-direction: column !important; 
-        gap: 8px !important; 
-        padding: 10px 0 !important;
-    }
-    nav a { font-size: 0.7rem !important; }
+        .whatsapp-fixed { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 
-    .category-nav { 
-        display: flex !important;
-        flex-wrap: wrap !important; 
-        justify-content: center !important; 
-        padding: 10px 5% !important; 
-        gap: 8px !important; 
-    }
-    .category-nav a { font-size: 0.7rem !important; padding: 4px 8px !important; }
-
-    .hero { 
-        height: auto !important; 
-        min-height: 400px !important; 
-        padding: 40px 0 !important; 
-        background: var(--emerald) !important; 
-        display: flex !important;
-        align-items: center !important;
-    }
-    .hero-video-container { display: none !important; }
-    .hero-overlay { 
-        padding: 20px !important; 
-        width: 90% !important; 
-        margin: 0 auto !important; 
-        position: relative !important; 
-        left: 0 !important; 
-        transform: none !important; 
-        backdrop-filter: none !important;
-    }
-    .hero-overlay h2 { font-size: 1.5rem !important; line-height: 1.2 !important; }
-    .hero-overlay p { font-size: 0.85rem !important; }
-
-    .section-header h2 { font-size: 1.6rem !important; }
-    .product-grid { 
-        display: grid !important;
-        grid-template-columns: 1fr !important; 
-        padding: 0 20px !important; 
-        gap: 25px !important; 
-    }
-    
-    .modal-layout { flex-direction: column !important; }
-    .modal-gallery { width: 100% !important; }
-    .modal-details { width: 100% !important; padding: 20px 0 !important; }
-    
-    .whatsapp-fixed { scale: 0.8 !important; right: 10px !important; bottom: 15px !important; }
-    
-    .footer-content { 
-        display: flex !important;
-        flex-direction: column !important; 
-        text-align: center !important; 
-        gap: 20px !important; 
-    }
-}
-</style>
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
+            .hero h2 { font-size: 2.5rem; }
+            .modal-layout { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -179,7 +103,15 @@
             <div class="seal">Jade</div>
             <h1>The Jade Ritual</h1>
         </div>
-        <nav><ul><li><a href="#ceremony">Ceremony</a></li><li><a href="#trays">Trays</a></li><li><a href="#zisha">Zisha</a></li><li><a href="#tea">Tea</a></li><li><a href="about.html">About</a></li><li><a href="heritage.html">Heritage</a></li><li><a href="journal.html">Journal</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+        <nav>
+            <ul>
+                <li><a href="#ceremony">Ceremony</a></li>
+                <li><a href="#zisha">Zisha</a></li>
+                <li><a href="#tea">Tea</a></li>
+                <li><a href="#trays">Trays</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="hero">
@@ -188,101 +120,105 @@
         </div>
         <div class="hero-overlay">
             <p>ESTABLISHED 2026</p>
-            <h2 id="hero-title">THE JADE RITUAL</h2>
-            <p id="hero-subtitle">Authentic Chinese Teaware & Premium Tea</p>
-            <a href="#ceremony" class="btn-gold" style="display:inline-block; padding:15px 40px; text-decoration:none; color:white; border:1px solid var(--gold); margin-top:20px;">EXPLORE COLLECTION</a>
+            <h2>THE JADE RITUAL</h2>
+            <p>Authentic Chinese Teaware & Premium Tea</p>
+            <a href="#ceremony" style="display:inline-block; padding:12px 35px; text-decoration:none; color:var(--gold); border:1px solid var(--gold); font-weight: 700; letter-spacing: 2px;">EXPLORE COLLECTION</a>
         </div>
     </section>
 
-    <!-- Gongfu Tea Ceremony Sets -->
+    <div class="controls-section">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by name or material..." onkeyup="filterAndSort()">
+        </div>
+        <div class="sort-box">
+            <select id="sortSelect" onchange="filterAndSort()">
+                <option value="default">Default Sorting</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Ceremony Sets -->
     <section id="ceremony">
         <div class="section-header">
             <h2>Gongfu Ceremony Sets</h2>
-            <p>Masterfully crafted porcelain and ceramic ritual sets</p>
+            <p>Masterfully crafted ritual ensembles</p>
             <div class="line"></div>
         </div>
-        <div class="product-grid" id="ceremony-grid">
-            <!-- Dynamic content -->
-        </div>
+        <div class="product-grid" id="ceremony-grid"></div>
     </section>
 
-    <!-- Tea Tray & Accessories -->
-    <section id="trays" style="background: #fdfaf0;">
+    <!-- Zisha -->
+    <section id="zisha">
         <div class="section-header">
-            <h2>Tea Trays & Tools</h2>
-            <p>The stage for your tea ritual: Bamboo, Stone, and Wood</p>
+            <h2>Zisha Teapot Gallery</h2>
+            <p>Hand-finished Yixing purple clay vessels</p>
             <div class="line"></div>
         </div>
-        <div class="product-grid" id="tray-grid">
-            <!-- Dynamic content -->
-        </div>
+        <div class="product-grid" id="zisha-grid"></div>
     </section>
 
-    <!-- Classic Zisha Shapes -->
-    <section id="zisha" style="background: rgba(0, 75, 35, 0.03);">
-        <div class="section-header">
-            <h2>Artisan Yixing Zisha Shapes</h2>
-            <p>Explore the history and soul of classic clay vessels</p>
-            <div class="line"></div>
-        </div>
-        <div class="product-grid" id="zisha-grid">
-            <!-- Dynamic content -->
-        </div>
-    </section>
-
-    <!-- Premium Tea Selection -->
+    <!-- Tea -->
     <section id="tea">
         <div class="section-header">
-            <h2>The Tea Treasury</h2>
-            <p>Curated from the most prestigious mountains of China</p>
+            <h2>Premium Tea Selection</h2>
+            <p>Curated from the most prestigious mountains</p>
             <div class="line"></div>
         </div>
-
-        <h3 style="margin-bottom: 30px; color: var(--jade); font-family: var(--font-title); font-size: 2rem;">Premium Tea Selection</h3>
-        <div class="product-grid" id="tea-rock-grid">
-            <!-- Dynamic content -->
-        </div>
+        <div class="product-grid" id="tea-grid"></div>
     </section>
 
-    <!-- Video Experience Section -->
-    <section id="ritual-video" style="background: var(--ink); color: white;">
+    <!-- Trays -->
+    <section id="trays">
         <div class="section-header">
-            <h2 style="color: var(--gold);">Tea Ritual Experience</h2>
-            <p style="color: #aaa;">Immerse yourself in the tranquility of Gongfu Tea</p>
+            <h2>The Tea Stage</h2>
+            <p>Hand-crafted tea trays and tables</p>
             <div class="line"></div>
         </div>
-        <div style="max-width: 1000px; margin: 0 auto; aspect-ratio: 16/9; box-shadow: 0 30px 60px rgba(0,0,0,0.5); border: 1px solid var(--gold);">
-            <iframe id="main-ritual-video" width="100%" height="100%" src="https://www.youtube.com/embed/fA_X8D1Tj10" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        <div class="product-grid" id="tray-grid"></div>
     </section>
 
-    <div id="guideModal">
+    <div id="product-modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <div id="modalBody" class="modal-body">
-                <!-- Content injected by JS -->
+            <div class="modal-layout">
+                <div class="modal-img-box"><img id="modal-img" src="" referrerpolicy="no-referrer"></div>
+                <div class="modal-details">
+                    <h2 id="modal-title"></h2>
+                    <div class="price" id="modal-price"></div>
+                    <div class="marketing" id="modal-marketing"></div>
+                    <div class="desc" id="modal-desc"></div>
+                    <a id="modal-wa" href="" class="whatsapp-fixed" style="position:static; margin-top:20px;">INQUIRE ON WHATSAPP</a>
+                </div>
             </div>
         </div>
     </div>
 
     <footer>
         <div class="footer-grid">
-            <div class="footer-brand"><h2>The Jade Ritual</h2><p>China Tea Culture Communication Co., Ltd.</p></div>
+            <div class="footer-brand">
+                <h2>The Jade Ritual</h2>
+                <p>Preserving the ancient art of tea through master-crafted vessels and exceptional leaves. Each piece is selected for its soul and craftsmanship.</p>
+            </div>
             <div class="footer-links">
-                <h4>CONTACT</h4>
+                <h4>Collections</h4>
                 <ul>
-                    <li><a href="mailto:chineseteaculture001@gmail.com">chineseteaculture001@gmail.com</a></li>
-                    <li><a href="mailto:chineseteaculture002@gmail.com">chineseteaculture002@gmail.com</a></li>
-                    <li><a href="https://wa.me/8618663543398">+86 186 6354 3398</a></li>
-                    <li><a href="https://wa.me/8615589482015">+86 155 8948 2015</a></li>
+                    <li><a href="#ceremony">Gongfu Sets</a></li>
+                    <li><a href="#zisha">Zisha Teapots</a></li>
+                    <li><a href="#tea">Premium Tea</a></li>
+                    <li><a href="#trays">Tea Trays</a></li>
+                    <li><a href="heritage.html">Our Heritage</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 50px; opacity: 0.5;">&copy; 2026 China Tea Culture Communication. All Rights Reserved.</p>
+        <p style="text-align: center; color: #555; font-size: 0.8rem; margin-top: 40px;">&copy; 2026 THE JADE RITUAL. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <a href="https://wa.me/8618663543398" class="whatsapp-fixed">Chat with Tea Master</a>
+    <a href="https://wa.me/8618663543398" class="whatsapp-fixed">
+        <span>Chat with Tea Master</span>
+    </a>
 
     <script>
         let allProducts = [];
@@ -290,93 +226,85 @@
         async function loadProducts() {
             try {
                 const response = await fetch('/content/all_products_combined.json');
-                if (!response.ok) throw new Error('Failed to load products');
                 allProducts = await response.json();
-
-                const grids = {
-                    'Ceremony Set': document.getElementById('ceremony-grid'),
-                    'Tea Tray': document.getElementById('tray-grid'),
-                    'Zisha Teapot': document.getElementById('zisha-grid'),
-                    'Tea': document.getElementById('tea-rock-grid')
-                };
-
-                allProducts.forEach((product, index) => {
-                    const cat = product.category || 'Unknown';
-                    let grid = grids[cat];
-                    
-                    if (!grid && (cat.includes('Tea') || cat.includes('Puer') || cat.includes('Oolong')) && cat !== 'Tea Tray') {
-                        grid = grids['Tea'];
-                    }
-                    if (!grid && (cat === 'Teapot' || cat === 'Zisha Teapot')) {
-                        grid = grids['Zisha Teapot'];
-                    }
-
-                    if (grid) {
-                        const card = document.createElement('div');
-                        card.className = 'product-card';
-                        card.onclick = () => openModal(index);
-                        
-                        card.innerHTML = `
-                            <div class="product-img">
-                                <img src="${product.image || product.image_url}" alt="${product.name}" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='https://sc04.alicdn.com/kf/H89ace38d4caf42c59826f029a4e18545s.jpg_640x640.jpg'">
-                            </div>
-                            <div class="product-info">
-                                <h4>${product.name}</h4>
-                                <p>${product.category ? product.category.replace('Tea - ', '') : ''}</p>
-                            </div>
-                        `;
-                        grid.appendChild(card);
-                    }
-                });
-
-                const settings = await fetch('/content/settings.json').then(res => res.json());
-                if (settings) {
-                    document.getElementById('hero-title').innerText = settings.hero_title;
-                    document.getElementById('hero-subtitle').innerText = settings.hero_subtitle;
-                    if (settings.video_id) {
-                        const videoUrl = `https://www.youtube.com/embed/${settings.video_id}`;
-                        document.querySelector('.hero-video-container iframe').src = `${videoUrl}?autoplay=1&mute=1&loop=1&playlist=${settings.video_id}&controls=0&showinfo=0&rel=0&iv_load_policy=3`;
-                        document.getElementById('main-ritual-video').src = videoUrl;
-                    }
-                }
-            } catch (err) {
-                console.error("Error loading dynamic products:", err);
+                renderGrids(allProducts);
+            } catch (e) {
+                console.error("Failed to load products", e);
             }
         }
-        
-        loadProducts();
 
-        function openModal(index) {
-            const product = allProducts[index];
-            const modalBody = document.getElementById('modalBody');
-            modalBody.innerHTML = `
-                <div class="modal-layout">
-                    <div class="modal-gallery">
-                        <div class="main-preview" id="main-preview">
-                            <img src="${product.image || product.image_url}" alt="${product.name}" referrerpolicy="no-referrer" onerror="this.src='https://sc04.alicdn.com/kf/H89ace38d4caf42c59826f029a4e18545s.jpg_640x640.jpg'">
+        function renderGrids(products) {
+            const grids = {
+                'Ceremony Set': document.getElementById('ceremony-grid'),
+                'Zisha Teapot': document.getElementById('zisha-grid'),
+                'Tea': document.getElementById('tea-grid'),
+                'Tea Tray': document.getElementById('tray-grid')
+            };
+
+            // Clear all grids
+            Object.values(grids).forEach(grid => grid.innerHTML = '');
+
+            products.forEach((product, index) => {
+                let category = product.category;
+                const grid = grids[category];
+                if (grid) {
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    card.onclick = () => openModal(product);
+                    card.innerHTML = `
+                        <div class="product-img">
+                            <img src="${product.image}" alt="${product.name}" referrerpolicy="no-referrer">
                         </div>
-                    </div>
-                    <div class="modal-details">
-                        <div class="clay-tag">${product.category}</div>
-                        <h2 style="font-family: var(--font-title); color: var(--emerald); margin-bottom: 20px;">${product.name}</h2>
-                        <p style="font-size: 1.5rem; color: var(--gold); font-weight: bold; margin-bottom: 20px;">$${product.price || product.price_usd}</p>
-                        <div style="color: #666; margin-bottom: 30px; line-height: 1.8;">${product.body}</div>
-                        <a href="https://wa.me/8618663543398" class="btn-gold" style="display:inline-block; padding:15px 40px; text-decoration:none; color:white; background: var(--emerald); border:1px solid var(--gold);">INQUIRE NOW</a>
-                    </div>
-                </div>
-            `;
-            document.getElementById('guideModal').style.display = 'flex';
+                        <div class="product-info">
+                            <p class="category">${category}</p>
+                            <h4>${product.name}</h4>
+                            <div class="price">$${product.price}</div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                }
+            });
+        }
+
+        function filterAndSort() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const sortVal = document.getElementById('sortSelect').value;
+
+            let filtered = allProducts.filter(p => 
+                p.name.toLowerCase().includes(query) || 
+                p.body.toLowerCase().includes(query)
+            );
+
+            if (sortVal === 'price-low') {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (sortVal === 'price-high') {
+                filtered.sort((a, b) => b.price - a.price);
+            } else {
+                // Default sort (the one from JSON)
+            }
+
+            renderGrids(filtered);
+        }
+
+        function openModal(product) {
+            document.getElementById('modal-img').src = product.image;
+            document.getElementById('modal-title').innerText = product.name;
+            document.getElementById('modal-price').innerText = `$${product.price}`;
+            document.getElementById('modal-marketing').innerText = product.marketing_tip || "";
+            document.getElementById('modal-desc').innerText = product.body;
+            document.getElementById('modal-wa').href = `https://wa.me/8618663543398?text=Hello, I am interested in ${product.name}`;
+            document.getElementById('product-modal').style.display = 'flex';
         }
 
         function closeModal() {
-            document.getElementById('guideModal').style.display = 'none';
+            document.getElementById('product-modal').style.display = 'none';
         }
 
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('guideModal')) {
-                closeModal();
-            }
-        }
+        window.onclick = (e) => {
+            if (e.target == document.getElementById('product-modal')) closeModal();
+        };
+
+        loadProducts();
     </script>
 </body>
 </html>
