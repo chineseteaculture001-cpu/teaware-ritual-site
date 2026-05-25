@@ -8,40 +8,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@300;400;600;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-deep: #000c18;
-            --bg-card: #001529;
+            --bg-rosewood: #4a0e0e;
+            --bg-card: #3d0c0c;
             --gold: #d4af37;
             --gold-hover: #f1c40f;
-            --text-main: #f8f8f8;
+            --text-main: #fffcf0;
             --text-muted: #bdc3c7;
-            --emerald: #004b23;
+            --lacquer-red: #a4161a;
             --font-main: 'Montserrat', sans-serif;
             --font-title: 'Playfair Display', serif;
             --font-deco: 'Cinzel Decorative', cursive;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { background-color: var(--bg-deep); color: var(--text-main); font-family: var(--font-main); line-height: 1.6; overflow-x: hidden; width: 100vw; }
+        body { background-color: var(--bg-rosewood); color: var(--text-main); font-family: var(--font-main); line-height: 1.6; overflow-x: hidden; width: 100vw; }
 
         header {
             padding: 15px 8%; display: flex; justify-content: space-between; align-items: center;
-            background: var(--bg-deep); border-bottom: 1px solid var(--gold);
+            background: var(--bg-rosewood); border-bottom: 2px solid var(--gold);
             position: sticky; top: 0; z-index: 2000; width: 100%;
         }
         .brand-logo { display: flex; align-items: center; gap: 15px; }
-        .brand-logo .seal { width: 45px; height: 45px; background: #a4161a; color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-deco); font-size: 1rem; border-radius: 4px; border: 1px solid var(--gold); }
+        .brand-logo .seal { width: 45px; height: 45px; background: var(--lacquer-red); color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-deco); font-size: 1rem; border-radius: 4px; border: 1px solid var(--gold); }
         .brand-logo h1 { font-size: 1.4rem; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-family: var(--font-deco); }
 
         nav ul { display: flex; list-style: none; gap: 25px; }
         nav a { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         nav a:hover { color: var(--gold); }
 
-        .hero { height: 90vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; }
-        .hero-video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
-        .hero-video-container iframe { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-        .hero-overlay { max-width: 800px; padding: 60px; background: rgba(0, 12, 24, 0.7); backdrop-filter: blur(10px); border: 1px solid var(--gold); }
-        .hero h2 { font-size: 4rem; margin-bottom: 15px; font-family: var(--font-title); color: var(--gold); }
+        .hero { height: 95vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; background: #000; }
+        .hero-video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 1; pointer-events: none; }
+        .hero-video-container iframe { 
+            width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh; 
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+            border: none; opacity: 0.7;
+        }
+        
+        .hero-overlay { z-index: 10; max-width: 800px; padding: 60px; background: rgba(74, 14, 14, 0.85); backdrop-filter: blur(8px); border: 2px solid var(--gold); box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+        .hero h2 { font-size: 4rem; margin-bottom: 15px; font-family: var(--font-title); color: var(--gold); text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
         .hero p { font-size: 1.1rem; letter-spacing: 4px; margin-bottom: 30px; color: var(--text-main); }
+        
+        .hero-contacts { display: flex; justify-content: center; gap: 30px; margin-top: 20px; font-size: 0.9rem; letter-spacing: 1px; }
+        .hero-contacts a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .hero-contacts a:hover { border-bottom-color: var(--gold); }
 
         .controls-section { padding: 40px 8% 0; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center; }
         .search-box { flex: 1; min-width: 250px; position: relative; }
@@ -52,12 +61,12 @@
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-header h2 { font-family: var(--font-title); font-size: 3rem; color: var(--gold); margin-bottom: 10px; }
         .section-header p { text-transform: uppercase; letter-spacing: 4px; color: var(--text-muted); font-size: 0.8rem; }
-        .section-header .line { width: 60px; height: 1px; background: var(--gold); margin: 25px auto; }
+        .section-header .line { width: 60px; height: 2px; background: var(--gold); margin: 25px auto; }
 
         .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
-        .product-card { background: var(--bg-card); border: 1px solid #1a2a3a; transition: 0.4s; cursor: pointer; overflow: hidden; }
+        .product-card { background: var(--bg-card); border: 1px solid #5a1a1a; transition: 0.4s; cursor: pointer; overflow: hidden; }
         .product-card:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .product-img { width: 100%; height: 320px; overflow: hidden; }
+        .product-img { width: 100%; height: 320px; overflow: hidden; border-bottom: 1px solid #5a1a1a; }
         .product-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
         .product-card:hover .product-img img { transform: scale(1.08); }
         .product-info { padding: 25px; text-align: center; }
@@ -66,9 +75,9 @@
         .product-info .price { font-size: 1.1rem; color: var(--text-main); font-weight: 700; }
 
         #product-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 3000; align-items: center; justify-content: center; padding: 20px; }
-        .modal-content { background: var(--bg-deep); max-width: 900px; width: 100%; border: 1px solid var(--gold); position: relative; max-height: 90vh; overflow-y: auto; }
+        .modal-content { background: var(--bg-rosewood); max-width: 900px; width: 100%; border: 2px solid var(--gold); position: relative; max-height: 90vh; overflow-y: auto; }
         .modal-layout { display: grid; grid-template-columns: 1fr 1fr; }
-        .modal-img-box { width: 100%; aspect-ratio: 1/1; background: #001a33; }
+        .modal-img-box { width: 100%; aspect-ratio: 1/1; background: #2c0a0a; }
         .modal-img-box img { width: 100%; height: 100%; object-fit: cover; }
         .modal-details { padding: 40px; }
         .modal-details h2 { font-family: var(--font-title); font-size: 2rem; color: var(--gold); margin-bottom: 15px; }
@@ -77,14 +86,16 @@
         .modal-details .desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 30px; }
         .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.8rem; cursor: pointer; color: var(--gold); z-index: 10; }
 
-        footer { background: #000810; padding: 80px 8% 40px; border-top: 1px solid #112233; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1.2fr; gap: 60px; padding-bottom: 40px; }
+        footer { background: #2c0a0a; padding: 80px 8% 40px; border-top: 2px solid var(--gold); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1.2fr 1.2fr; gap: 40px; padding-bottom: 40px; }
         .footer-brand h2 { font-family: var(--font-deco); color: var(--gold); margin-bottom: 20px; font-size: 1.8rem; }
-        .footer-brand p { color: var(--text-muted); max-width: 400px; }
-        .footer-links h4 { color: var(--gold); margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; }
-        .footer-links ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .footer-brand p { color: var(--text-muted); max-width: 400px; font-size: 0.9rem; }
+        .footer-links h4 { color: var(--gold); margin-bottom: 20px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+        .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
         .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
         .footer-links a:hover { color: var(--gold); }
+        .footer-contact p { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 10px; }
+        .footer-contact a { color: var(--gold); text-decoration: none; }
 
         .whatsapp-fixed { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 
@@ -92,6 +103,7 @@
             header { flex-direction: column; gap: 15px; }
             nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
             .hero h2 { font-size: 2.5rem; }
+            .hero-contacts { flex-direction: column; gap: 10px; }
             .modal-layout { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
         }
@@ -109,6 +121,9 @@
                 <li><a href="#zisha">Zisha</a></li>
                 <li><a href="#tea">Tea</a></li>
                 <li><a href="#trays">Trays</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="heritage.html">Heritage</a></li>
+                <li><a href="journal.html">Journal</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -116,13 +131,17 @@
 
     <section class="hero">
         <div class="hero-video-container">
-            <iframe src="https://www.youtube.com/embed/fA_X8D1Tj10?autoplay=1&mute=1&loop=1&playlist=fA_X8D1Tj10&controls=0&showinfo=0&rel=0&iv_load_policy=3" frameborder="0"></iframe>
+            <iframe id="hero-iframe" src="https://www.youtube.com/embed/fA_X8D1Tj10?autoplay=1&mute=1&loop=1&playlist=fA_X8D1Tj10&controls=0&showinfo=0&rel=0&iv_load_policy=3&enablejsapi=1" frameborder="0" allow="autoplay; fullscreen"></iframe>
         </div>
         <div class="hero-overlay">
-            <p>ESTABLISHED 2026</p>
-            <h2>THE JADE RITUAL</h2>
-            <p>Authentic Chinese Teaware & Premium Tea</p>
-            <a href="#ceremony" style="display:inline-block; padding:12px 35px; text-decoration:none; color:var(--gold); border:1px solid var(--gold); font-weight: 700; letter-spacing: 2px;">EXPLORE COLLECTION</a>
+            <p id="hero-established">ESTABLISHED 2026</p>
+            <h2 id="hero-title">THE JADE RITUAL</h2>
+            <p id="hero-subtitle">Authentic Chinese Teaware & Premium Tea</p>
+            <div class="hero-contacts">
+                <a href="https://wa.me/8618663543398">WhatsApp: +86 186 6354 3398</a>
+                <a href="mailto:chineseteaculture001@gmail.com">Email: chineseteaculture001@gmail.com</a>
+            </div>
+            <a href="#ceremony" style="display:inline-block; margin-top: 30px; padding:12px 35px; text-decoration:none; color:var(--bg-rosewood); background: var(--gold); font-weight: 700; letter-spacing: 2px;">EXPLORE COLLECTION</a>
         </div>
     </section>
 
@@ -199,7 +218,9 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <h2>The Jade Ritual</h2>
-                <p>Preserving the ancient art of tea through master-crafted vessels and exceptional leaves. Each piece is selected for its soul and craftsmanship.</p>
+                <p>Preserving the ancient art of tea through master-crafted vessels and exceptional leaves. Part of Shandong Mingzhi Education Group.</p>
+                <p style="margin-top: 20px;">WhatsApp: +86 186 6354 3398 / +86 155 8948 2015</p>
+                <p>Email: chineseteaculture001@gmail.com</p>
             </div>
             <div class="footer-links">
                 <h4>Collections</h4>
@@ -208,12 +229,16 @@
                     <li><a href="#zisha">Zisha Teapots</a></li>
                     <li><a href="#tea">Premium Tea</a></li>
                     <li><a href="#trays">Tea Trays</a></li>
-                    <li><a href="heritage.html">Our Heritage</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>WhatsApp 1: <a href="https://wa.me/8618663543398">+86 186 6354 3398</a></p>
+                <p>WhatsApp 2: <a href="https://wa.me/8615589482015">+86 155 8948 2015</a></p>
+                <p>Email: <a href="mailto:chineseteaculture001@gmail.com">chineseteaculture001@gmail.com</a></p>
+            </div>
         </div>
-        <p style="text-align: center; color: #555; font-size: 0.8rem; margin-top: 40px;">&copy; 2026 THE JADE RITUAL. ALL RIGHTS RESERVED.</p>
+        <p style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 40px;">&copy; 2026 THE JADE RITUAL. ALL RIGHTS RESERVED.</p>
     </footer>
 
     <a href="https://wa.me/8618663543398" class="whatsapp-fixed">
@@ -223,13 +248,23 @@
     <script>
         let allProducts = [];
 
-        async function loadProducts() {
+        async function init() {
             try {
+                // Load Settings
+                const settingsRes = await fetch('/content/settings.json');
+                const settings = await settingsRes.json();
+                if (settings.video_id) {
+                    document.getElementById('hero-iframe').src = `https://www.youtube.com/embed/${settings.video_id}?autoplay=1&mute=1&loop=1&playlist=${settings.video_id}&controls=0&showinfo=0&rel=0&iv_load_policy=3&enablejsapi=1`;
+                }
+                if (settings.hero_title) document.getElementById('hero-title').innerText = settings.hero_title;
+                if (settings.hero_subtitle) document.getElementById('hero-subtitle').innerText = settings.hero_subtitle;
+
+                // Load Products
                 const response = await fetch('/content/all_products_combined.json');
                 allProducts = await response.json();
                 renderGrids(allProducts);
             } catch (e) {
-                console.error("Failed to load products", e);
+                console.error("Initialization failed", e);
             }
         }
 
@@ -241,10 +276,9 @@
                 'Tea Tray': document.getElementById('tray-grid')
             };
 
-            // Clear all grids
             Object.values(grids).forEach(grid => grid.innerHTML = '');
 
-            products.forEach((product, index) => {
+            products.forEach((product) => {
                 let category = product.category;
                 const grid = grids[category];
                 if (grid) {
@@ -272,15 +306,13 @@
 
             let filtered = allProducts.filter(p => 
                 p.name.toLowerCase().includes(query) || 
-                p.body.toLowerCase().includes(query)
+                (p.body && p.body.toLowerCase().includes(query))
             );
 
             if (sortVal === 'price-low') {
                 filtered.sort((a, b) => a.price - b.price);
             } else if (sortVal === 'price-high') {
                 filtered.sort((a, b) => b.price - a.price);
-            } else {
-                // Default sort (the one from JSON)
             }
 
             renderGrids(filtered);
@@ -291,7 +323,7 @@
             document.getElementById('modal-title').innerText = product.name;
             document.getElementById('modal-price').innerText = `$${product.price}`;
             document.getElementById('modal-marketing').innerText = product.marketing_tip || "";
-            document.getElementById('modal-desc').innerText = product.body;
+            document.getElementById('modal-desc').innerText = product.body || "";
             document.getElementById('modal-wa').href = `https://wa.me/8618663543398?text=Hello, I am interested in ${product.name}`;
             document.getElementById('product-modal').style.display = 'flex';
         }
@@ -304,7 +336,7 @@
             if (e.target == document.getElementById('product-modal')) closeModal();
         };
 
-        loadProducts();
+        init();
     </script>
 </body>
 </html>

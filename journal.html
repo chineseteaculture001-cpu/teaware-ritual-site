@@ -4,54 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Tea Journal | The Jade Ritual</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@300;400;600;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --emerald: #004b23; --jade: #2d6a4f; --gold: #d4af37; --silk: #fffdfa; --ink: #0a0a0a; }
+        :root {
+            --bg-rosewood: #4a0e0e;
+            --bg-card: #3d0c0c;
+            --gold: #d4af37;
+            --text-main: #fffcf0;
+            --text-muted: #bdc3c7;
+            --font-main: 'Montserrat', sans-serif;
+            --font-title: 'Playfair Display', serif;
+            --font-deco: 'Cinzel Decorative', cursive;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--silk); font-family: 'Montserrat', sans-serif; color: var(--ink); line-height: 1.8; }
-        header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 253, 250, 0.98); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 2000; border-bottom: 3px solid var(--emerald); left: 0; right: 0; width: 100%; }
-        .logo { font-family: 'Playfair Display', serif; font-weight: 900; color: var(--emerald); font-size: 1.5rem; letter-spacing: 2px; text-decoration: none; }
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav a { text-decoration: none; color: var(--ink); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; }
-
-        .journal-container { max-width: 1600px; margin: 80px auto; padding: 0 20px; }
-        .journal-header { text-align: center; margin-bottom: 80px; }
-        .journal-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--emerald); }
-        .journal-header p { font-style: italic; color: #666; font-size: 1.1rem; }
-
-        .blog-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
-        .blog-post { background: white; border-bottom: 4px solid #eee; transition: 0.3s; padding-bottom: 20px; }
-        .blog-post:hover { border-color: var(--gold); }
-        .blog-img { height: 250px; background-size: cover; background-position: center; margin-bottom: 20px; border-radius: 4px; }
-        .blog-content { padding: 0 10px; }
-        .blog-content .date { font-size: 0.8rem; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: block; }
-        .blog-content h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--emerald); margin-bottom: 15px; }
-        .blog-content p { font-size: 0.95rem; color: #555; margin-bottom: 20px; }
-        .read-more { font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--gold); padding-bottom: 5px; font-size: 0.8rem; cursor: pointer; }
-
-        footer { background: var(--ink); color: white; padding: 80px 8% 40px; text-align: center; }
-        .footer-logo { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
-        .copy { opacity: 0.5; font-size: 0.8rem; margin-top: 40px; }
+        body { background: var(--bg-rosewood); font-family: var(--font-main); color: var(--text-main); line-height: 1.8; overflow-x: hidden; }
         
-        .full-content { font-size: 0.95rem; color: #555; white-space: pre-line; }
-    
-@media (max-width: 768px) {
-    header { padding: 15px 5%; flex-direction: column; text-align: center; }
-    nav ul { gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
-    nav a { font-size: 0.6rem; letter-spacing: 1px; }
+        header {
+            padding: 15px 8%; display: flex; justify-content: space-between; align-items: center;
+            background: var(--bg-rosewood); border-bottom: 2px solid var(--gold);
+            position: sticky; top: 0; z-index: 2000;
+        }
+        .logo { font-family: var(--font-deco); color: var(--gold); font-size: 1.4rem; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: var(--text-main); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
 
-    .journal-container { margin: 40px auto; }
-    .journal-header { margin-bottom: 40px; }
-    .journal-header h1 { font-size: 2.2rem; }
-    .journal-header p { font-size: 0.9rem; }
+        .journal-container { max-width: 1400px; margin: 80px auto; padding: 0 20px; }
+        .journal-header { text-align: center; margin-bottom: 80px; }
+        .journal-header h1 { font-family: var(--font-title); font-size: 3.5rem; color: var(--gold); }
+        .journal-header p { font-style: italic; color: var(--text-muted); font-size: 1.1rem; }
 
-    .blog-list { grid-template-columns: 1fr; gap: 30px; }
-    .blog-img { height: 200px; }
-    .blog-content h2 { font-size: 1.5rem; }
+        .blog-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px; }
+        .blog-post { background: var(--bg-card); border: 1px solid #5a1a1a; transition: 0.3s; overflow: hidden; }
+        .blog-post:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .blog-img { height: 250px; background-size: cover; background-position: center; border-bottom: 1px solid #5a1a1a; }
+        .blog-content { padding: 30px; }
+        .blog-content .date { font-size: 0.8rem; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; display: block; }
+        .blog-content h2 { font-family: var(--font-title); font-size: 1.8rem; color: var(--gold); margin-bottom: 15px; }
+        .blog-content p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 25px; line-height: 1.8; }
+        .read-more { font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); text-decoration: none; border: 1px solid var(--gold); padding: 10px 20px; font-size: 0.8rem; cursor: pointer; transition: 0.3s; }
+        .read-more:hover { background: var(--gold); color: var(--bg-rosewood); }
+
+        footer { background: #2c0a0a; padding: 80px 8% 40px; border-top: 2px solid var(--gold); text-align: center; }
+        .footer-logo { font-family: var(--font-deco); font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
+        .copy { opacity: 0.5; font-size: 0.8rem; margin-top: 40px; color: var(--text-muted); }
+        
+        .full-content { font-size: 0.95rem; color: var(--text-muted); white-space: pre-line; margin-top: 20px; }
     
-    footer { padding: 40px 5% 20px; }
-}
-</style>
+        @media (max-width: 768px) {
+            .journal-header h1 { font-size: 2.2rem; }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -80,7 +84,7 @@
 
     <footer>
         <div class="footer-logo">The Jade Ritual</div>
-        <p>Part of Shandong Mingzhi Education Group</p>
+        <p style="color: var(--text-muted);">Part of Shandong Mingzhi Education Group</p>
         <p class="copy">&copy; 2026 China Tea Culture Communication. All Rights Reserved.</p>
     </footer>
 
