@@ -308,8 +308,10 @@
 
                 allProducts.forEach((product, index) => {
                     let cat = product.category;
-                    if (cat.startsWith('Tea') && cat !== 'Tea Tray') cat = 'Tea';
-                    const grid = grids[cat];
+                    let grid = grids[cat];
+                    if (!grid && (cat.includes('Tea') || cat.includes('Puer') || cat.includes('Oolong')) && cat !== 'Tea Tray') {
+                        grid = grids['Tea'];
+                    }
                     if (grid) {
                         const card = document.createElement('div');
                         card.className = 'product-card';
