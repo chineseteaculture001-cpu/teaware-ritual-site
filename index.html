@@ -308,6 +308,14 @@
 
                 allProducts.forEach((product, index) => {
                     let cat = product.category;
+                    if (!cat) {
+                        const filename = productFiles[index];
+                        if (filename.includes('gongfu-set')) cat = 'Ceremony Set';
+                        else if (filename.includes('tea-')) cat = 'Tea';
+                        else if (filename.includes('tray-')) cat = 'Tea Tray';
+                        else if (filename.includes('zisha')) cat = 'Zisha Teapot';
+                        else cat = 'Unknown';
+                    }
                     let grid = grids[cat];
                     if (!grid && (cat.includes('Tea') || cat.includes('Puer') || cat.includes('Oolong')) && cat !== 'Tea Tray') {
                         grid = grids['Tea'];
