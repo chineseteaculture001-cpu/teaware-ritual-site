@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
     <title>The Jade Ritual | Authentic Chinese Teaware & Premium Tea</title>
     <meta name="description" content="Discover handmade Yixing Zisha teapots, Dehua porcelain, and premium ancient tree tea. Direct from the source to your table. Global shipping available.">
     <meta name="keywords" content="Gongfu Tea Set, Yixing Zisha Teapot, Handmade Teaware, Chinese Tea, Puer Tea, Oolong Tea, Dehua Porcelain">
@@ -290,36 +289,28 @@
 
         async function loadProducts() {
             try {
-                const productFiles = ["ancient-tree-palace-ripe.json", "biluochun.json", "classical-fang-gu.json", "dragon-egg.json", "elegant-duo-qiu.json", "gongfu-set-558347124280.json", "gongfu-set-558428832764.json", "gongfu-set-558761014275.json", "gongfu-set-558815988182.json", "gongfu-set-558815988182_1.json", "gongfu-set-558815988182_2.json", "gongfu-set-558815988182_3.json", "gongfu-set-559209486734.json", "gongfu-set-559429394601.json", "gongfu-set-559494103159.json", "gongfu-set-570954997041.json", "gongfu-set-575490441530.json", "gongfu-set-575490441530_1.json", "gongfu-set-575490441530_2.json", "gongfu-set-575490441530_3.json", "gongfu-set-575490441530_4.json", "gongfu-set-583011036104.json", "gongfu-set-591547099327.json", "gongfu-set-615365721946.json", "gongfu-set-620250388382.json", "gongfu-set-638951671431.json", "gongfu-set-643174181493.json", "gongfu-set-704501334932.json", "gongfu-set-717341796871.json", "gongfu-set-717580305215.json", "gongfu-set-717762538558.json", "gongfu-set-717766486096.json", "gongfu-set-717957283735.json", "gongfu-set-717957359130.json", "gongfu-set-807874286827.json", "gongfu-set-807874286827_1.json", "gongfu-set-807874286827_2.json", "gongfu-set-808034741640.json", "gongfu-set-809749761844.json", "gongfu-set-819421451378.json", "gongfu-set-827645135345.json", "gongfu-set-850911835404.json", "gongfu-set-898631956680.json", "gongfu-set-900802297545.json", "gongfu-set-942917410779.json", "gongfu-set-945252225229.json", "gongfu-set-955382581181.json", "gongfu-set-955382581181_1.json", "gongfu-set-955382581181_2.json", "gongfu-set-955382581181_3.json", "gongfu-set-957264813919.json", "gongfu-set-957726193456.json", "gongfu-set-963081971314.json", "gongfu-set-964239089642.json", "gongfu-set-969767035231.json", "gongfu-set-985206116347.json", "gongfu-set-986264270654.json", "gongfu-set-997338379266.json", "gongfu-set-997932934707.json", "handmade-xi-shi.json", "imperial-white-porcelain.json", "jasmine-dragon-pearls.json", "literati-shi-piao.json", "longquan-celadon-set.json", "master-de-zhong.json", "master-pan-hu.json", "minimalist-han-wa.json", "roasted-tieguanyin.json", "ru-kiln-celadon-set.json", "silver-needle.json", "tea-1000706690797.json", "tea-1003178327578.json", "tea-1003381658379.json", "tea-1003418452144.json", "tea-1003427240604.json", "tea-1003627207609.json", "tea-1003743964410.json", "tea-1004250320237.json", "tea-1005052365564.json", "tea-1008191609301.json", "tea-1033801253011.json", "tea-1037712366330.json", "tea-1043696654285.json", "tea-1047799372273.json", "tea-1051502063763.json", "tea-1052931193813.json", "tea-1053658548955.json", "tea-1192808072.json", "tea-36477895798.json", "tea-555746082583.json", "tea-564941837771.json", "tea-609387900452.json", "tea-609519440999.json", "tea-609902877485.json", "tea-610684177138.json", "tea-694436579946.json", "tea-694441519009.json", "tea-706070675030.json", "tea-708851289154.json", "tea-710134172809.json", "tea-719628317391.json", "tea-727266357644.json", "tea-728053178177.json", "tea-731635007024.json", "tea-733068964026.json", "tea-742097836074.json", "tea-746652039085.json", "tea-750145656288.json", "tea-750283793730.json", "tea-751618757213.json", "tea-779906625415.json", "tea-893925820772.json", "tea-895412518490.json", "tea-895786154146.json", "tea-896247001029.json", "tea-985855082612.json", "travel-gongfu-set.json", "tray-18014528443.json", "tray-18014537336.json", "tray-18281934733.json", "tray-18826131445.json", "tray-18842524532.json", "tray-18917483266.json", "tray-18967661854.json", "tray-20471152614.json", "tray-20553338031.json", "tray-2207935873228-1.json", "tray-2207935873228-2.json", "tray-2207935873228-3.json", "tray-2207935873228-4.json", "tray-2207935873228-5.json", "tray-2207935873228-6.json", "west-lake-longjing.json", "wuyi-dahongpao.json", "wuyi-rougui.json", "xiaoqinggan.json", "yunnan-dianhong.json", "zisha-12-piece-master.json", "zisha-3-00.json", "zisha-3-01.json", "zisha-3-02.json", "zisha-3-03.json", "zisha-3-04.json", "zisha-3-05.json", "zisha-3-06.json", "zisha-3-07.json", "zisha-3-08.json", "zisha-3-09.json", "zisha-3-10.json", "zisha-3-11.json", "zisha-3-12.json", "zisha-3-13.json", "zisha-3-14.json", "zisha-3-15.json", "zisha-3-16.json", "zisha-3-17.json", "zisha-3-18.json", "zisha-3-19.json", "zisha-3-20.json", "zisha-3-21.json", "zisha-3-22.json", "zisha-3-23.json", "zisha-3-24.json", "zisha-3-25.json", "zisha-3-26.json", "zisha-3-27.json", "zisha-3-28.json", "zisha-3-29.json", "zisha-4-00.json", "zisha-4-01.json", "zisha-4-02.json", "zisha-4-03.json", "zisha-4-04.json", "zisha-4-05.json", "zisha-4-06.json", "zisha-4-07.json", "zisha-4-08.json", "zisha-4-09.json", "zisha-4-10.json", "zisha-4-11.json", "zisha-4-12.json", "zisha-4-13.json", "zisha-4-14.json", "zisha-4-15.json", "zisha-4-16.json", "zisha-4-17.json", "zisha-4-18.json", "zisha-4-19.json", "zisha-4-20.json", "zisha-4-21.json", "zisha-4-22.json", "zisha-4-23.json", "zisha-4-24.json", "zisha-4-25.json", "zisha-4-26.json", "zisha-4-27.json", "zisha-4-28.json", "zisha-4-29.json", "zisha-5-01.json", "zisha-5-02.json", "zisha-5-03.json", "zisha-5-04.json", "zisha-5-05.json", "zisha-5-06.json", "zisha-5-07.json", "zisha-5-08.json", "zisha-5-09.json", "zisha-5-10.json", "zisha-5-11.json", "zisha-5-12.json", "zisha-5-13.json", "zisha-5-14.json", "zisha-5-15.json", "zisha-5-16.json", "zisha-5-17.json", "zisha-5-18.json", "zisha-5-19.json", "zisha-5-20.json", "zisha-5-21.json", "zisha-5-22.json", "zisha-5-23.json", "zisha-5-24.json", "zisha-5-25.json", "zisha-5-26.json", "zisha-5-27.json", "zisha-5-28.json"];
-
-                const products = await Promise.all(
-                    productFiles.map(file => fetch(`/content/products/${file}`).then(res => res.ok ? res.json() : null))
-                );
-
-                allProducts = products.filter(p => p);
+                const response = await fetch('/content/all_products_combined.json');
+                if (!response.ok) throw new Error('Failed to load products');
+                allProducts = await response.json();
 
                 const grids = {
                     'Ceremony Set': document.getElementById('ceremony-grid'),
                     'Tea Tray': document.getElementById('tray-grid'),
                     'Zisha Teapot': document.getElementById('zisha-grid'),
-                    'Teapot': document.getElementById('zisha-grid'),
                     'Tea': document.getElementById('tea-rock-grid')
                 };
 
                 allProducts.forEach((product, index) => {
-                    let cat = product.category;
-                    if (!cat) {
-                        const filename = productFiles[index];
-                        if (filename.includes('gongfu-set')) cat = 'Ceremony Set';
-                        else if (filename.includes('tea-')) cat = 'Tea';
-                        else if (filename.includes('tray-')) cat = 'Tea Tray';
-                        else if (filename.includes('zisha')) cat = 'Zisha Teapot';
-                        else cat = 'Unknown';
-                    }
+                    const cat = product.category || 'Unknown';
                     let grid = grids[cat];
+                    
                     if (!grid && (cat.includes('Tea') || cat.includes('Puer') || cat.includes('Oolong')) && cat !== 'Tea Tray') {
                         grid = grids['Tea'];
                     }
+                    if (!grid && (cat === 'Teapot' || cat === 'Zisha Teapot')) {
+                        grid = grids['Zisha Teapot'];
+                    }
+
                     if (grid) {
                         const card = document.createElement('div');
                         card.className = 'product-card';
@@ -327,18 +318,17 @@
                         
                         card.innerHTML = `
                             <div class="product-img">
-                                <img src="${product.image || product.image_url}" alt="${product.name}" loading="lazy" onerror="this.src='https://sc04.alicdn.com/kf/H89ace38d4caf42c59826f029a4e18545s.jpg_640x640.jpg'">
+                                <img src="${product.image || product.image_url}" alt="${product.name}" loading="lazy" referrerpolicy="no-referrer" onerror="this.src='https://sc04.alicdn.com/kf/H89ace38d4caf42c59826f029a4e18545s.jpg_640x640.jpg'">
                             </div>
                             <div class="product-info">
                                 <h4>${product.name}</h4>
-                                <p>${product.category.replace('Tea - ', '')}</p>
+                                <p>${product.category ? product.category.replace('Tea - ', '') : ''}</p>
                             </div>
                         `;
                         grid.appendChild(card);
                     }
                 });
 
-                // Load Settings
                 const settings = await fetch('/content/settings.json').then(res => res.json());
                 if (settings) {
                     document.getElementById('hero-title').innerText = settings.hero_title;
@@ -363,13 +353,13 @@
                 <div class="modal-layout">
                     <div class="modal-gallery">
                         <div class="main-preview" id="main-preview">
-                            <img src="${product.image || product.image_url}" alt="${product.name}" onerror="this.src='https://sc04.alicdn.com/kf/H89ace38d4caf42c59826f029a4e18545s.jpg_640x640.jpg'">
+                            <img src="${product.image || product.image_url}" alt="${product.name}" referrerpolicy="no-referrer" onerror="this.src='https://sc04.alicdn.com/kf/H89ace38d4caf42c59826f029a4e18545s.jpg_640x640.jpg'">
                         </div>
                     </div>
                     <div class="modal-details">
                         <div class="clay-tag">${product.category}</div>
                         <h2 style="font-family: var(--font-title); color: var(--emerald); margin-bottom: 20px;">${product.name}</h2>
-                        <p style="font-size: 1.5rem; color: var(--gold); font-weight: bold; margin-bottom: 20px;">$${product.price || product.price_usd}</p>
+                        <p style="font-size: 1.5rem; color: var(--gold); font-weight: bold; margin-bottom: 20px;">${product.price || product.price_usd}</p>
                         <div style="color: #666; margin-bottom: 30px; line-height: 1.8;">${product.body}</div>
                         <a href="https://wa.me/8618663543398" class="btn-gold" style="display:inline-block; padding:15px 40px; text-decoration:none; color:white; background: var(--emerald); border:1px solid var(--gold);">INQUIRE NOW</a>
                     </div>
