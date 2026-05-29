@@ -73,8 +73,13 @@
         .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
         .product-card { background: var(--bg-card); border: 1px solid #5a1a1a; transition: 0.4s; cursor: pointer; overflow: hidden; }
         .product-card:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .product-img { width: 100%; height: 320px; overflow: hidden; border-bottom: 1px solid #5a1a1a; background: #2c0a0a; display: flex; align-items: center; justify-content: center; }
-        .product-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+        .product-img { width: 100%; height: 320px; overflow: hidden; border-bottom: 1px solid #5a1a1a; background: #2c0a0a; display: flex; align-items: center; justify-content: center; position: relative; }
+        /* Skeleton Loader Effect */
+        .product-img::before { content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent); animation: loading 1.5s infinite; }
+        @keyframes loading { 100% { left: 100%; } }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; opacity: 0; }
+        .product-img img.loaded { opacity: 1; }
+        
         .product-card:hover .product-img img { transform: scale(1.08); }
         .product-info { padding: 25px; text-align: center; }
         .product-info h4 { font-family: var(--font-title); font-size: 1.2rem; color: var(--gold); margin-bottom: 8px; }
@@ -104,6 +109,7 @@
         .footer-contact p { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 15px; }
         .footer-contact a { color: var(--gold); text-decoration: none; }
 
+        .load-more-container { text-align: center; padding: 40px 0; }
         .whatsapp-fixed { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 
         @media (max-width: 768px) {
@@ -209,17 +215,24 @@
         <div class="product-grid" id="tray-grid"></div>
     </section>
 
+    <div class="load-more-container">
+        <button id="loadMoreBtn" class="explore-btn" onclick="loadNextPage()">LOAD MORE PRODUCTS</button>
+    </div>
+
     <div id="product-modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
             <div class="modal-layout">
-                <div class="modal-img-box"><img id="modal-img" src="" referrerpolicy="no-referrer"></div>
+                <div class="modal-img-box"><img id="modal-img" src=""></div>
                 <div class="modal-details">
                     <h2 id="modal-title"></h2>
                     <div class="price" id="modal-price"></div>
                     <div class="marketing" id="modal-marketing"></div>
                     <div class="desc" id="modal-desc"></div>
-                    <a id="modal-wa" href="" class="whatsapp-fixed" style="position:static; margin-top:20px;">INQUIRE ON WHATSAPP</a>
+                    <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+                        <a id="modal-wa" href="" class="whatsapp-fixed" style="position:static; justify-content:center;">INQUIRE ON WHATSAPP</a>
+                        <a id="modal-bulk" href="contact.html" style="text-align:center; padding:15px; border:1px solid var(--gold); color:var(--gold); text-decoration:none; font-weight:700; text-transform:uppercase; letter-spacing:2px; font-size:0.8rem; transition:0.3s;">Request Corporate Quote</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -257,31 +270,37 @@
 
     <script>
         let allProducts = [];
+        let displayedCount = 0;
+        const PAGE_SIZE = 24;
+        const base_url = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
 
         async function init() {
             try {
-                // Load Settings
                 const settingsRes = await fetch('content/settings.json');
                 const settings = await settingsRes.json();
-                
-                // Video initialization
                 if (settings.video_id) {
                     const vid = settings.video_id;
-                    const iframe = document.getElementById('hero-iframe');
-                    // Add more robust parameters for autoplay
-                    iframe.src = `https://www.youtube.com/embed/${vid}?autoplay=1&mute=1&loop=1&playlist=${vid}&controls=0&showinfo=0&rel=0&iv_load_policy=3&enablejsapi=1`;
+                    document.getElementById('hero-iframe').src = `https://www.youtube.com/embed/${vid}?autoplay=1&mute=1&loop=1&playlist=${vid}&controls=0&showinfo=0&rel=0&iv_load_policy=3&enablejsapi=1&origin=${window.location.origin}`;
                 }
 
-                // Load Products
                 const response = await fetch('content/all_products_combined.json');
                 allProducts = await response.json();
-                renderGrids(allProducts);
+                loadNextPage();
             } catch (e) {
                 console.error("Initialization failed", e);
             }
         }
 
-        function renderGrids(products) {
+        function loadNextPage() {
+            const nextBatch = allProducts.slice(displayedCount, displayedCount + PAGE_SIZE);
+            renderGrids(nextBatch, false);
+            displayedCount += PAGE_SIZE;
+            if (displayedCount >= allProducts.length) {
+                document.getElementById('loadMoreBtn').style.display = 'none';
+            }
+        }
+
+        function renderGrids(products, clear = true) {
             const grids = {
                 'Ceremony Set': document.getElementById('ceremony-grid'),
                 'Zisha Teapot': document.getElementById('zisha-grid'),
@@ -289,7 +308,10 @@
                 'Tea Tray': document.getElementById('tray-grid')
             };
 
-            Object.values(grids).forEach(grid => grid.innerHTML = '');
+            if (clear) {
+                Object.values(grids).forEach(grid => grid.innerHTML = '');
+                displayedCount = products.length; // If clearing (filtering), reset count
+            }
 
             products.forEach((product) => {
                 let category = product.category;
@@ -299,12 +321,11 @@
                     card.className = 'product-card';
                     card.onclick = () => openModal(product);
                     
-                    // Fallback image handling
-                    const imgSrc = product.image || 'https://via.placeholder.com/400x400?text=No+Photo';
+                    const imgSrc = product.image ? (product.image.startsWith('http') ? product.image : base_url + product.image) : 'https://via.placeholder.com/400x400?text=No+Photo';
                     
                     card.innerHTML = `
                         <div class="product-img">
-                            <img src="${imgSrc}" alt="${product.name}" referrerpolicy="no-referrer" onerror="this.src='https://via.placeholder.com/400x400?text=No+Photo'">
+                            <img data-src="${imgSrc}" alt="${product.name}" class="lazy" onload="this.classList.add('loaded')" onerror="this.src='https://via.placeholder.com/400x400?text=No+Photo'">
                         </div>
                         <div class="product-info">
                             <p class="category">${category}</p>
@@ -315,6 +336,25 @@
                     grid.appendChild(card);
                 }
             });
+            initLazyLoading();
+        }
+
+        function initLazyLoading() {
+            const lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
         }
 
         function filterAndSort() {
@@ -332,16 +372,19 @@
                 filtered.sort((a, b) => b.price - a.price);
             }
 
-            renderGrids(filtered);
+            renderGrids(filtered, true);
+            document.getElementById('loadMoreBtn').style.display = 'none'; // Disable paging during search
         }
 
         function openModal(product) {
-            document.getElementById('modal-img').src = product.image;
+            const imgSrc = product.image ? (product.image.startsWith('http') ? product.image : base_url + product.image) : 'https://via.placeholder.com/400x400?text=No+Photo';
+            document.getElementById('modal-img').src = imgSrc;
             document.getElementById('modal-title').innerText = product.name;
             document.getElementById('modal-price').innerText = `$${product.price}`;
             document.getElementById('modal-marketing').innerText = product.marketing_tip || "";
             document.getElementById('modal-desc').innerText = product.body || "";
             document.getElementById('modal-wa').href = `https://wa.me/8618663543398?text=Hello, I am interested in ${product.name}`;
+            document.getElementById('modal-bulk').href = `contact.html?product=${encodeURIComponent(product.name)}`;
             document.getElementById('product-modal').style.display = 'flex';
         }
 
