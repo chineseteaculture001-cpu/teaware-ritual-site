@@ -1,6 +1,6 @@
 [
   {
-    "name": "Artisan White Ceramic Gongfu Collection",
+    "name": "White",
     "marketing_tip": "A versatile and creative tea set that blends modern design with traditional brewing techniques.",
     "price": 15.0,
     "image": "assets/products/prod_a6c193257ffa163265307ec5331f84da.png",
@@ -12,7 +12,7 @@
   },
   {
     "offer_id": "638951671431",
-    "name": "Artisanal Ceramic Trio Tea Set",
+    "name": "Al Trio Tea Set",
     "marketing_tip": "A compact and creative set perfect for intimate tea sessions.",
     "price_rmb": 47,
     "price": 47.0,
@@ -51,7 +51,7 @@
     "filename": "gongfu-set-997338379266.json"
   },
   {
-    "name": "Chaozhou Style Dehua White Porcelain Set",
+    "name": "Chaozhou Style Dehua White Porcelain",
     "marketing_tip": "Perfect for the traditional Chaozhou 'Kung Fu' tea ceremony with its high-clarity white porcelain.",
     "price": 10.0,
     "image": "assets/products/prod_1b620f50c818d336e8a2b4a5e9babd81.png",
@@ -62,7 +62,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Classic Blue and White Porcelain Collection",
+    "name": "Classic Blue And White Porcelain",
     "marketing_tip": "A timeless tribute to Chinese heritage, featuring iconic cobalt blue patterns on crisp white porcelain.",
     "price": 22.0,
     "image": "assets/products/prod_97ef8675d1a3febbb77c6ca4023976db.png",
@@ -74,7 +74,7 @@
   },
   {
     "offer_id": "583011036104",
-    "name": "Classic Everyday Ceramic Gongfu Set",
+    "name": "Classic Everyday Set",
     "marketing_tip": "An affordable and practical choice for starting your gongfu tea journey.",
     "price_rmb": 9,
     "price": 9.0,
@@ -103,7 +103,7 @@
   },
   {
     "offer_id": "643174181493",
-    "name": "Dehua Pristine White Porcelain Gongfu Set",
+    "name": "Dehua Pristine White Porcelain Set",
     "marketing_tip": "Experience the pure elegance of Dehua white porcelain in every sip.",
     "price_rmb": 15,
     "price": 15.0,
@@ -113,7 +113,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Dehua Suet Jade Gift Collection",
+    "name": "Dehua Suet Jade Gift",
     "marketing_tip": "A gift of pure elegance and tradition.",
     "category": "Ceremony Set",
     "price": 15.0,
@@ -123,7 +123,7 @@
   },
   {
     "offer_id": "570954997041",
-    "name": "Elegant Blue and White Ceramic Collection",
+    "name": "Elegant Blue And White",
     "marketing_tip": "Timeless beauty and functionality combined in one elegant set.",
     "price_rmb": 13,
     "price": 13.0,
@@ -133,7 +133,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Explorer's Quick-Brew Hand-Held Set",
+    "name": "Explorer'S Quick-Brew Hand-Held Set",
     "marketing_tip": "The ultimate companion for the tea lover on the move, combining durability with simplicity.",
     "price": 3.0,
     "image": "assets/products/prod_aee8e33858f8497af7897eb03ae85854.png",
@@ -153,7 +153,7 @@
     "filename": "gongfu-set-717580305215.json"
   },
   {
-    "name": "Festive Dehua Mutton Fat Jade Gift Set",
+    "name": "Festive Dehua Mutton Fat Jade",
     "marketing_tip": "Celebrate special moments with the unmatched purity and brilliance of premium Dehua porcelain.",
     "price": 34.0,
     "image": "assets/products/prod_c212c312a724611936d7a531cbaba16a.png",
@@ -164,7 +164,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Ge Kiln Celadon Dry Brew Set",
+    "name": "Ge Kiln Celadon Dry Brew",
     "marketing_tip": "Perfect for the focused 'dry brewing' style, this Ge Kiln set offers compact elegance.",
     "price": 14.0,
     "image": "assets/products/prod_fda786c7417e84838c421f87ae7ca86d.png",
@@ -218,7 +218,7 @@
     "filename": "longquan-celadon-set.json"
   },
   {
-    "name": "High-Capacity New Chinese Ceramic Pitcher",
+    "name": "High-Capacity New Chinese Pitcher",
     "marketing_tip": "A bold statement piece that combines grand capacity with refined New Chinese aesthetic.",
     "price": 37.0,
     "image": "assets/products/prod_e3e0cd60e0c28eac98ba4e7ab2855ccd.png",
@@ -247,7 +247,7 @@
   },
   {
     "offer_id": "809749761844",
-    "name": "Japanese Style Ash-Glazed Gongfu Set",
+    "name": "Japanese Style Ash-Glazed Set",
     "marketing_tip": "Embrace the wabi-sabi aesthetic with this minimalist ash-glazed collection.",
     "price_rmb": 16,
     "price": 16.0,
@@ -258,7 +258,7 @@
   },
   {
     "offer_id": "558761014275",
-    "name": "Minimalist White Porcelain Gongfu Collection",
+    "name": "Minimalist White Porcelain",
     "marketing_tip": "Focus on the essence of tea with this clean and minimalist porcelain set.",
     "price_rmb": 71,
     "price": 71.0,
@@ -268,7 +268,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Modern Ru Kiln Celadon Tea Set",
+    "name": "Modern Ru Kiln Celadon Tea",
     "marketing_tip": "Celebrate the 'beauty of imperfection' with the delicate cicada-wing crackles of Ru Kiln porcelain.",
     "price": 8.0,
     "image": "assets/products/prod_bd78834015ad7d9d6d2ed3564a7f0ad6.png",
@@ -279,7 +279,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Outdoor Adventure Gongfu Set",
+    "name": "Outdoor Adventure Set",
     "marketing_tip": "Elevate your camping experience with fine tea.",
     "category": "Ceremony Set",
     "price": 19.0,
@@ -289,7 +289,7 @@
   },
   {
     "offer_id": "955382581181",
-    "name": "Portable Glass and Porcelain Travel Set",
+    "name": "Portable Glass And Porcelain Travel",
     "marketing_tip": "Enjoy your favorite tea on the go with this sleek and portable design.",
     "price_rmb": 6,
     "price": 6.0,
@@ -310,7 +310,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Premium Mutton Fat Jade Porcelain Set",
+    "name": "Mutton Fat Jade Porcelain Set",
     "marketing_tip": "Indulge in luxury with the silky texture and warm glow of authentic mutton fat jade porcelain.",
     "price": 35.0,
     "image": "assets/products/prod_a56df28efa4afc12ffbee8e8e8feb3d7.png",
@@ -321,7 +321,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Premium Purple Clay Quick Set",
+    "name": "Purple Clay Quick Set",
     "marketing_tip": "Authentic flavor in a portable design.",
     "category": "Ceremony Set",
     "price": 14.0,
@@ -342,7 +342,7 @@
   },
   {
     "offer_id": "558347124280",
-    "name": "Promotional Ceramic Gongfu Tea Set",
+    "name": "Promotional Tea Set",
     "marketing_tip": "A versatile and cost-effective set ideal for corporate gifts and events.",
     "price_rmb": 9,
     "price": 9.0,
@@ -388,7 +388,7 @@
   },
   {
     "offer_id": "955382581181",
-    "name": "Ru Ware Travel Gongfu Set",
+    "name": "Ru Ware Travel Set",
     "marketing_tip": "Experience the legendary 'azure sky after rain' glaze of Ru ware.",
     "price_rmb": 15,
     "price": 15.0,
@@ -426,7 +426,7 @@
   },
   {
     "offer_id": "900802297545",
-    "name": "Traditional Blue and White Porcelain Set",
+    "name": "Blue And White Porcelain Set",
     "marketing_tip": "Celebrate heritage with timeless blue and white porcelain patterns.",
     "price_rmb": 24,
     "price": 24.0,
@@ -436,7 +436,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Travel Gongfu Set",
+    "name": "Travel Set",
     "category": "Ceremony Set",
     "price": 0,
     "image": "assets/products/prod_d22397dd93458ebf7fedd870b775aaf6.png",
@@ -444,7 +444,7 @@
     "filename": "travel-gongfu-set.json"
   },
   {
-    "name": "Traveler's Essential Tea Duo",
+    "name": "Traveler'S Essential Tea Duo",
     "marketing_tip": "Take the comfort of tea wherever you roam.",
     "category": "Ceremony Set",
     "price": 11.0,
@@ -454,7 +454,7 @@
   },
   {
     "offer_id": "558428832764",
-    "name": "Twelve-Piece Classic Blue and White Set",
+    "name": "Twelve-Piece Classic Blue And White",
     "marketing_tip": "Host a complete tea ceremony with this comprehensive twelve-piece collection.",
     "price_rmb": 16,
     "price": 16.0,
@@ -482,7 +482,7 @@
     "filename": "gongfu-set-717762538558.json"
   },
   {
-    "name": "Zisha 12-Piece Master",
+    "name": "12-Piece Master",
     "category": "Ceremony Set",
     "price": 0,
     "image": "assets/products/prod_bd6a807b1fffddf96d6db7eb6c19b83a.jpg",
@@ -490,7 +490,7 @@
     "filename": "zisha-12-piece-master.json"
   },
   {
-    "name": "2023 Pre-Qingming Ancient Tree Raw Pu-erh Tasting Collection",
+    "name": "2023 Pre-Qingming Ancient Tree Raw",
     "marketing_tip": "A curated selection of 2023's finest pre-spring harvests, capturing the diverse terroir and vibrant vitality of Yunnan's premier ancient tea forests.",
     "category": "Ceremony Set",
     "price": 171,
@@ -499,7 +499,7 @@
     "filename": "tea-555746082583.json"
   },
   {
-    "name": "2026 First-Pick Huangshan Maofeng - Ceramic Jar Gift",
+    "name": "2026 First-Pick Huangshan Maofeng -",
     "marketing_tip": "A prestigious first-pick spring tea presented in a ceramic gift jar.",
     "category": "Ceremony Set",
     "price": 258,
@@ -508,7 +508,7 @@
     "filename": "tea-1033801253011.json"
   },
   {
-    "name": "Corporate Signature Keemun Black Tea Gift Set",
+    "name": "Corporate Signature Keemun Black Tea",
     "marketing_tip": "A professional and elegant choice for corporate gifting.",
     "category": "Ceremony Set",
     "price": 158,
@@ -517,7 +517,7 @@
     "filename": "tea-1005052365564.json"
   },
   {
-    "name": "Elegant Qimen Black Tea Gift Collection",
+    "name": "Elegant Qimen Black Tea Gift",
     "marketing_tip": "A refined selection of premium Qimen black tea, elegantly packaged for the perfect gift.",
     "category": "Ceremony Set",
     "price": 158.0,
@@ -526,7 +526,7 @@
     "filename": "tea-719628317391.json"
   },
   {
-    "name": "Huangshan Maofeng Green Tea - Corporate Gift Set",
+    "name": "Huangshan Maofeng Green Tea -",
     "marketing_tip": "A premium selection of Huangshan Maofeng, perfect for corporate gifting.",
     "category": "Ceremony Set",
     "price": 38,
@@ -535,7 +535,7 @@
     "filename": "tea-779906625415.json"
   },
   {
-    "name": "Keemun Black Tea - 200g Boutique Gift Set",
+    "name": "Keemun Black Tea - 200G",
     "marketing_tip": "A thoughtfully sized gift set of classic Keemun black tea.",
     "category": "Ceremony Set",
     "price": 128,
@@ -544,7 +544,7 @@
     "filename": "tea-750145656288.json"
   },
   {
-    "name": "Keemun Black Tea - 500g Grand Collection",
+    "name": "Keemun Black Tea - 500G",
     "marketing_tip": "A generous half-kilogram set of diverse premium Keemun black teas.",
     "category": "Ceremony Set",
     "price": 458,
@@ -553,7 +553,7 @@
     "filename": "tea-1003627207609.json"
   },
   {
-    "name": "Keemun Black Tea - Blue and White Porcelain Set",
+    "name": "Keemun Black Tea - Blue",
     "marketing_tip": "A stunning combination of premium Keemun tea and traditional porcelain art.",
     "category": "Ceremony Set",
     "price": 458,
@@ -562,7 +562,7 @@
     "filename": "tea-1003178327578.json"
   },
   {
-    "name": "Keemun Black Tea Collection - 250g Ceramic Gift Set",
+    "name": "Keemun Black Tea - 250G",
     "marketing_tip": "A curated selection of premium Keemun black teas in artisanal ceramic packaging.",
     "category": "Ceremony Set",
     "price": 328,
@@ -571,7 +571,7 @@
     "filename": "tea-1008191609301.json"
   },
   {
-    "name": "Premium First-Harvest Huangshan Maofeng Gift Set",
+    "name": "First-Harvest Huangshan Maofeng Gift Set",
     "marketing_tip": "The prestigious first harvest of Huangshan Maofeng, offering the purest expression of spring.",
     "category": "Ceremony Set",
     "price": 128.0,
@@ -581,7 +581,7 @@
   },
   {
     "offer_id": "559494103159",
-    "name": "Snowflake Glaze Ten-Piece Tea Collection",
+    "name": "Snowflake Glaze Ten-Piece Tea",
     "marketing_tip": "Capture the beauty of winter with the unique texture of snowflake glaze.",
     "price_rmb": 27,
     "price": 27.0,
@@ -591,7 +591,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Special Grade Taiping Houkui - Ceramic Gift Set",
+    "name": "Special Grade Taiping Houkui -",
     "marketing_tip": "A luxurious gift set featuring top-grade Taiping Houkui in ceramic canisters.",
     "category": "Ceremony Set",
     "price": 388,
@@ -600,7 +600,7 @@
     "filename": "tea-1043696654285.json"
   },
   {
-    "name": "Yan Yu Tea Talk Qimen Black Tea Collection",
+    "name": "Yan Yu Tea Talk Qimen",
     "marketing_tip": "Refined Qimen black tea in a beautiful gift set, ideal for corporate gifting and personal enjoyment.",
     "category": "Ceremony Set",
     "price": 128.0,
@@ -610,7 +610,7 @@
   },
   {
     "offer_id": "955382581181",
-    "name": "Artisanal Stove-Top Tea Roaster",
+    "name": "Al Stove-Top Tea Roaster",
     "marketing_tip": "A versatile ceramic pot for roasting milk tea and traditional brews indoors.",
     "price_rmb": 11,
     "price": 11.0,
@@ -620,7 +620,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Large Handcrafted Clay Milk Tea Jar",
+    "name": "Large Handcrafted Clay Milk Tea",
     "marketing_tip": "Specifically designed for the rich textures of boiled milk tea and roasted infusions.",
     "price": 11.0,
     "image": "assets/products/prod_427703524aa02eb1fbdcd276b331ff1a.png",
@@ -664,7 +664,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Snowflake Glaze Ceramic Tea Ensemble",
+    "name": "Snowflake Glaze Tea Ensemble",
     "marketing_tip": "The unique crystalline texture of the snowflake glaze adds a layer of visual poetry to your tea table.",
     "price": 12.0,
     "image": "assets/products/prod_56eb9df5e2b23a08897ef3d2ac36eeb3.png",
@@ -697,7 +697,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Vintage Charcoal Roasted Milk Tea Pot",
+    "name": "Vintage Charcoal Roasted Milk Tea",
     "marketing_tip": "Embrace the rustic charm of traditional hearth brewing with our 2026 edition roasted tea pot.",
     "price": 15.0,
     "image": "assets/products/prod_1c27660c200c41b886abb570c22e8b46.png",
@@ -708,7 +708,7 @@
     "category": "Ceremony Set"
   },
   {
-    "name": "Ancient Method Chenxiang Clay Wood-Fired Tree Stump Teapot (250cc)",
+    "name": "Ancient Method Chenxiang Clay Wood-Fired",
     "category": "Zisha Teapot",
     "price": 220,
     "image": "assets/products/prod_e1ba32bf106e6e9e69ede8b102abe5e8.png",
@@ -716,7 +716,7 @@
     "filename": "zisha-5-05.json"
   },
   {
-    "name": "Artisan Hand-Carved Grotto Square Zisha Teacup",
+    "name": "Hand-Carved Grotto Square Teacup",
     "marketing_tip": "Unique square profile with artistic grotto-style carvings.",
     "category": "Zisha Teapot",
     "price": 49.9,
@@ -725,7 +725,7 @@
     "filename": "zisha-4-04.json"
   },
   {
-    "name": "Artisan Zisha Tea-Infuser Cup with Integrated Filter",
+    "name": "Tea-Infuser Cup With Integrated Filter",
     "marketing_tip": "Convenient tea separation for the perfect steep every time.",
     "category": "Zisha Teapot",
     "price": 138.0,
@@ -734,7 +734,7 @@
     "filename": "zisha-4-09.json"
   },
   {
-    "name": "Authentic Raw Ore Zisha Personal Water Cup",
+    "name": "Raw Ore Personal Water Cup",
     "marketing_tip": "Natural raw ore clay for a pure and healthy tea drinking experience.",
     "category": "Zisha Teapot",
     "price": 37.9,
@@ -743,7 +743,7 @@
     "filename": "zisha-4-05.json"
   },
   {
-    "name": "Classic Red Jiangpo Lotus Fragrance Duo Zhi Teapot",
+    "name": "Classic Red Jiangpo Lotus Fragrance",
     "category": "Zisha Teapot",
     "price": 209,
     "image": "assets/products/prod_6a1ef98662d61410388f803561e9d8b1.png",
@@ -751,7 +751,7 @@
     "filename": "zisha-5-11.json"
   },
   {
-    "name": "Classic Twelve Zodiac Yixing Zisha Teapot",
+    "name": "Classic Twelve Zodiac",
     "marketing_tip": "Symbolic zodiac designs for a personalized tea experience.",
     "category": "Zisha Teapot",
     "price": 28.8,
@@ -768,7 +768,7 @@
     "filename": "classical-fang-gu.json"
   },
   {
-    "name": "Cloud Mist Chenxiang Clay Wood-Fired Pine Stump Teapot (260cc)",
+    "name": "Cloud Mist Chenxiang Clay Wood-Fired",
     "category": "Zisha Teapot",
     "price": 220,
     "image": "assets/products/prod_02c6c152f1b41de7af0dd5417f6d2447.png",
@@ -776,7 +776,7 @@
     "filename": "zisha-5-20.json"
   },
   {
-    "name": "Di Cao Qing Clay Han Wa Style Yixing Teapot",
+    "name": "Di Cao Qing Clay Han",
     "marketing_tip": "Classic Han Wa design made from sought-after Di Cao Qing clay.",
     "category": "Zisha Teapot",
     "price": 228.0,
@@ -793,7 +793,7 @@
     "filename": "dragon-egg.json"
   },
   {
-    "name": "Elegant Bamboo Segment Zisha Teacup with Lid",
+    "name": "Elegant Bamboo Segment Teacup With",
     "marketing_tip": "Authentic Yixing Zisha clay with a classic bamboo motif for a touch of nature.",
     "category": "Zisha Teapot",
     "price": 37.8,
@@ -810,7 +810,7 @@
     "filename": "elegant-duo-qiu.json"
   },
   {
-    "name": "Hand-Painted Artisan Zisha Gungfu Teacup",
+    "name": "Hand-Painted Gungfu Teacup",
     "marketing_tip": "Delicate hand-painted motifs on premium Zisha clay.",
     "category": "Zisha Teapot",
     "price": 37.0,
@@ -819,7 +819,7 @@
     "filename": "zisha-4-02.json"
   },
   {
-    "name": "Handcrafted High-Capacity Zisha Thermos with Custom Engraving",
+    "name": "Handcrafted High-Capacity Thermos With Custom",
     "marketing_tip": "Traditional Zisha craftsmanship meets modern portability.",
     "category": "Zisha Teapot",
     "price": 32.0,
@@ -828,7 +828,7 @@
     "filename": "zisha-4-01.json"
   },
   {
-    "name": "Handcrafted Lotus Seed Zisha Teapot Set",
+    "name": "Handcrafted Lotus Seed Set",
     "marketing_tip": "Elegant lotus seed shape for a serene tea brewing experience.",
     "category": "Zisha Teapot",
     "price": 259.0,
@@ -837,7 +837,7 @@
     "filename": "zisha-4-08.json"
   },
   {
-    "name": "Handmade 20 Mesh Coarse Sand Vermilion Clay Jade Bowl Teapot",
+    "name": "20 Mesh Coarse Sand Vermilion",
     "category": "Zisha Teapot",
     "price": 124,
     "image": "assets/products/prod_b933ef15bcd219a6c5eba86c4ad5918f.png",
@@ -845,7 +845,7 @@
     "filename": "zisha-5-02.json"
   },
   {
-    "name": "Handmade Monk Hat Teapot (270ml)",
+    "name": "Monk Hat (270Ml)",
     "category": "Zisha Teapot",
     "price": 168,
     "image": "assets/products/prod_b08e9544ef87722f436a911cb7d998b5.png",
@@ -853,7 +853,7 @@
     "filename": "zisha-5-16.json"
   },
   {
-    "name": "Handmade Painted Golden Duan Clay Lotus Xi Shi Teapot",
+    "name": "Painted Golden Duan Clay Lotus",
     "category": "Zisha Teapot",
     "price": 115,
     "image": "assets/products/prod_c99c7ce66bdefcdb5f57bd9375c3c448.png",
@@ -861,7 +861,7 @@
     "filename": "zisha-5-22.json"
   },
   {
-    "name": "Handmade Painted Zhao Zhuang Vermilion Clay Rong Tian Teapot",
+    "name": "Painted Zhao Zhuang Vermilion Clay",
     "category": "Zisha Teapot",
     "price": 169,
     "image": "assets/products/prod_4770ff11d54e06d9ce7baab3f5245743.png",
@@ -869,7 +869,7 @@
     "filename": "zisha-5-25.json"
   },
   {
-    "name": "Handmade Raw Ore Stone Yellow Hanjiang Teapot",
+    "name": "Raw Ore Stone Yellow Hanjiang",
     "category": "Zisha Teapot",
     "price": 158,
     "image": "assets/products/prod_d4d015386ac6db1674348173e29734b0.png",
@@ -877,7 +877,7 @@
     "filename": "zisha-5-27.json"
   },
   {
-    "name": "Handmade Xi Shi",
+    "name": "Xi Shi",
     "category": "Zisha Teapot",
     "price": 0,
     "image": "assets/products/prod_6179c178180228ad15a809115a86d75f.jpg",
@@ -893,7 +893,7 @@
     "filename": "handmade-xi-shi.json"
   },
   {
-    "name": "Handmade Yuru Teapot (180cc, Purple Dragon Blood Sand)",
+    "name": "Yuru (180Cc, Purple Dragon Blood",
     "category": "Zisha Teapot",
     "price": 138,
     "image": "assets/products/prod_047df0d16a145b2d5782db818747f21a.png",
@@ -901,7 +901,7 @@
     "filename": "zisha-5-21.json"
   },
   {
-    "name": "High-Capacity Rong Tian Handcrafted Yixing Teapot",
+    "name": "High-Capacity Rong Tian Handcrafted",
     "marketing_tip": "Generous capacity for sharing tea with friends and family.",
     "category": "Zisha Teapot",
     "price": 259.0,
@@ -910,7 +910,7 @@
     "filename": "zisha-4-19.json"
   },
   {
-    "name": "Jiang Po Clay Thin-Wall Shui Ping Teapot",
+    "name": "Jiang Po Clay Thin-Wall Shui",
     "marketing_tip": "A lightweight and elegant shui ping form in rare Jiang Po clay.",
     "category": "Zisha Teapot",
     "price": 599.0,
@@ -951,7 +951,7 @@
     "filename": "minimalist-han-wa.json"
   },
   {
-    "name": "Original Small Qin Quan Teapot (Raw Ore Cultural Revolution Purple Clay)",
+    "name": "Original Small Qin Quan (Raw",
     "category": "Zisha Teapot",
     "price": 173,
     "image": "assets/products/prod_f604e50d8b8396cd21481caefe9ff594.png",
@@ -959,7 +959,7 @@
     "filename": "zisha-5-28.json"
   },
   {
-    "name": "Raw Ore Azure Clay Zisha Tasting Cup Set",
+    "name": "Raw Ore Azure Clay Tasting",
     "category": "Zisha Teapot",
     "price": 13,
     "image": "assets/products/prod_b92f738491278f710525ed4289beb3f3.png",
@@ -967,7 +967,7 @@
     "filename": "zisha-5-15.json"
   },
   {
-    "name": "Raw Ore Chicken Blood Dahongpao Duo Zhi Teapot (Engraved)",
+    "name": "Raw Ore Chicken Blood Dahongpao",
     "category": "Zisha Teapot",
     "price": 145,
     "image": "assets/products/prod_27b9405fc189545c02ac2733e42000e2.png",
@@ -975,7 +975,7 @@
     "filename": "zisha-5-13.json"
   },
   {
-    "name": "Raw Ore Dahongpao Classic Level Teapot (130ml)",
+    "name": "Raw Ore Dahongpao Classic Level",
     "category": "Zisha Teapot",
     "price": 95,
     "image": "assets/products/prod_301547f1f4402ece4e8714df58524460.png",
@@ -983,7 +983,7 @@
     "filename": "zisha-5-14.json"
   },
   {
-    "name": "Raw Ore Dahongpao Round Tasting Cup",
+    "name": "Raw Ore Dahongpao Round Tasting",
     "category": "Zisha Teapot",
     "price": 12,
     "image": "assets/products/prod_290b578eb6d9cc20e60ec2231ef678f7.png",
@@ -991,7 +991,7 @@
     "filename": "zisha-5-24.json"
   },
   {
-    "name": "Raw Ore Dicaoqing Bamboo Section Teapot",
+    "name": "Raw Ore Dicaoqing Bamboo Section",
     "category": "Zisha Teapot",
     "price": 170,
     "image": "assets/products/prod_054aab7b6be83c6168d274bf6561da28.png",
@@ -999,7 +999,7 @@
     "filename": "zisha-5-17.json"
   },
   {
-    "name": "Raw Ore Emerald Green Clay Handmade Painted High Shipiao Teapot",
+    "name": "Raw Ore Emerald Green Clay",
     "category": "Zisha Teapot",
     "price": 118,
     "image": "assets/products/prod_e7339d3d2afc0a8d71452a9af70870ef.png",
@@ -1007,7 +1007,7 @@
     "filename": "zisha-5-18.json"
   },
   {
-    "name": "Raw Ore Hongpidong High Julun Teapot",
+    "name": "Raw Ore Hongpidong High Julun",
     "category": "Zisha Teapot",
     "price": 108,
     "image": "assets/products/prod_030cab941340c08c60a5bd9c9d2a272f.png",
@@ -1015,7 +1015,7 @@
     "filename": "zisha-5-06.json"
   },
   {
-    "name": "Raw Ore Old Purple Clay Big Mouth Jinglan Teapot",
+    "name": "Raw Ore Old Purple Clay",
     "category": "Zisha Teapot",
     "price": 88,
     "image": "assets/products/prod_1be666a50fc12494c6410e15e256154f.png",
@@ -1023,7 +1023,7 @@
     "filename": "zisha-5-03.json"
   },
   {
-    "name": "Raw Ore Purple Clay Hexagonal Tasting Cup",
+    "name": "Raw Ore Purple Clay Hexagonal",
     "category": "Zisha Teapot",
     "price": 11,
     "image": "assets/products/prod_a779e38662f488d42264a2156848ccd6.png",
@@ -1031,7 +1031,7 @@
     "filename": "zisha-5-23.json"
   },
   {
-    "name": "Raw Ore Purple Vermilion Clay Anxiang Teapot",
+    "name": "Raw Ore Purple Vermilion Clay",
     "category": "Zisha Teapot",
     "price": 105,
     "image": "assets/products/prod_1c0ca20026c3bf3e9bd88217da14f14a.png",
@@ -1039,39 +1039,7 @@
     "filename": "zisha-5-19.json"
   },
   {
-    "name": "Raw Ore Purple Vermilion Clay Classic Flat Julun Teapot",
-    "category": "Zisha Teapot",
-    "price": 108,
-    "image": "assets/products/prod_a61ab940f34f185778438e873a1f6bc9.png",
-    "body": "A flat version of the classic Julun shape, this teapot in purple vermilion clay is both compact and elegant, ideal for focused Gongfu tea sessions.",
-    "filename": "zisha-5-10.json"
-  },
-  {
-    "name": "Raw Ore Purple Vermilion Clay Classic Minglu Teapot",
-    "category": "Zisha Teapot",
-    "price": 118,
-    "image": "assets/products/prod_fe8aafe02a446b2f7a2657baa4aea497.png",
-    "body": "The Minglu teapot is known for its architectural beauty. This version in purple vermilion clay is a testament to traditional Yixing craftsmanship.",
-    "filename": "zisha-5-07.json"
-  },
-  {
-    "name": "Raw Ore Purple Vermilion Clay Handmade Beauty Shoulder Teapot",
-    "category": "Zisha Teapot",
-    "price": 138,
-    "image": "assets/products/prod_a66999d0e40505c8ff25c3e4dc62bccb.png",
-    "body": "The Beauty Shoulder (Meirenjian) shape is celebrated for its elegant, flowing lines. This handmade teapot is a beautiful addition to any collection.",
-    "filename": "zisha-5-12.json"
-  },
-  {
-    "name": "Raw Ore Purple Vermilion Clay Handmade Classic Xi Shi Teapot",
-    "category": "Zisha Teapot",
-    "price": 85,
-    "image": "assets/products/prod_a62843663f7a509aee09868e78860e78.png",
-    "body": "A classic Xi Shi teapot, handcrafted from premium purple vermilion clay. Its round, graceful curves are a favorite among tea enthusiasts worldwide.",
-    "filename": "zisha-5-08.json"
-  },
-  {
-    "name": "Raw Ore Vermilion Clay Dezhong Teapot (Handmade)",
+    "name": "Raw Ore Vermilion Clay Dezhong",
     "category": "Zisha Teapot",
     "price": 169,
     "image": "assets/products/prod_3b7d4a62fe65b363449239fa4181ff3b.png",
@@ -1079,7 +1047,7 @@
     "filename": "zisha-5-09.json"
   },
   {
-    "name": "Raw Ore Vermilion Clay Pear Shaped Small Teapot (150cc)",
+    "name": "Raw Ore Vermilion Clay Pear",
     "category": "Zisha Teapot",
     "price": 138,
     "image": "assets/products/prod_9105c9b47e9ba7a090aca1988fd06c26.png",
@@ -1087,7 +1055,7 @@
     "filename": "zisha-5-04.json"
   },
   {
-    "name": "Retro Style Zisha-Lined Business Insulation Cup",
+    "name": "Retro Style -Lined Business Insulation",
     "marketing_tip": "Elegant business design with the benefits of traditional Zisha lining.",
     "category": "Zisha Teapot",
     "price": 48.9,
@@ -1096,7 +1064,7 @@
     "filename": "zisha-4-06.json"
   },
   {
-    "name": "Xu Feng Raw Ore Ball Hole Xi Shi Teapot",
+    "name": "Xu Feng Raw Ore Ball",
     "category": "Zisha Teapot",
     "price": 125,
     "image": "assets/products/prod_b77876eb019efe9f99fd8ed855190e4d.png",
@@ -1104,7 +1072,7 @@
     "filename": "zisha-5-01.json"
   },
   {
-    "name": "Yunding Xi Shi Emerald Green Clay Large Teapot (500cc)",
+    "name": "Yunding Xi Shi Emerald Green",
     "category": "Zisha Teapot",
     "price": 185,
     "image": "assets/products/prod_eefba5209e684825bb06a8a465aa6bcd.png",
@@ -1112,7 +1080,7 @@
     "filename": "zisha-5-26.json"
   },
   {
-    "name": "High Mountain Mist Green Tea - Value Gift Selection",
+    "name": "High Mountain Mist Green Tea",
     "marketing_tip": "High-quality Huangshan Maofeng at an exceptional value.",
     "category": "Tea",
     "price": 84,
@@ -1121,7 +1089,7 @@
     "filename": "tea-710134172809.json"
   },
   {
-    "name": "Keemun Black Tea - Corporate Welfare Gift Box",
+    "name": "Keemun Black Tea - Corporate",
     "marketing_tip": "A refined Keemun black tea set, ideal for employee benefits and corporate gifts.",
     "category": "Tea",
     "price": 78,
@@ -1130,7 +1098,7 @@
     "filename": "tea-731635007024.json"
   },
   {
-    "name": "Keemun Black Tea - Lunar New Year Gift Edition",
+    "name": "Keemun Black Tea - Lunar",
     "marketing_tip": "Celebrate the New Year with a premium selection of diverse Keemun black teas.",
     "category": "Tea",
     "price": 168,
@@ -1139,7 +1107,7 @@
     "filename": "tea-1003427240604.json"
   },
   {
-    "name": "Prestige Taiping Houkui Spring Gift Box",
+    "name": "Prestige Taiping Houkui Spring Gift",
     "marketing_tip": "A premium 2026 spring harvest of Taiping Houkui, elegantly presented for special occasions.",
     "category": "Tea",
     "price": 286.0,
@@ -1148,7 +1116,7 @@
     "filename": "tea-751618757213.json"
   },
   {
-    "name": "Qimen Black Tea Corporate Gift Selection",
+    "name": "Qimen Black Tea Corporate Gift",
     "marketing_tip": "A professional and elegant black tea gift set, perfect for clients and business partners.",
     "category": "Tea",
     "price": 98.0,
@@ -1157,7 +1125,7 @@
     "filename": "tea-1003743964410.json"
   },
   {
-    "name": "Spring Harvest Huangshan Maofeng - Half Pound Gift",
+    "name": "Spring Harvest Huangshan Maofeng -",
     "marketing_tip": "A generous selection of premium spring Maofeng green tea, ideal for daily enjoyment.",
     "category": "Tea",
     "price": 128.0,
@@ -1166,7 +1134,7 @@
     "filename": "tea-893925820772.json"
   },
   {
-    "name": "Yan Yu Tea Talk Taiping Houkui Gift Box",
+    "name": "Yan Yu Tea Talk Taiping",
     "marketing_tip": "A sophisticated green tea gift featuring the unique, hand-crafted leaves of Taiping Houkui.",
     "category": "Tea",
     "price": 198.0,
@@ -1175,7 +1143,7 @@
     "filename": "tea-746652039085.json"
   },
   {
-    "name": "2019 Spring Lao Ban Zhang Puerh Tea - 200g Cake",
+    "name": "2019 Spring Lao Ban Zhang",
     "marketing_tip": "Authentic ancient tree Puerh from the legendary Lao Ban Zhang village.",
     "category": "Tea",
     "price": 2352,
@@ -1184,7 +1152,7 @@
     "filename": "tea-610684177138.json"
   },
   {
-    "name": "2026 Shexian Huangshan Maofeng - Spring Selection",
+    "name": "2026 Shexian Huangshan Maofeng -",
     "marketing_tip": "Freshly harvested spring tea from the historic Shexian region.",
     "category": "Tea",
     "price": 160,
@@ -1201,7 +1169,7 @@
     "filename": "ancient-tree-palace-ripe.json"
   },
   {
-    "name": "Anhui High-Mountain Qimen Black Tea Trio",
+    "name": "Anhui High-Mountain Qimen Black Tea",
     "marketing_tip": "Discover the diverse profiles of Qimen black tea with this curated collection.",
     "category": "Tea",
     "price": 138.0,
@@ -1210,7 +1178,7 @@
     "filename": "tea-1004250320237.json"
   },
   {
-    "name": "Artisanal Huangshan Maofeng - Daily Ritual Selection",
+    "name": "Al Huangshan Maofeng - Daily",
     "marketing_tip": "High mountain green tea perfect for your daily wellness ritual.",
     "category": "Tea",
     "price": 128,
@@ -1219,7 +1187,7 @@
     "filename": "tea-1003381658379.json"
   },
   {
-    "name": "Artisanal Huangshan Maofeng Green Tea",
+    "name": "Al Huangshan Maofeng Green Tea",
     "marketing_tip": "Exquisite high-mountain Maofeng, hand-processed for a pure and refreshing taste.",
     "category": "Tea",
     "price": 128.0,
@@ -1236,7 +1204,7 @@
     "filename": "biluochun.json"
   },
   {
-    "name": "Bulang Mountain Ancient Tree Mellow Ripe Pu-erh Cake",
+    "name": "Bulang Mountain Ancient Tree Mellow",
     "marketing_tip": "From the legendary Bulang Mountain comes this \"Bulang Mellow\" ripe Pu-erh, known for its bold strength and exceptionally smooth, sweet mouthfeel.",
     "category": "Tea",
     "price": 235,
@@ -1245,7 +1213,7 @@
     "filename": "tea-36477895798.json"
   },
   {
-    "name": "Early Spring Special Grade Huangshan Maofeng",
+    "name": "Early Spring Special Grade Huangshan",
     "marketing_tip": "The finest first-pick Maofeng for a delicate and aromatic brew.",
     "category": "Tea",
     "price": 198,
@@ -1263,16 +1231,7 @@
     "filename": "tea-985855082612.json"
   },
   {
-    "name": "Huangshan Maofeng Green Tea - Corporate Selection",
-    "marketing_tip": "A premium gift set for corporate events and professional gestures.",
-    "category": "Tea",
-    "price": 158,
-    "image": "assets/products/prod_b47125d87ce335d6ac91434396c3f063.png",
-    "body": "This exquisite Huangshan Maofeng is presented in a professional gift box, making it the perfect choice for corporate clients and business partners. The tea itself is light, nutty, and highly aromatic, representing the best of Anhui's tea traditions.",
-    "filename": "tea-1000706690797.json"
-  },
-  {
-    "name": "Imperial Palace Grade Ancient Tree Ripe Pu-erh with Camphor Notes",
+    "name": "Imperial Palace Grade Ancient Tree",
     "marketing_tip": "Experience the regal richness of Imperial-grade ripe Pu-erh, aged to perfection with distinct camphor undertones and a velvet-smooth finish.",
     "category": "Tea",
     "price": 539,
@@ -1298,7 +1257,7 @@
     "filename": "jasmine-dragon-pearls.json"
   },
   {
-    "name": "Keemun Black Tea - Floral and Fruity Jin Zhen",
+    "name": "Keemun Black Tea - Floral",
     "marketing_tip": "2026 new harvest Keemun black tea with rich honey and orchid notes.",
     "category": "Tea",
     "price": 178,
@@ -1307,7 +1266,7 @@
     "filename": "tea-1051502063763.json"
   },
   {
-    "name": "Kunlu Mountain 2019 First Spring Raw Pu-erh Tea Cake (200g)",
+    "name": "Kunlu Mountain 2019 First Spring",
     "marketing_tip": "A rare find from the mist-covered slopes of Kunlu Mountain, this 2019 vintage offers a pristine, unadulterated taste of pure old-growth tea trees.",
     "category": "Tea",
     "price": 666,
@@ -1316,7 +1275,7 @@
     "filename": "tea-609519440999.json"
   },
   {
-    "name": "Old Stone Path 2019 Ancient Tree Raw Pu-erh Tea Cake (357g)",
+    "name": "Old Stone Path 2019 Ancient",
     "marketing_tip": "Journey through time with every sip of this 2019 ancient tree harvest, characterized by its robust character and complex depth.",
     "category": "Tea",
     "price": 215,
@@ -1343,7 +1302,7 @@
     "filename": "tea-742097836074.json"
   },
   {
-    "name": "Premium Huangshan Maofeng - High Mountain Green Tea",
+    "name": "Huangshan Maofeng - High Mountain",
     "marketing_tip": "High mountain grown Maofeng with a smooth, lingering finish.",
     "category": "Tea",
     "price": 116,
@@ -1352,7 +1311,7 @@
     "filename": "tea-733068964026.json"
   },
   {
-    "name": "Qimen 'Zong' Black Tea - Traditional Leaf Wrap",
+    "name": "Qimen 'Zong' Black Tea -",
     "marketing_tip": "Individually wrapped in bamboo leaves for a unique, earthy infusion.",
     "category": "Tea",
     "price": 45.0,
@@ -1377,16 +1336,7 @@
     "filename": "silver-needle.json"
   },
   {
-    "name": "Spring Harvest Huangshan Maofeng - Artisanal Green Tea",
-    "marketing_tip": "Freshly harvested spring Maofeng for a vibrant tea experience.",
-    "category": "Tea",
-    "price": 102,
-    "image": "assets/products/prod_ddc34cb9373714a1e929a4c903505f10.png",
-    "body": "Enjoy the first flush of spring with this Huangshan Maofeng. The leaves are expertly processed to retain their natural sweetness and bright green color, offering a truly authentic taste of the season.",
-    "filename": "tea-895412518490.json"
-  },
-  {
-    "name": "Spring Harvest Huangshan Maofeng Green Tea",
+    "name": "Spring Harvest Huangshan Maofeng Green",
     "marketing_tip": "Fresh 2026 Huangshan Maofeng, a delicate green tea with a sweet, orchid-like fragrance.",
     "category": "Tea",
     "price": 141.0,
@@ -1404,22 +1354,13 @@
     "filename": "tea-1052931193813.json"
   },
   {
-    "name": "Taiping Houkui Green Tea - Hand-Pinched Selection",
+    "name": "Taiping Houkui Green Tea -",
     "marketing_tip": "Authentic Taiping Houkui with a distinctive orchid aroma.",
     "category": "Tea",
     "price": 78,
     "image": "assets/products/prod_e21bcca3d2fec87ba1384dace419da07.png",
     "body": "Experience the unique character of Taiping Houkui, a renowned Chinese green tea. These leaves are hand-pinched and processed to preserve their large, flat shape and exquisite floral notes. Perfect for daily enjoyment or gifting.",
     "filename": "tea-1047799372273.json"
-  },
-  {
-    "name": "Taiping Houkui Green Tea - Hand-Pressed Selection",
-    "marketing_tip": "Unique long-leaf Taiping Houkui, known for its bold appearance and sweet, clean finish.",
-    "category": "Tea",
-    "price": 158.0,
-    "image": "assets/products/prod_9c44f78cfde9ab391fb43f460d13fd42.png",
-    "body": "Taiping Houkui is one of China's most distinctive green teas. These hand-pressed leaves produce a clear, bright infusion with a lingering sweetness and a hint of wild orchid. A true connoisseur's tea.",
-    "filename": "tea-896247001029.json"
   },
   {
     "name": "West Lake Longjing",
@@ -1454,7 +1395,7 @@
     "filename": "xiaoqinggan.json"
   },
   {
-    "name": "Yan Yu Tea Talk Huangshan Maofeng - Origin Select",
+    "name": "Yan Yu Tea Talk Huangshan",
     "marketing_tip": "Pure Huangshan Maofeng, sourced directly from the origin for unparalleled freshness.",
     "category": "Tea",
     "price": 112.0,
@@ -1463,16 +1404,7 @@
     "filename": "tea-708851289154.json"
   },
   {
-    "name": "Yan Yu Tea Talk Qimen Black Tea - Daily Select",
-    "marketing_tip": "Convenient individual pouches of premium Qimen black tea, ideal for on-the-go enjoyment.",
-    "category": "Tea",
-    "price": 55.0,
-    "image": "assets/products/prod_f48bddefab6f5523b10b73c17da991b6.png",
-    "body": "Enjoy the rich, malty flavor of Qimen black tea anywhere. These portable pouches are designed for daily ritual, offering a consistent and high-quality tea experience in a modern gift box.",
-    "filename": "tea-728053178177.json"
-  },
-  {
-    "name": "Yunnan \"Purple Cuckoo\" Dian Hong Black Tea with Honey-Floral Notes (500g)",
+    "name": "Yunnan \"Purple Cuckoo\" Dian Hong",
     "marketing_tip": "A rare \"Zijuan\" (Purple Cuckoo) variety black tea, offering an enchanting fusion of wildflower fragrance and luscious honey sweetness.",
     "category": "Tea",
     "price": 274,
@@ -1489,7 +1421,7 @@
     "filename": "yunnan-dianhong.json"
   },
   {
-    "name": "Yunnan Puerh Ripe Tea Cake - 10th Anniversary Edition",
+    "name": "Yunnan Puerh Ripe Tea Cake",
     "marketing_tip": "A commemorative 357g ripe Puerh cake celebrating a decade of excellence.",
     "category": "Tea",
     "price": 78,
@@ -1507,7 +1439,7 @@
     "filename": "tray-20471152614.json"
   },
   {
-    "name": "Artisan Hand-Lacquered Mural Tea Tray",
+    "name": "Hand-Lacquered Mural Tea Tray",
     "marketing_tip": "A collectible masterpiece of traditional lacquer art and Zen aesthetics.",
     "category": "Tea Tray",
     "price": 2080,
@@ -1516,7 +1448,7 @@
     "filename": "tray-2207935873228-2.json"
   },
   {
-    "name": "Classic German Bakelite Dry Pour Table",
+    "name": "Classic German Bakelite Dry Pour",
     "marketing_tip": "Seamlessly combines traditional Chinese style with high-performance German materials.",
     "category": "Tea Tray",
     "price": 152,
@@ -1534,7 +1466,7 @@
     "filename": "tray-2207935873228-6.json"
   },
   {
-    "name": "Factory-Standard Integrated Bakelite Tray",
+    "name": "-Standard Integrated Bakelite Tray",
     "marketing_tip": "Robust performance at an unbeatable factory-direct value.",
     "category": "Tea Tray",
     "price": 300,
@@ -1579,7 +1511,7 @@
     "filename": "tray-2207935873228-1.json"
   },
   {
-    "name": "Mother-of-Pearl Inlay Lacquer Tray",
+    "name": "Mother-Of-Pearl Inlay Lacquer Tray",
     "marketing_tip": "Exquisite mother-of-pearl inlays paired with rare red rhino-skin texture.",
     "category": "Tea Tray",
     "price": 1900,
@@ -1588,7 +1520,7 @@
     "filename": "tray-2207935873228-3.json"
   },
   {
-    "name": "Natural Lacquer 'Flying Bird' Round Tray",
+    "name": "Lacquer 'Flying Bird' Round Tray",
     "marketing_tip": "Natural raw lacquer with delicate hand-painted bird motifs.",
     "category": "Tea Tray",
     "price": 759,
@@ -1597,7 +1529,7 @@
     "filename": "tray-2207935873228-5.json"
   },
   {
-    "name": "Premium Square Bakelite Drainage Table",
+    "name": "Square Bakelite Drainage Table",
     "marketing_tip": "Elegant square silhouette with superior water drainage for a clean table.",
     "category": "Tea Tray",
     "price": 152,
@@ -1606,7 +1538,7 @@
     "filename": "tray-18014537336.json"
   },
   {
-    "name": "Ru Kiln Heritage Collection with Tray",
+    "name": "Ru Kiln Heritage With Tray",
     "marketing_tip": "A complete heritage experience, featuring the serene beauty of Ru Kiln celadon and a matching tray.",
     "price": 8.0,
     "image": "assets/products/prod_a7c6e5016a33ab46e77d6ad399dc5dd0.png",
@@ -1626,7 +1558,7 @@
     "filename": "tray-18967661854.json"
   },
   {
-    "name": "Traditional Chinese Bakelite Tea Table",
+    "name": "Chinese Bakelite Tea Table",
     "marketing_tip": "Sturdy construction and classic proportions for the serious tea enthusiast.",
     "category": "Tea Tray",
     "price": 300,

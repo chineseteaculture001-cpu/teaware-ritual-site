@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Jade Ritual | Authentic Chinese Teaware & Premium Tea</title>
-    <meta name="description" content="Discover handmade Yixing Zisha teapots, Dehua porcelain, and premium ancient tree tea.">
+    <title>The Jade Ritual | Heritage Tea & Zen Living</title>
+    <meta name="description" content="Experience the art of Gongfu tea with The Jade Ritual. Authentic Zisha teapots and artisan tea sets for a mindful lifestyle.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@300;400;600;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -154,9 +158,9 @@
             <p class="chinese-subtitle">正宗中国茶具及优质茶叶</p>
             <div class="hero-contacts">
                 <a href="https://wa.me/8618663543398">WhatsApp: +86 186 6354 3398</a>
-                <a href="mailto:chineseteaculture001@gmail.com">Email: chineseteaculture001@gmail.com</a>
+                <a href="mailto:chineseteaculture001@thejaderitual.com">Email: chineseteaculture001@thejaderitual.com</a>
                 <a href="https://wa.me/8615589482015">WhatsApp: +86 155 8948 2015</a>
-                <a href="mailto:chineseteaculture002@gmail.com">电子邮件: chineseteaculture002@gmail.com</a>
+                <a href="mailto:chineseteaculture002@thejaderitual.com">电子邮件: chineseteaculture002@thejaderitual.com</a>
             </div>
             <a href="#ceremony" class="explore-btn">EXPLORE COLLECTION 探索收藏</a>
         </div>
@@ -257,8 +261,8 @@
                 <h4>Contact Us</h4>
                 <p>WhatsApp 1: <a href="https://wa.me/8618663543398">+86 186 6354 3398</a></p>
                 <p>WhatsApp 2: <a href="https://wa.me/8615589482015">+86 155 8948 2015</a></p>
-                <p>Email 1: <a href="mailto:chineseteaculture001@gmail.com">chineseteaculture001@gmail.com</a></p>
-                <p>Email 2: <a href="mailto:chineseteaculture002@gmail.com">chineseteaculture002@gmail.com</a></p>
+                <p>Email 1: <a href="mailto:chineseteaculture001@thejaderitual.com">chineseteaculture001@thejaderitual.com</a></p>
+                <p>Email 2: <a href="mailto:chineseteaculture002@thejaderitual.com">chineseteaculture002@thejaderitual.com</a></p>
             </div>
         </div>
         <p style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 40px;">&copy; 2026 THE JADE RITUAL. ALL RIGHTS RESERVED.</p>
@@ -313,10 +317,14 @@
                 displayedCount = products.length; // If clearing (filtering), reset count
             }
 
+            const categoryCounts = {};
             products.forEach((product) => {
                 let category = product.category;
                 const grid = grids[category];
                 if (grid) {
+                    categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+                    const isPriority = categoryCounts[category] <= 4;
+
                     const card = document.createElement('div');
                     card.className = 'product-card';
                     card.onclick = () => openModal(product);
@@ -325,12 +333,14 @@
                     
                     card.innerHTML = `
                         <div class="product-img">
-                            <img data-src="${imgSrc}" alt="${product.name}" class="lazy" onerror="this.src='https://via.placeholder.com/400x400?text=No+Photo'">
+                            <img ${isPriority ? `src="${imgSrc}" class="loaded" fetchpriority="high"` : `data-src="${imgSrc}" class="lazy"`} 
+                                 alt="${product.name}" 
+                                 onerror="this.src='https://via.placeholder.com/400x400?text=No+Photo'">
                         </div>
                         <div class="product-info">
                             <p class="category">${category}</p>
                             <h4>${product.name}</h4>
-                            <div class="price">$${product.price}</div>
+                            <div class="price">${product.price}</div>
                         </div>
                     `;
                     grid.appendChild(card);
