@@ -199,7 +199,7 @@
   {
     "name": "Guiyin Mountain Forest (Gift Box)",
     "category": "Ceremony Set",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/images/10953477033_1639040125.jpg",
     "body": "#### Product details\n\n![](/assets/images/o1cn01mwqoac1apafpc2i4o_-2513843378-0-cib.jpg)",
     "gallery": [
@@ -240,7 +240,7 @@
   {
     "name": "Imperial White Porcelain",
     "category": "Ceremony Set",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_5ce94ab38171d840c241989df758c4ff.jpg",
     "body": "Masterfully crafted white porcelain ceremony set.",
     "filename": "imperial-white-porcelain.json"
@@ -372,7 +372,7 @@
   {
     "name": "Ru Kiln Celadon Set",
     "category": "Ceremony Set",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_81d399d7732b7c6ba41af23c5cd07cf4.jpg",
     "body": "Traditional Ru Kiln celadon set with crackle glaze.",
     "filename": "ru-kiln-celadon-set.json"
@@ -438,7 +438,7 @@
   {
     "name": "Travel Set",
     "category": "Ceremony Set",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_d22397dd93458ebf7fedd870b775aaf6.png",
     "body": "Portable travel gongfu set in a protective carrying case.",
     "filename": "travel-gongfu-set.json"
@@ -484,7 +484,7 @@
   {
     "name": "12-Piece Master",
     "category": "Ceremony Set",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_bd6a807b1fffddf96d6db7eb6c19b83a.jpg",
     "body": "Complete 12-piece Zisha tea ceremony set for masters.",
     "filename": "zisha-12-piece-master.json"
@@ -762,7 +762,7 @@
   {
     "name": "Classical Fang Gu",
     "category": "Zisha Teapot",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_10e399a8d451b3b4ab7fc25802e5271f.png",
     "body": "The 'Ancient Drum' shape, symbolizing resonance and tradition. Known for its broad opening and steady pour.",
     "filename": "classical-fang-gu.json"
@@ -787,7 +787,7 @@
   {
     "name": "Dragon Egg",
     "category": "Zisha Teapot",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_af6c3528f993b3a2d3be236f0439a3b7.jpg",
     "body": "The 'Long Dan' shape, resembling a dragon egg, is compact and efficient, ideal for quick infusions.",
     "filename": "dragon-egg.json"
@@ -804,7 +804,7 @@
   {
     "name": "Elegant Duo Qiu",
     "category": "Zisha Teapot",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_9e6e4b51dfc19065eb34d98b9d196b16.png",
     "body": "The 'Ball' shape, known for its perfectly spherical components that stack harmoniously, representing completeness.",
     "filename": "elegant-duo-qiu.json"
@@ -879,7 +879,7 @@
   {
     "name": "Xi Shi",
     "category": "Zisha Teapot",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_6179c178180228ad15a809115a86d75f.jpg",
     "gallery": [
       {
@@ -921,7 +921,7 @@
   {
     "name": "Literati Shi Piao",
     "category": "Zisha Teapot",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_3ff0f9029826d06b71aee417d704f8e8.jpg",
     "body": "A classic 'Stone Gourd' shape favored by literati for its strong, stable base and balanced proportions.",
     "filename": "literati-shi-piao.json"
@@ -929,7 +929,7 @@
   {
     "name": "Master De Zhong",
     "category": "Zisha Teapot",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_43361167a971d06781d4dd9bc1e6ee1a.png",
     "body": "A dignified shape with a tall body and high-positioned handle, representing moral uprightness and virtue.",
     "filename": "master-de-zhong.json"
@@ -937,7 +937,7 @@
   {
     "name": "Master Pan Hu",
     "category": "Zisha Teapot",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_48ce50183a70c4399a1400d74bb491e4.png",
     "body": "A flat, stable shape with a wide base, historically designed to be steady on tea boats.",
     "filename": "master-pan-hu.json"
@@ -945,7 +945,7 @@
   {
     "name": "Minimalist Han Wa",
     "category": "Zisha Teapot",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_30ef8a8ac0b60383c988b2dfb759a564.png",
     "body": "Inspired by Han Dynasty roof tiles, this shape is minimalist and wide-mouthed, perfect for large-leaf teas.",
     "filename": "minimalist-han-wa.json"
@@ -1163,7 +1163,7 @@
   {
     "name": "Ancient Tree Palace Ripe",
     "category": "Tea",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_d4a74fe08c7c7795d4ae5b4c744b0954.png",
     "body": "High-grade ripe Puer from ancient trees, smooth and earthy with a thick mouthfeel.",
     "filename": "ancient-tree-palace-ripe.json"
@@ -1198,7 +1198,7 @@
   {
     "name": "Biluochun",
     "category": "Tea",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_a751ac3604edbb26da0fcf9995780cb4.png",
     "body": "Green Snail Spring tea, famous for its tiny, curled leaves covered in white down and intense floral-fruity aroma.",
     "filename": "biluochun.json"
@@ -1251,7 +1251,7 @@
   {
     "name": "Jasmine Dragon Pearls",
     "category": "Tea",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_8b15f8c4f0ff7e701ffb45ee8580e306.jpg",
     "body": "Hand-rolled green tea pearls scented multiple times with fresh jasmine flowers for a sweet, floral infusion.",
     "filename": "jasmine-dragon-pearls.json"
@@ -1322,7 +1322,7 @@
   {
     "name": "Roasted Tieguanyin",
     "category": "Tea",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_f4ed687423566d67ead29711d110afb2.png",
     "body": "Traditional charcoal-roasted Tieguanyin with deep, nutty, and roasted notes.",
     "filename": "roasted-tieguanyin.json"
@@ -1330,7 +1330,7 @@
   {
     "name": "Silver Needle",
     "category": "Tea",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_4455da5c2ad13bb74d329e7ac1cf5f1c.png",
     "body": "Bai Hao Yin Zhen, the highest grade of white tea, consisting only of young spring buds covered in silver down.",
     "filename": "silver-needle.json"
@@ -1365,7 +1365,7 @@
   {
     "name": "West Lake Longjing",
     "category": "Tea",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_13cc7d25c29e29d716b819cfe6c5fa36.jpg",
     "body": "The iconic West Lake Dragon Well tea, known for its four perfections: green color, flat shape, orchid aroma, and sweet taste.",
     "filename": "west-lake-longjing.json"
@@ -1373,7 +1373,7 @@
   {
     "name": "Wuyi Dahongpao",
     "category": "Tea",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_106b8650e71346c91e459cd2089ebf68.png",
     "body": "The King of Wuyi Rock teas, known for its complex 'Yan Yun' (Rock Rhyme) and deep charcoal-roasted aroma.",
     "filename": "wuyi-dahongpao.json"
@@ -1381,7 +1381,7 @@
   {
     "name": "Wuyi Rougui",
     "category": "Tea",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_30abfae156b6f485dedf5b9202724884.png",
     "body": "Wuyi Rougui, famous for its sharp, cinnamon-like spice and long-lasting floral aftertaste.",
     "filename": "wuyi-rougui.json"
@@ -1389,7 +1389,7 @@
   {
     "name": "Xiaoqinggan",
     "category": "Tea",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_7daa68a9724f7868336df1e6de65d22b.png",
     "body": "Mini green citrus stuffed with ripe Puer tea, a perfect balance of citrus brightness and tea depth.",
     "filename": "xiaoqinggan.json"
@@ -1415,7 +1415,7 @@
   {
     "name": "Yunnan Dianhong",
     "category": "Tea",
-    "price": 0,
+    "price": 45.0,
     "image": "assets/products/prod_f9a33104069808d7641dade2daef370b.png",
     "body": "Golden Bud Dianhong from Yunnan, offering a rich, malty, and honey-sweet flavor profile.",
     "filename": "yunnan-dianhong.json"
