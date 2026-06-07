@@ -29,4 +29,4 @@ You don't need a dedicated room to start your ritual. A small corner, a clean tr
 
 **Elevate Your Sanctuary**
 Explore our full collection of artisanal teaware and premium leaves at **The Jade Ritual**.
-B2B & Wholesale: ritual@thejaderitual.com | +86 186 6354 3398
+B2B & Wholesale: chineseteaculture001@gmail.com | +86 186 6354 3398
