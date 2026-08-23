@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article | The Jade Ritual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@300;400;600;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        :root {
+            --bg-rosewood: #4a0e0e;
+            --bg-card: #3d0c0c;
+            --gold: #d4af37;
+            --text-main: #fffcf0;
+            --text-muted: #bdc3c7;
+            --font-main: 'Montserrat', sans-serif;
+            --font-title: 'Playfair Display', serif;
+            --font-deco: 'Cinzel Decorative', cursive;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg-rosewood); font-family: var(--font-main); color: var(--text-main); line-height: 1.8; }
+        
+        header {
+            padding: 15px 8%; display: flex; justify-content: space-between; align-items: center;
+            background: var(--bg-rosewood); border-bottom: 2px solid var(--gold);
+            position: sticky; top: 0; z-index: 2000;
+        }
+        .logo { font-family: var(--font-deco); color: var(--gold); font-size: 1.4rem; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: var(--text-main); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+
+        .article-hero { height: 60vh; background-size: cover; background-position: center; position: relative; display: flex; align-items: flex-end; padding: 60px 8%; }
+        .article-hero::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 70%; background: linear-gradient(to top, var(--bg-rosewood), transparent); }
+        .hero-meta { position: relative; z-index: 10; max-width: 900px; }
+        .hero-meta .date { font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
+        .hero-meta h1 { font-family: var(--font-title); font-size: 4rem; color: #fff; margin: 10px 0 20px; line-height: 1.1; }
+
+        .article-body { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+        .content-render { font-size: 1.1rem; color: var(--text-muted); }
+        .content-render h2 { font-family: var(--font-title); color: var(--gold); font-size: 2.2rem; margin: 50px 0 20px; }
+        .content-render p { margin-bottom: 25px; }
+        .content-render img { width: 100%; border: 1px solid var(--gold); margin: 30px 0; display: block; }
+        .content-render strong { color: #fff; }
+
+        .back-nav { margin-bottom: 40px; }
+        .back-nav a { color: var(--gold); text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+
+        footer { background: #2c0a0a; padding: 80px 8% 40px; border-top: 2px solid var(--gold); text-align: center; margin-top: 100px; }
+        .footer-logo { font-family: var(--font-deco); font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
+        .copy { opacity: 0.5; font-size: 0.8rem; margin-top: 40px; color: var(--text-muted); }
+
+        @media (max-width: 768px) {
+            .hero-meta h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">THE JADE RITUAL</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Collection</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="heritage.html">Heritage</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="article-page">
+        <div id="hero" class="article-hero" style="background-image: url('https://images.unsplash.com/photo-1544787210-282d9692cc6a?auto=format&fit=crop&q=80&w=800');">
+            <div class="hero-meta">
+                <span class="date" id="post-date">Loading...</span>
+                <h1 id="post-title">...</h1>
+            </div>
+        </div>
+
+        <article class="article-body">
+            <div class="back-nav"><a href="journal.html">← Back to Journal</a></div>
+            <div id="content" class="content-render">
+                <!-- Markdown rendered here -->
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="footer-logo">The Jade Ritual</div>
+        <p style="color: var(--text-muted);">Part of Shandong Mingzhi Education Group</p>
+        <div style="margin-top: 20px; color: var(--text-muted); font-size: 0.85rem;">
+            <p>WhatsApp: +86 186 6354 3398 / +86 155 8948 2015</p>
+            <p>Email: chineseteaculture001@gmail.com</p>
+        </div>
+        <p class="copy">&copy; 2026 China Tea Culture Communication. All Rights Reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms &amp; Conditions</a></p>
+    </footer>
+
+    <script>
+        function parseMarkdown(md) {
+            const frontmatterMatch = md.match(/^---\n([\s\S]+?)\n---\n([\s\S]*)$/);
+            if (!frontmatterMatch) return { meta: {}, content: md };
+            const yaml = frontmatterMatch[1];
+            const content = frontmatterMatch[2];
+            const meta = {};
+            yaml.split('\n').forEach(line => {
+                const [key, ...val] = line.split(':');
+                if (key && val) meta[key.trim()] = val.join(':').trim().replace(/^"(.*)"$/, '$1');
+            });
+            return { meta, content };
+        }
+
+        async function loadPost() {
+            const params = new URLSearchParams(window.location.search);
+            const fileName = params.get('post');
+            if (!fileName) { window.location.href = 'journal.html'; return; }
+
+            try {
+                const repo = 'chineseteaculture001-cpu/teaware-ritual-site';
+                const res = await fetch(`https://raw.githubusercontent.com/${repo}/main/content/blog/${fileName}`);
+                const text = await res.text();
+                const post = parseMarkdown(text);
+                
+                document.getElementById('post-title').innerText = post.meta.title || "Untitled";
+                document.getElementById('post-date').innerText = post.meta.date || "";
+                if (post.meta.image) document.getElementById('hero').style.backgroundImage = `url('${post.meta.image}')`;
+                
+                // Use marked.js to render Markdown including images and bold text
+                document.getElementById('content').innerHTML = marked.parse(post.content);
+                
+                document.title = `${post.meta.title} | The Jade Ritual`;
+            } catch (e) {
+                console.error("Error loading post:", e);
+                document.getElementById('content').innerHTML = "<p>Sorry, the article could not be loaded.</p>";
+            }
+        }
+
+        loadPost();
+    </script>
+</body>
+</html>

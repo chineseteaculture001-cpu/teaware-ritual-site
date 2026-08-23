@@ -89,7 +89,7 @@
             <p>WhatsApp: +86 186 6354 3398 / +86 155 8948 2015</p>
             <p>Email: chineseteaculture001@thejaderitual.com / chineseteaculture002@thejaderitual.com</p>
         </div>
-        <p class="copy">&copy; 2026 China Tea Culture Communication. All Rights Reserved.</p>
+        <p class="copy">&copy; 2026 China Tea Culture Communication. All Rights Reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms &amp; Conditions</a></p>
     </footer>
 
     <script>
@@ -126,7 +126,15 @@
                         });
                         const article = document.createElement('article');
                         article.className = 'blog-post';
-                        article.innerHTML = '<div class="blog-img" style="background-image: url(\'' + post.meta.image + '\');"></div><div class="blog-content"><span class="date">' + date + '</span><h2>' + post.meta.title + '</h2><p class="snippet">' + post.content.substring(0, 150) + '...</p><div class="full-content" style="display:none">' + post.content + '</div><a class="read-more" onclick="toggleReadMore(this)">Continue Reading</a></div>';
+                        article.innerHTML = `
+                            <div class="blog-img" style="background-image: url('${post.meta.image}');"></div>
+                            <div class="blog-content">
+                                <span class="date">${date}</span>
+                                <h2>${post.meta.title}</h2>
+                                <p class="snippet">${post.content.substring(0, 150)}...</p>
+                                <a href="article.html?post=${file.name}" class="read-more">Read Full Article</a>
+                            </div>
+                        `;
                         blogList.appendChild(article);
                     }
                 }
