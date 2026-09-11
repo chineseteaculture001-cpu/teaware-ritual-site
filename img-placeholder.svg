@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="320" viewBox="0 0 400 320" role="img" aria-label="Photo on request">
+  <title>Photo on request</title>
+  <rect width="400" height="320" fill="#2c0a0a"/>
+  <rect x="0.5" y="0.5" width="399" height="319" fill="none" stroke="#5a1a1a"/>
+  <circle cx="200" cy="126" r="34" fill="none" stroke="#d4af37" stroke-width="1.5" opacity="0.55"/>
+  <path d="M186 136l13-15 9 11 8-7 12 17z" fill="#d4af37" opacity="0.55"/>
+  <text x="200" y="196" text-anchor="middle" font-family="Montserrat, Helvetica, Arial, sans-serif" font-size="15" letter-spacing="2" fill="#d4af37">PHOTO ON REQUEST</text>
+  <text x="200" y="222" text-anchor="middle" font-family="Montserrat, Helvetica, Arial, sans-serif" font-size="12" fill="#bdc3c7">Contact us for product images</text>
+</svg>

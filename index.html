@@ -12,7 +12,7 @@
       gtag('js', new Date());
       gtag('config', 'G-V08H7JHNVR');
     </script>
-    <meta name="description" content="Experience the art of Gongfu tea with The Jade Ritual. Authentic Zisha teapots and artisan tea sets for a mindful lifestyle.">
+    <meta name="description" content="Wholesale &amp; OEM/ODM Chinese teaware — Yixing Zisha teapots, artisan gongfu tea sets, tea trays and premium tea. Bulk and custom orders for global retailers, distributors and corporate gifting.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
@@ -76,6 +76,9 @@
         .search-box input { width: 100%; padding: 12px 20px; background: var(--bg-card); border: 1px solid var(--gold); color: white; border-radius: 5px; outline: none; }
         .sort-box select { padding: 12px 20px; background: var(--bg-card); border: 1px solid var(--gold); color: white; border-radius: 5px; outline: none; cursor: pointer; }
 
+        .wholesale-bar { background: var(--lacquer-red); border-bottom: 1px solid var(--gold); text-align: center; padding: 10px 8%; font-size: 0.78rem; letter-spacing: 1px; color: var(--text-main); }
+        .wholesale-bar strong { color: var(--gold); letter-spacing: 2px; }
+        .wholesale-bar a { color: var(--gold); text-decoration: underline; margin-left: 8px; white-space: nowrap; }
         section { padding: 80px 8%; }
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-header h2 { font-family: var(--font-title); font-size: 3rem; color: var(--gold); margin-bottom: 10px; }
@@ -135,6 +138,9 @@
     </style>
 </head>
 <body>
+    <div class="wholesale-bar">
+        <strong>WHOLESALE &amp; OEM / ODM</strong> — Bulk and custom orders only; single-piece retail is not available. <a href="contact.html">Request a Quote &rarr;</a>
+    </div>
     <header>
         <div class="brand-logo">
             <div class="seal">Jade</div>
@@ -170,7 +176,10 @@
                 <a href="https://wa.me/8615589482015">WhatsApp: +86 155 8948 2015</a>
                 <a href="mailto:chineseteaculture002@thejaderitual.com">电子邮件: chineseteaculture002@thejaderitual.com</a>
             </div>
-            <a href="#ceremony" class="explore-btn">EXPLORE COLLECTION 探索收藏</a>
+            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+                <a href="#ceremony" class="explore-btn">EXPLORE COLLECTION 探索收藏</a>
+                <a href="contact.html" class="explore-btn" style="background:transparent; border:2px solid var(--gold); color:var(--gold);">GET A QUOTE 获取报价</a>
+            </div>
         </div>
     </section>
 
@@ -181,8 +190,8 @@
         <div class="sort-box">
             <select id="sortSelect" onchange="filterAndSort()">
                 <option value="default">Default Sorting</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+                <option value="name-desc">Name: Z to A</option>
             </select>
         </div>
     </div>
@@ -242,8 +251,8 @@
                     <div class="marketing" id="modal-marketing"></div>
                     <div class="desc" id="modal-desc"></div>
                     <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
-                        <a id="modal-wa" href="" class="whatsapp-fixed" style="position:static; justify-content:center;">INQUIRE ON WHATSAPP</a>
-                        <a id="modal-bulk" href="contact.html" style="text-align:center; padding:15px; border:1px solid var(--gold); color:var(--gold); text-decoration:none; font-weight:700; text-transform:uppercase; letter-spacing:2px; font-size:0.8rem; transition:0.3s;">Request Corporate Quote</a>
+                        <a id="modal-bulk" href="contact.html" style="text-align:center; padding:15px; background:var(--gold); color:var(--bg-rosewood); text-decoration:none; font-weight:700; text-transform:uppercase; letter-spacing:2px; font-size:0.85rem;">Request Wholesale Quote</a>
+                        <a id="modal-wa" href="" style="text-align:center; padding:15px; border:1px solid #25d366; color:#25d366; text-decoration:none; font-weight:700; text-transform:uppercase; letter-spacing:2px; font-size:0.8rem;">Ask on WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -277,13 +286,13 @@
     </footer>
 
     <a href="https://wa.me/8618663543398" class="whatsapp-fixed">
-        <span>Chat with Tea Master</span>
+        <span>Get a Quote on WhatsApp</span>
     </a>
 
     <script>
         let allProducts = [];
         let displayedCount = 0;
-        const PAGE_SIZE = 100;
+        const PAGE_SIZE = 24;
         // Using relative paths directly for GitHub/Vercel compatibility
 
         async function init() {
@@ -337,18 +346,21 @@
                     card.className = 'product-card';
                     card.onclick = () => openModal(product);
                     
-                    const imgSrc = product.image ? (product.image.startsWith('http') ? product.image : product.image) : 'https://via.placeholder.com/400x400?text=No+Photo';
+                    const imgSrc = product.image ? product.image : 'img-placeholder.svg';
                     
                     card.innerHTML = `
                         <div class="product-img">
-                            <img ${isPriority ? `src="${imgSrc}" class="loaded" fetchpriority="high"` : `data-src="${imgSrc}" class="lazy"`} 
-                                 alt="${product.name}" 
-                                 onerror="this.src='https://via.placeholder.com/400x400?text=No+Photo'">
+                            <img src="${imgSrc}"
+                                 alt="${product.name}"
+                                 ${isPriority ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}
+                                 decoding="async"
+                                 onload="this.classList.add('loaded')"
+                                 onerror="this.onerror=null; this.src='img-placeholder.svg'; this.classList.add('loaded');">
                         </div>
                         <div class="product-info">
                             <p class="category">${category}</p>
                             <h4>${product.name}</h4>
-                            <div class="price">$${product.price}</div>
+                            <div class="price">Wholesale price on request</div>
                         </div>
                     `;
                     grid.appendChild(card);
@@ -357,19 +369,7 @@
             initLazyLoading();
         }
 
-        const lazyImageObserver = ("IntersectionObserver" in window) ? new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    let lazyImage = entry.target;
-                    if (lazyImage.dataset.src) {
-                        lazyImage.src = lazyImage.dataset.src;
-                        lazyImage.classList.add('loaded');
-                        lazyImage.classList.remove("lazy");
-                        lazyImageObserver.unobserve(lazyImage);
-                    }
-                }
-            });
-        }, { rootMargin: '400px' }) : null;
+        const lazyImageObserver = null;
 
         function initLazyLoading() {
             const lazyImages = document.querySelectorAll("img.lazy");
@@ -394,10 +394,10 @@
                 (p.body && p.body.toLowerCase().includes(query))
             );
 
-            if (sortVal === 'price-low') {
-                filtered.sort((a, b) => a.price - b.price);
-            } else if (sortVal === 'price-high') {
-                filtered.sort((a, b) => b.price - a.price);
+            if (sortVal === 'name-asc') {
+                filtered.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+            } else if (sortVal === 'name-desc') {
+                filtered.sort((a, b) => String(b.name).localeCompare(String(a.name)));
             }
 
             renderGrids(filtered, true);
@@ -405,10 +405,16 @@
         }
 
         function openModal(product) {
-            const imgSrc = product.image ? (product.image.startsWith('http') ? product.image : product.image) : 'https://via.placeholder.com/400x400?text=No+Photo';
-            document.getElementById('modal-img').src = imgSrc;
+            const imgSrc = product.image ? product.image : 'img-placeholder.svg';
+            const mimg = document.getElementById('modal-img');
+            mimg.onerror = function () { this.onerror = null; this.src = 'img-placeholder.svg'; };
+            mimg.src = imgSrc;
             document.getElementById('modal-title').innerText = product.name;
-            document.getElementById('modal-price').innerText = `$${product.price}`;
+            const priceEl = document.getElementById('modal-price');
+            priceEl.innerText = 'Wholesale price on request — MOQ applies';
+            priceEl.style.fontSize = '1rem';
+            priceEl.style.color = 'var(--gold)';
+            priceEl.style.letterSpacing = '1px';
             document.getElementById('modal-marketing').innerText = product.marketing_tip || "";
             document.getElementById('modal-desc').innerText = product.body || "";
             document.getElementById('modal-wa').href = `https://wa.me/8618663543398?text=Hello, I am interested in ${product.name}`;
