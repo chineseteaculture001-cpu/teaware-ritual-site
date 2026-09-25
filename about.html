@@ -59,14 +59,33 @@
             .grid { grid-template-columns: 1fr; gap: 30px; }
             .hero-sub h1 { font-size: 2.5rem; }
         }
-    </style>
+    /* language strip - wine ground, gold label, aligned to the header's 8% gutter */
+.util{background:#2c0a0a;border-bottom:1px solid rgba(212,175,55,.3);padding:9px 8%;
+display:flex;justify-content:flex-end;align-items:center;gap:12px}
+.util-l{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+@media(max-width:560px){.util-l{display:none}}
+#google_translate_element{font-size:.75rem}
+#google_translate_element .goog-te-gadget{color:var(--gold)!important;font-size:.75rem!important;white-space:nowrap}
+#google_translate_element select,#google_translate_element .goog-te-combo{background:var(--bg-card)!important;color:var(--text-main)!important;border:1px solid rgba(212,175,55,.4)!important;border-radius:0!important;padding:4px 6px!important;margin:0!important;font-size:.74rem!important;font-family:inherit!important;max-width:190px;height:26px!important;line-height:1!important}
+.util{max-height:52px;overflow:hidden}
+#google_translate_element{display:flex;align-items:center;height:30px;flex:0 0 auto;min-width:max-content;white-space:nowrap}
+#google_translate_element .goog-te-gadget{display:flex;align-items:center;line-height:1;background:transparent!important;white-space:nowrap!important}
+#google_translate_element .goog-te-gadget-icon{display:none!important}
+#google_translate_element .goog-te-gadget-simple{background:transparent!important;border:0!important;padding:0!important;font-size:.74rem!important;white-space:nowrap!important}
+#google_translate_element .goog-te-gadget-simple a,#google_translate_element .goog-te-gadget-simple span{color:var(--gold)!important;background:transparent!important;text-decoration:none!important}
+#google_translate_element .goog-te-gadget-simple img{display:none!important}
+
+body{top:0!important}
+.skiptranslate iframe{display:none!important}
+</style>
 </head>
 <body>
     <div style="background:#a4161a;border-bottom:1px solid #d4af37;text-align:center;padding:10px 8%;font-size:0.78rem;letter-spacing:1px;color:#fffcf0;">
-        <strong style="color:#d4af37;letter-spacing:2px;">WHOLESALE &amp; OEM / ODM</strong> — Bulk and custom orders only; single-piece retail is not available.
+        <strong style="color:#d4af37;letter-spacing:2px;">WHOLESALE, OEM / ODM &amp; SAMPLE ORDERS</strong> — No minimum order; one piece is quoted at wholesale too.
         <a href="contact.html" style="color:#d4af37;text-decoration:underline;margin-left:8px;white-space:nowrap;">Request a Quote &rarr;</a>
     </div>
-    <header>
+    <div class="util"><span class="util-l">Language</span><div id="google_translate_element"></div></div>
+<header>
         <a href="index.html" class="logo">THE JADE RITUAL</a>
         <nav>
             <ul>
@@ -113,5 +132,11 @@
         </div>
         <p class="copy">&copy; 2026 China Tea Culture Communication. All Rights Reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms &amp; Conditions</a></p>
     </footer>
+<script>
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({pageLanguage:'en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&hl=en" async></script>
 </body>
 </html>

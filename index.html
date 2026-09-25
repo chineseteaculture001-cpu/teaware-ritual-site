@@ -136,13 +136,32 @@
             .modal-layout { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
         }
-    </style>
+    /* language strip - wine ground, gold label, aligned to the header's 8% gutter */
+.util{background:#2c0a0a;border-bottom:1px solid rgba(212,175,55,.3);padding:9px 8%;
+display:flex;justify-content:flex-end;align-items:center;gap:12px}
+.util-l{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+@media(max-width:560px){.util-l{display:none}}
+#google_translate_element{font-size:.75rem}
+#google_translate_element .goog-te-gadget{color:var(--gold)!important;font-size:.75rem!important;white-space:nowrap}
+#google_translate_element select,#google_translate_element .goog-te-combo{background:var(--bg-card)!important;color:var(--text-main)!important;border:1px solid rgba(212,175,55,.4)!important;border-radius:0!important;padding:4px 6px!important;margin:0!important;font-size:.74rem!important;font-family:inherit!important;max-width:190px;height:26px!important;line-height:1!important}
+.util{max-height:52px;overflow:hidden}
+#google_translate_element{display:flex;align-items:center;height:30px;flex:0 0 auto;min-width:max-content;white-space:nowrap}
+#google_translate_element .goog-te-gadget{display:flex;align-items:center;line-height:1;background:transparent!important;white-space:nowrap!important}
+#google_translate_element .goog-te-gadget-icon{display:none!important}
+#google_translate_element .goog-te-gadget-simple{background:transparent!important;border:0!important;padding:0!important;font-size:.74rem!important;white-space:nowrap!important}
+#google_translate_element .goog-te-gadget-simple a,#google_translate_element .goog-te-gadget-simple span{color:var(--gold)!important;background:transparent!important;text-decoration:none!important}
+#google_translate_element .goog-te-gadget-simple img{display:none!important}
+
+body{top:0!important}
+.skiptranslate iframe{display:none!important}
+</style>
 </head>
 <body>
     <div class="wholesale-bar">
-        <strong>WHOLESALE &amp; OEM / ODM</strong> — Bulk and custom orders only; single-piece retail is not available. <a href="contact.html">Request a Quote &rarr;</a>
+        <strong style="color:#d4af37;letter-spacing:2px;">WHOLESALE, OEM / ODM &amp; SAMPLE ORDERS</strong> — No minimum order; one piece is quoted at wholesale too. <a href="contact.html">Request a Quote &rarr;</a>
     </div>
-    <header>
+    <div class="util"><span class="util-l">Language</span><div id="google_translate_element"></div></div>
+<header>
         <div class="brand-logo">
             <div class="seal">Jade</div>
             <h1>The Jade Ritual</h1>
@@ -412,7 +431,7 @@
             mimg.src = imgSrc;
             document.getElementById('modal-title').innerText = product.name;
             const priceEl = document.getElementById('modal-price');
-            priceEl.innerText = 'Wholesale price on request — MOQ applies';
+            priceEl.innerText = 'Wholesale price on request — no minimum order';
             priceEl.style.fontSize = '1rem';
             priceEl.style.color = 'var(--gold)';
             priceEl.style.letterSpacing = '1px';
@@ -433,5 +452,11 @@
 
         init();
     </script>
+<script>
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({pageLanguage:'en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&hl=en" async></script>
 </body>
 </html>
