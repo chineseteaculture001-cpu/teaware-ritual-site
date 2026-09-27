@@ -35,7 +35,8 @@
             background: var(--bg-rosewood); border-bottom: 2px solid var(--gold);
             position: sticky; top: 0; z-index: 100;
         }
-        .logo { font-family: var(--font-deco); color: var(--gold); font-size: 1.4rem; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
+        .logo { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-deco); color: var(--gold); font-size: 1.4rem; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
+        .mark { width: 32px; height: 32px; flex: none; }
         nav ul { display: flex; list-style: none; gap: 30px; }
         nav a { text-decoration: none; color: var(--text-main); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         nav a:hover { color: var(--gold); }
@@ -64,7 +65,7 @@
 .util{background:#2c0a0a;border-bottom:1px solid rgba(212,175,55,.3);padding:9px 8%;
 display:flex;justify-content:flex-end;align-items:center;gap:12px}
 .util-l{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-@media(max-width:560px){.util-l{display:none}}
+@media(max-width:560px){.util-l{display:none}.mark{width:26px;height:26px}header{flex-wrap:wrap}nav ul{flex-wrap:wrap;gap:10px 18px}}
 #google_translate_element{font-size:.75rem}
 #google_translate_element .goog-te-gadget{color:var(--gold)!important;font-size:.75rem!important;white-space:nowrap}
 #google_translate_element select,#google_translate_element .goog-te-combo{background:var(--bg-card)!important;color:var(--text-main)!important;border:1px solid rgba(212,175,55,.4)!important;border-radius:0!important;padding:4px 6px!important;margin:0!important;font-size:.74rem!important;font-family:inherit!important;max-width:190px;height:26px!important;line-height:1!important}
@@ -87,7 +88,7 @@ body{top:0!important}
     </div>
     <div class="util"><span class="util-l">Language</span><div id="google_translate_element"></div></div>
 <header>
-        <a href="index.html" class="logo">JADE RITUAL TEA</a>
+        <a href="index.html" class="logo"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B1A15"/><path d="M16 7l6 9-6 9-6-9z" fill="none" stroke="#C8A96A" stroke-width="1.6"/></svg><span>JADE RITUAL TEA</span></a>
         <nav>
             <ul>
                 <li><a href="index.html">Collection</a></li>
