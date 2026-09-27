@@ -34,7 +34,7 @@ Also known as "Floral Shapes," these pots mimic forms found in nature. You will 
 ---
 
 ### Start Your Heritage Collection
-At **The Jade Ritual**, we curate certified Yixing Zisha teapots that bridge ancient tradition with modern lifestyle. Whether you are a beginner or a seasoned collector, find the shape that speaks to your soul.
+At **JadeRitual Tea**, we curate certified Yixing Zisha teapots that bridge ancient tradition with modern lifestyle. Whether you are a beginner or a seasoned collector, find the shape that speaks to your soul.
 
 **Wholesale & B2B Inquiries:**
 We provide safe B2B trade solutions and T/T payment support for global tea retailers. 
