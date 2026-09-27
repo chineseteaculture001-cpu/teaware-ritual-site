@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | JadeRitual Tea</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1A15'/%3E%3Cpath d='M16 7l6 9-6 9-6-9z' fill='none' stroke='%23C8A96A' stroke-width='1.6'/%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1A15'/%3E%3Cpath d='M16 7l6 9-6 9-6-9z' fill='none' stroke='%23E0C892' stroke-width='2'/%3E%3C/svg%3E">
     <link rel="canonical" href="https://tea.thejaderitual.com/contact">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V08H7JHNVR"></script>
@@ -19,7 +19,8 @@
         :root {
             --bg-rosewood: #4a0e0e;
             --bg-card: #3d0c0c;
-            --gold: #d4af37;
+            --gold: #C8A96A;
+            --gold-2: #E0C892;
             --text-main: #fffcf0;
             --text-muted: #bdc3c7;
             --font-main: 'Montserrat', sans-serif;
@@ -35,7 +36,9 @@
             background: var(--bg-rosewood); border-bottom: 2px solid var(--gold);
             position: sticky; top: 0; z-index: 2000;
         }
-        .logo { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-deco); color: var(--gold); font-size: 1.4rem; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
+        .brand { display: inline-flex; align-items: center; gap: 13px; text-decoration: none; }
+        .brand-t { font-family: Georgia, "Times New Roman", serif; font-size: 1.1rem; color: #F3F0E8; text-transform: none; letter-spacing: 0; font-weight: 400; display: block; margin: 0; white-space: nowrap; }
+        .brand-s { font-size: .66rem; letter-spacing: .2em; font-weight: 600; color: var(--gold-2); text-transform: uppercase; display: block; margin-top: 2px; white-space: nowrap; }
         .mark { width: 32px; height: 32px; flex: none; }
         nav ul { display: flex; list-style: none; gap: 30px; }
         nav a { text-decoration: none; color: var(--text-main); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
@@ -60,7 +63,7 @@
         .form-group input:focus, .form-group textarea:focus { border-color: var(--gold); }
         
         .submit-btn { width: 100%; padding: 18px; background: var(--gold); color: var(--bg-rosewood); border: none; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: 0.3s; margin-top: 10px; }
-        .submit-btn:hover { background: #f1c40f; transform: translateY(-2px); }
+        .submit-btn:hover { background: #E0C892; transform: translateY(-2px); }
 
         footer { background: #2c0a0a; padding: 80px 8% 40px; border-top: 2px solid var(--gold); text-align: center; }
         .footer-logo { font-family: var(--font-deco); font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
@@ -71,13 +74,13 @@
             .contact-info h1 { font-size: 2.5rem; }
         }
     /* language strip - wine ground, gold label, aligned to the header's 8% gutter */
-.util{background:#2c0a0a;border-bottom:1px solid rgba(212,175,55,.3);padding:9px 8%;
+.util{background:#2c0a0a;border-bottom:1px solid rgba(200, 169, 106,.3);padding:9px 8%;
 display:flex;justify-content:flex-end;align-items:center;gap:12px}
 .util-l{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 @media(max-width:560px){.util-l{display:none}.mark{width:26px;height:26px}header{flex-wrap:wrap}nav ul{flex-wrap:wrap;gap:10px 18px}}
 #google_translate_element{font-size:.75rem}
 #google_translate_element .goog-te-gadget{color:var(--gold)!important;font-size:.75rem!important;white-space:nowrap}
-#google_translate_element select,#google_translate_element .goog-te-combo{background:var(--bg-card)!important;color:var(--text-main)!important;border:1px solid rgba(212,175,55,.4)!important;border-radius:0!important;padding:4px 6px!important;margin:0!important;font-size:.74rem!important;font-family:inherit!important;max-width:190px;height:26px!important;line-height:1!important}
+#google_translate_element select,#google_translate_element .goog-te-combo{background:var(--bg-card)!important;color:var(--text-main)!important;border:1px solid rgba(200, 169, 106,.4)!important;border-radius:0!important;padding:4px 6px!important;margin:0!important;font-size:.74rem!important;font-family:inherit!important;max-width:190px;height:26px!important;line-height:1!important}
 .util{max-height:52px;overflow:hidden}
 #google_translate_element{display:flex;align-items:center;height:30px;flex:0 0 auto;min-width:max-content;white-space:nowrap}
 #google_translate_element .goog-te-gadget{display:flex;align-items:center;line-height:1;background:transparent!important;white-space:nowrap!important}
@@ -91,13 +94,13 @@ body{top:0!important}
 </style>
 </head>
 <body>
-    <div style="background:#a4161a;border-bottom:1px solid #d4af37;text-align:center;padding:10px 8%;font-size:0.78rem;letter-spacing:1px;color:#fffcf0;">
-        <strong style="color:#d4af37;letter-spacing:2px;">WHOLESALE, OEM / ODM &amp; SAMPLE ORDERS</strong> — No minimum order; one piece is quoted at wholesale too.
-        <a href="contact.html" style="color:#d4af37;text-decoration:underline;margin-left:8px;white-space:nowrap;">Request a Quote &rarr;</a>
+    <div style="background:#a4161a;border-bottom:1px solid #C8A96A;text-align:center;padding:10px 8%;font-size:0.78rem;letter-spacing:1px;color:#fffcf0;">
+        <strong style="color:#C8A96A;letter-spacing:2px;">WHOLESALE, OEM / ODM &amp; SAMPLE ORDERS</strong> — No minimum order; one piece is quoted at wholesale too.
+        <a href="contact.html" style="color:#C8A96A;text-decoration:underline;margin-left:8px;white-space:nowrap;">Request a Quote &rarr;</a>
     </div>
     <div class="util"><span class="util-l">Language</span><div id="google_translate_element"></div></div>
 <header>
-        <a href="index.html" class="logo"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B1A15"/><path d="M16 7l6 9-6 9-6-9z" fill="none" stroke="#C8A96A" stroke-width="1.6"/></svg><span>JADE RITUAL TEA</span></a>
+        <a href="index.html" class="brand"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B1A15"/><path d="M16 7l6 9-6 9-6-9z" fill="none" stroke="#E0C892" stroke-width="2"/></svg><span class="brand-text"><span class="brand-t">JadeRitual Tea</span><span class="brand-s">Tea Ware &amp; Ceremony</span></span></a>
         <nav>
             <ul>
                 <li><a href="index.html">Collection</a></li>
