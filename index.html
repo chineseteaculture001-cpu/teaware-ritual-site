@@ -393,7 +393,7 @@ padding-bottom:3px;text-decoration:none}
                             <p class="category">${category}</p>
                             <h4>${product.name}</h4>
                             <div class="price">Wholesale price on request</div>
-                            ${PDP_SLUGS[product.name] ? `<a class="pdp-link" href="/products/${PDP_SLUGS[product.name]}">View details</a>` : ''}
+                            ${PDP_SLUGS[product.name] ? `<a class="pdp-link" href="/products/${PDP_SLUGS[product.name]}" onclick="event.stopPropagation()">View details</a>` : ''}
                         </div>
                     `;
                     grid.appendChild(card);
